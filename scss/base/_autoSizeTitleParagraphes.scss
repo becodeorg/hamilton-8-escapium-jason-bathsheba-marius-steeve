@@ -1,0 +1,45 @@
+body {
+  h1 {
+    font-size: $h1TitleBigScreen;
+    font-family: $fontTitleMonserrat;
+  }
+
+  h2 {
+    font-size: $h2TitleBigScreen;
+    font-family: $fontTitleMonserrat;
+  }
+
+  h3 {
+    font-size: $h3TitleBigScreen;
+    font-family: $fontTitleMonserrat;
+  }
+
+  p {
+    font-size: $sizeParagraphBigScreen;
+    font-family: $fontParagraphHind;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    h1 {
+      font-size: $h1TitleMobile;
+      font-family: $fontTitleMonserrat;
+    }
+
+    h2 {
+      font-size: $h2TitleMobile;
+      font-family: $fontTitleMonserrat;
+    }
+
+    h3 {
+      font-size: $h3TitleMobile;
+      font-family: $fontTitleMonserrat;
+    }
+
+    p {
+      font-size: $sizeParagrapheMobile;
+      font-family: $fontParagraphHind;
+    }
+  }
+}
