@@ -1,0 +1,22 @@
+{
+  "name": "hamilton-8-escapium-jason-bathsheba-marius-steeve",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass -w scss/style.scss:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/becodeorg/hamilton-8-escapium-jason-bathsheba-marius-steeve.git"
+  },
+  "author": "Jason Bathsheba Marius Steeve",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/becodeorg/hamilton-8-escapium-jason-bathsheba-marius-steeve/issues"
+  },
+  "homepage": "https://github.com/becodeorg/hamilton-8-escapium-jason-bathsheba-marius-steeve#readme",
+  "dependencies": {
+    "sass": "^1.63.4"
+  }
+}
