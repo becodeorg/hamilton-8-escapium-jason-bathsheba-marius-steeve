@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"version":3,"sourceRoot":"","sources":["../scss/base/_reset.scss","../scss/layouts/_navbar.scss","../scss/utils/_mixins.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;;;ACFF;EACI;ECcA;EACA;EACA;EACA;EDfA;;AAEA;ECgBA;EACA;EACA;EACA;;ADfA;ECsBA","file":"style.css"}
+=======
+{"version":3,"sourceRoot":"","sources":["../scss/base/_reset.scss","../scss/base/_autoSizeTitleParagraphes.scss","../scss/utils/_variables.scss","../scss/base/_font.scss","../scss/layouts/_header.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;;;AAGF;EACE;EACA;;;ACPA;EACE,WCDe;EDEf,aEFiB;;AFKnB;EACE,WCLe;EDMf,aEPiB;;AFUnB;EACE,WCTe;EDUf,aEZiB;;AFenB;EACE,WCbqB;EDcrB,aEhBgB;;;AFoBpB;EAEI;IACE,WCjBU;IDkBV,aEzBe;;EF4BjB;IACE,WCrBU;IDsBV,aE9Be;;EFiCjB;IACE,WCzBU;ID0BV,aEnCe;;EFsCjB;IACE,WC7BiB;ID8BjB,aEvCc;;;ACFpB;EACE;IACE;IACA;IACA","file":"style.css"}
+>>>>>>> 6fa6f4dfb1313e70564f0c1caf81e8d026d76046
