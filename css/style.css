@@ -1,92 +1,18 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* Error: expected "{".
+ *    ,
+ * 54 | >>>>>>> 05569e7809ce0045f48dedface262bf8209712af
+ *    |                                                 ^
+ *    '
+ *   scss/utils/_mixins.scss 54:49  @import
+ *   scss/style.scss 2:9            root stylesheet */
 
-body {
-  min-height: 100vh;
-  max-width: 100vw;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected "{".\a    \2577 \a 54 \2502  >>>>>>> 05569e7809ce0045f48dedface262bf8209712af\a    \2502                                                  ^\a    \2575 \a   scss/utils/_mixins.scss 54:49  @import\a   scss/style.scss 2:9            root stylesheet';
 }
-
-body h1 {
-  font-size: 120px;
-  font-family: "Montserrat", sans-serif;
-}
-body h2 {
-  font-size: 44px;
-  font-family: "Montserrat", sans-serif;
-}
-body h3 {
-  font-size: 32px;
-  font-family: "Montserrat", sans-serif;
-}
-body h4 {
-  font-size: 16px;
-  font-family: "Montserrat", sans-serif;
-}
-body p {
-  font-size: 16px;
-  font-family: "Hind", sans-serif;
-}
-
-@media only screen and (max-width: 768px) {
-  body h1 {
-    font-size: 32px;
-    font-family: "Montserrat", sans-serif;
-  }
-  body h2 {
-    font-size: 19px;
-    font-family: "Montserrat", sans-serif;
-  }
-  body h3 {
-    font-size: 21px;
-    font-family: "Montserrat", sans-serif;
-  }
-  body p {
-    font-size: 14px;
-    font-family: "Hind", sans-serif;
-  }
-}
-@media only screen and (max-width: 412px) {
-  header {
-    background: url(../image/gallery/slide4_412px-4.jpg) no-repeat center/cover;
-    max-width: 100%;
-    height: 250px;
-  }
-}
-.footer {
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-.footer__background {
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: hsl(0, 0%, 23%);
-}
-.footer__background__image {
-  background-image: url(/image/gallery/slide-3.jpg);
-}
-
-nav {
-  background-color: rgba(34, 34, 34, 0.3);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
-}
-nav ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-nav ._nav_icon {
-  width: 20px;
-}
-
-/*# sourceMappingURL=style.css.map */
