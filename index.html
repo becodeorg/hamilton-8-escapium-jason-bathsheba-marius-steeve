@@ -13,36 +13,48 @@
   </head>
   <body>
     <header>
-      <figure><img src="image/logo/logo.png" alt="logo escapium"></figure>
-      <nav>
-        <ul>
-          <li>
-            <a href="index.html">home</a>
-          </li>
-          <li>
-            <a href="pages_html/about.html">about</a>
-          </li>
-           feature
-          <li>
-          <li>
-            <a href="pages_html/romms.html">rooms</a>
-          </li>
-          <li>
-            booking
-          </li>
-          <li>
-            <a href="pages_html/blog.html">blog</a>
-          </li>
-          <li>
-            <a href="pages_html/contact.html">contact</a>
-          </li>
-        </ul>
-        <button><a href="pages_html/romms.html">Book Now!</a></button>
-        <img class="_nav_icon" src="image/icones/magnifying-glass-solid.svg" alt="Icon of a magnifying glass">
-        <img class="_nav_icon" src="image/icones/user.svg" alt="Icon of a user">
-        <img class="_nav_icon" src="image/icones/calendar.svg" alt="icon of a calendar">
-        <img class="_nav_icon" src="image/icones/hamburger.svg" alt="Icon of a hamburger menu">
-        <p>SIGN IN</p>
+      <nav class="nav">
+        <figure><img src="image/logo/logo.png" alt="logo escapium"></figure>
+        <div id="mySidenav" class="sidenav">
+          <a id="closeBtn" class="close" href="#">x</a>
+        
+          <ul>
+            <li>
+              <a href="index.html">home</a>
+            </li>
+            <li>
+              <a href="pages_html/about.html">about</a>
+            </li>
+            <li>
+              <a href="">feature</a>
+            </li>
+            <li>
+              <a href="pages_html/romms.html">rooms</a>
+            </li>
+            <li>
+              <a href="">booking</a>
+            </li>
+            <li>
+              <a href="pages_html/blog.html">blog</a>
+            </li>
+            <li>
+              <a href="pages_html/contact.html">contact</a>
+            </li>
+          </ul>
+        </div>
+        
+        <button class="invisible"><a  href="pages_html/romms.html">Book Now!</a></button>
+        <img class="_nav_icon _nav_icon_hamburger visible" src="image/icones/calendar.svg" alt="icon of a calendar">
+        <img class="_nav_icon _nav_icon_descktop" src="image/icones/magnifying-glass-solid.svg" alt="Icon of a magnifying glass">
+        <img class="_nav_icon _nav_icon_descktop invisible" src="image/icones/user.svg" alt="Icon of a user">
+        <a href="#" id="openBtn">
+          <span class="burger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </a>
+        <p class="invisible">SIGN IN</p>
       </nav>
     </header>
     <main>
@@ -51,5 +63,6 @@
     <footer>
 
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
