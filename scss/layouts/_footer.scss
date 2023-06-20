@@ -1,9 +1,10 @@
-@import "../utils/variables";
-@import "../utils/mixins";
-@import "../utils/variables";
-@import "../base/font";
+
 
 .footer {
+    img{
+        width: 30px;
+        height: 30px;
+    }
     width: 100%;
     height: auto;
     position: relative;
@@ -13,10 +14,20 @@
         width: 100%;
         height: 100%;
         position: absolute;
-        background-color : hsl(0,0%,23%);
+        
 
         &__image {
-            background-image: url(/image/gallery/slide-3.jpg);
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background-image: url(../image/gallery/slide-3.jpg);
+            background-image: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            //opacity: 10%;
+        }
+        &__color {
+            //background-color : hsl(0,0%,23%);
         }
     }
 }
