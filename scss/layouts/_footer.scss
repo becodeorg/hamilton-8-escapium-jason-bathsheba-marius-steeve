@@ -1,0 +1,22 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+@import "../utils/variables";
+@import "../base/font";
+
+.footer {
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    &__background {
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color : hsl(0,0%,23%);
+
+        &__image {
+            background-image: url(/image/gallery/slide-3.jpg);
+        }
+    }
+}
