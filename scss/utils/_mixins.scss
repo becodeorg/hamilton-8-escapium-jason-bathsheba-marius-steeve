@@ -8,14 +8,6 @@
   flex-direction: row;
 }
 
-
-
-
-
-
-
-
-
 @mixin flex-column-center {
     display: flex;
     flex-direction: column;
@@ -34,9 +26,6 @@
     justify-content: space-between;
     align-items: center;
 }
-
-
-
 
 @mixin petit-icon {
     width: 20px;
