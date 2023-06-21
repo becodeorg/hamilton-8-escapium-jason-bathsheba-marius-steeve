@@ -129,7 +129,7 @@ body p {
   padding: 20px;
 }
 
-@media (min-width: 769px) {
+@media screen and (min-width: 769px) {
   ._nav_icon_hamburger {
     display: none;
   }
@@ -212,7 +212,24 @@ p {
   color: #717171;
 }
 
-@media screen and (max-width: 412px) {
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  .contact__main-contact {
+    display: flex;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1140px;
+  }
+  .contact__main {
+    padding-bottom: 40px;
+  }
   .contact__main__section-content {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -224,11 +241,12 @@ p {
     margin-right: auto;
     margin-left: auto;
   }
-  .contact__main__container__list {
+  .contact__main__list {
     padding-top: 2rem;
   }
   .contact__main__title {
     margin-bottom: 1.5rem;
+    font-size: 28px;
   }
   .contact__main__address {
     display: flex;
@@ -239,6 +257,141 @@ p {
     width: 30px;
     color: white;
     margin-right: 20px;
+  }
+  #contact__section__title {
+    font-size: 28px;
+  }
+  .contact__section {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 40px;
+  }
+  .contact__section__form__name, .contact__section__form__email {
+    margin-bottom: 3rem;
+  }
+  .contact__section__form__input {
+    display: block;
+    width: 100%;
+    height: calc(3.1rem + 4px);
+    padding: 0.8rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #fff;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: none;
+    border-bottom: 2px solid #404040;
+    border-radius: 0;
+    transition: border-color 0.15s ease-in-out;
+    outline: none;
+    font-family: "Hind", sans-serif;
+  }
+  .contact__section__form__button {
+    display: block;
+    padding: 1rem 2.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: #fff;
+    background-color: #f60b0e;
+    border-color: #f60b0e;
+    border: 2px solid transparent;
+    width: 100%;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .form__message {
+    resize: vertical;
+    overflow: auto;
+  }
+}
+@media screen and (max-width: 412px) {
+  .contact__main {
+    padding-bottom: 40px;
+  }
+  .contact__main__section-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .contact__main__container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .contact__main__list {
+    padding-top: 2rem;
+  }
+  .contact__main__title {
+    margin-bottom: 1.5rem;
+    font-size: 28px;
+  }
+  .contact__main__address {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  .contact__main__address__icon {
+    width: 30px;
+    color: white;
+    margin-right: 20px;
+  }
+  #contact__section__title {
+    font-size: 28px;
+  }
+  .contact__section {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 40px;
+  }
+  .contact__section__form__name, .contact__section__form__email {
+    margin-bottom: 3rem;
+  }
+  .contact__section__form__input {
+    display: block;
+    width: 100%;
+    height: calc(3.1rem + 4px);
+    padding: 0.8rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #fff;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: none;
+    border-bottom: 2px solid #404040;
+    border-radius: 0;
+    transition: border-color 0.15s ease-in-out;
+    outline: none;
+    font-family: "Hind", sans-serif;
+  }
+  .contact__section__form__button {
+    display: block;
+    padding: 1rem 2.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: #fff;
+    background-color: #f60b0e;
+    border-color: #f60b0e;
+    border: 2px solid transparent;
+    width: 100%;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .form__message {
+    resize: vertical;
+    overflow: auto;
   }
 }
 
