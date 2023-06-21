@@ -1,0 +1,140 @@
+.rooms {
+   
+    
+
+
+.banRoom {
+
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.2)),url("/image/gallery/slide-1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 510px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1{
+      
+      font-family: $fontTitleMonserrat;
+      color: $whiteText;
+      span{
+        color: $redColor;
+      }
+    }
+  
+    p{
+      color: $whiteText;
+      font-family:$fontParagraphHind  ;
+      font-size: $sizeParagraphBigScreen;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .grey{
+        color: #3C3F3E;
+      }
+      
+    }
+  }
+}    
+.homeRoom {
+
+    &__section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+
+        &__container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+
+            ul {
+                display: block;
+                list-style-type: disc;
+                margin-block-start: 1em;
+                margin-block-end: 1em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                padding-inline-start: 40px;
+                padding-left: 0;
+                list-style: none;
+
+                .filterDifficult {
+                    display: list-item;
+                    margin: 0  0.5rem;
+                    
+                }
+            }
+
+            .filter {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 3.75rem;
+                
+
+                button {
+                    display: inline-block;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                    border: 2px solid $navFontColor;
+                    padding: 0.8rem 2rem;
+                    font-family: $fontTitleMonserrat;
+                    font-weight: 700;
+                    font-size: 1.05rem;
+                    line-height: 1.25;
+                    border-radius: 2.5rem;
+                    transition: all .5s ease;
+                    background-color: transparent;
+                    color: $whiteText;
+                    cursor: pointer;
+                    
+
+                    &:hover {
+                        color: $whiteText;
+                        background-color: $navFontColor;
+                        
+
+                    }
+
+                    &:active {
+                        color: $whiteText;
+                        background-color: $redColor;
+                        border-color: #c7070a;
+                    }
+                }
+            }
+        }
+    }
+}    
+
+.gridRoom {
+    height: 1200px;
+    position: relative;
+}
+
+
+@media (min-width: 992px){
+
+    .homeRoom {
+
+        &__section {
+
+            padding-top: 120px;
+            padding-bottom: 120px;
+    
+        
+            &__section{
+
+                max-width: 960px;
+
+            } 
+        }
+    }
+} 
+    

@@ -3,12 +3,134 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Escapium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <script type="module" src="rooms.js"></script>
+    <script src="https://kit.fontawesome.com/9dacd2a25d.js" crossorigin="anonymous"></script>
+    <title>Rooms</title>
   </head>
-  <body></body>
+  <body class="rooms">
+    <header class="banRoom">
+
+      <h1 class="ban">rooms<span>.</span></h1>
+      <p>HOME - R00MS </p>
+  
+  </header>
+    <main class="homeRoom">
+      <section class="homeRoom__section">
+        <section class="homeRoom__section__container">
+          <ul class="filter">
+            <li class="filterDifficult">
+              <button>All</button>
+            </li>
+            <li class="filterDifficult">
+              <button>Easy</button>
+            </li>
+            <li class="filterDifficult">
+              <button>Normal</button>
+            </li>
+            <li class="filterDifficult">
+              <button>Hard</button>
+            </li>
+          </ul>
+          <section class="gridRoom">
+            <article class="gridRoom__card">
+
+            </article>
+          </section>
+          <nav class="roomNav">
+            <ul class="roomNav__pagelist">
+              <li>
+                <a href="#">1</a>
+              </li>
+              <li>
+                <a href="#">1</a>
+              </li>
+              <li>
+                <a href="#">1</a>
+              </li>
+              <li>
+                <a href="#">...</a>
+              </li>
+              <li>
+                <a href="#">10</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <section>
+        <article>
+          <span>01</span>
+          <h4>Our Address</h4>
+          <ul>
+            <li>Escape Room Ltd.</li>
+            <li>2390 RoadHill St. Suite 100</li>
+            <li>North Downtown, NY 82153</li>
+            <li>Email: <em>info@escapium.com</em></li>
+            <li>Tel: +1 800 900 1248</li>
+          </ul>
+        </article>
+        <article class="link">
+          <span>02</span>
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">about</a></li>
+            <li><a href="#">gallery</a></li>
+            <li><a href="#">plan an event</a></li>
+            <li><a href="#">pricing packages</a></li>
+            <li><a href="#">faq</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </article>
+        <article>
+          <span>03</span>
+          <h4>Working Hours</h4>
+          <div>
+            <ul>
+              <li>Monday:</li>
+              <li>Tuesday:</li>
+              <li>Wednesday:</li>
+              <li>Thursday:</li>
+              <li>Friday:</li>
+              <li>Saturday:</li>
+              <li>Sunday:</li>
+            </ul>
+            <ul>
+              <li>6pm - 11pm</li>
+              <li>5pm - 11pm</li>
+              <li>Closed</li>
+              <li>6pm - 11pm</li>
+              <li>2pm - 11pm</li>
+              <li>11am - 11pm</li>
+              <li>11am - 9pm</li>
+            </ul>
+          </div>
+        </article>
+        <article>
+          <span>04</span>
+          <h4>Social Links</h4>
+          <ul>
+            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-tripadvisor" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-yelp"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
+          </ul>
+        </article>
+      </section>
+      <section class="footer__legal">
+        <figure>
+          <img src="/image/logo/footer-logo.png" alt="logo">
+        </figure>
+        <cite>Copyright 2022 Escapium | All Rights Reserved</cite>
+      </section>
+    </footer>
+  </body>
 </html>
