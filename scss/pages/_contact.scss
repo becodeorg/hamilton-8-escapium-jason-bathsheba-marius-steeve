@@ -1,0 +1,47 @@
+h1, h2, h3 {
+    color: $whiteText;
+}
+
+p {
+    color: $globalFontColor;
+}
+@media screen and (max-width:412px) {
+
+    .contact__main{
+
+            &__section-content {
+                padding-top: 40px;
+                padding-bottom: 40px;
+
+            }
+            &__container {
+                width: 100%;
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;
+                &__list {
+                    padding-top: 2rem;
+                }
+            }
+            &__title {
+                margin-bottom:1.5rem;
+            }
+            
+            &__address {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1.5rem;
+
+                
+
+                &__icon {
+                    width:$iconMiddle;
+                    color:white;
+                    margin-right:20px;
+                    
+                }
+            }
+        
+    }
+}

@@ -204,5 +204,42 @@ body p {
     justify-content: flex-end;
   }
 }
+h1, h2, h3 {
+  color: white;
+}
+
+p {
+  color: #717171;
+}
+
+@media screen and (max-width: 412px) {
+  .contact__main__section-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .contact__main__container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .contact__main__container__list {
+    padding-top: 2rem;
+  }
+  .contact__main__title {
+    margin-bottom: 1.5rem;
+  }
+  .contact__main__address {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  .contact__main__address__icon {
+    width: 30px;
+    color: white;
+    margin-right: 20px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
