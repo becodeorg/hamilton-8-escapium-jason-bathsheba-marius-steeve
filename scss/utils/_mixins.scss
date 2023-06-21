@@ -38,3 +38,9 @@
 @mixin grand-icon {
   width: 100px;
 }
+
+@mixin separator($height, $width, $background) {
+  height: $height;
+  width: $width;
+  background: $background;
+}

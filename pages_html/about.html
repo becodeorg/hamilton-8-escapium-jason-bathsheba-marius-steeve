@@ -7,8 +7,94 @@
       href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+      integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Escapium</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav class="nav">
+        <figure>
+          <img src="../image/logo/logo.png" alt="logo escapium" />
+        </figure>
+        <div id="mySidenav" class="sidenav">
+          <a id="closeBtn" class="close" href="#">x</a>
+
+          <ul>
+            <li>
+              <a href="index.html">home</a>
+            </li>
+            <li>
+              <a href="../pages_html/about.html">about</a>
+            </li>
+            <li>
+              <a href="">feature</a>
+            </li>
+            <li>
+              <a href="../pages_html/romms.html">rooms</a>
+            </li>
+            <li>
+              <a href="">booking</a>
+            </li>
+            <li>
+              <a href="pages_html/blog.html">blog</a>
+            </li>
+            <li>
+              <a href="pages_html/contact.html">contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <button class="invisible">
+          <a href="pages_html/romms.html">Book Now!</a>
+        </button>
+        <img
+          class="_nav_icon _nav_icon_hamburger visible"
+          src="../image/icones/calendar.svg"
+          alt="icon of a calendar"
+        />
+        <img
+          class="_nav_icon _nav_icon_descktop"
+          src="../image/icones/magnifying-glass-solid.svg"
+          alt="Icon of a magnifying glass"
+        />
+        <img
+          class="_nav_icon _nav_icon_descktop invisible"
+          src="../image/icones/user.svg"
+          alt="Icon of a user"
+        />
+        <a href="#" id="openBtn">
+          <span class="burger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </a>
+        <p class="invisible">SIGN IN</p>
+      </nav>
+
+      <div class="header_about">
+        <div class="header_about_container">
+          <h1>about<span>.</span></h1>
+          <ul class="header_about_list">
+            <li class="header_about_list_item">
+              <a class="header_about_link" href="">home</a>
+            </li>
+            <li class="header_about_list_item">
+              <div class="header_about_separator"></div>
+            </li>
+            <li class="header_about_list_item">about</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section></section>
+    <script src="../js/about.js"></script>
+  </body>
 </html>
