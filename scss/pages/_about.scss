@@ -55,6 +55,70 @@
   }
 }
 
+.about_section_how_to_play {
+  @include displayFlexColumn;
+  text-align: center;
+  padding: 8rem 15rem;
+
+  .about_separator_how_to_play {
+    @include separator(5px, 35px, $separatorBg);
+    margin: 0 auto;
+  }
+
+  h2 {
+    color: $whiteText;
+    font-size: 2.8rem;
+    padding: 5rem 0;
+  }
+
+  .about_list_how_to_play {
+    @include displayFlexRow;
+    .about_item_list_how_to_play {
+      @include displayFlexColumn;
+      align-items: center;
+      gap: 2rem;
+
+      .circle {
+        position: relative;
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        justify-content: center;
+        border: 1px solid $smallGreyBg;
+        height: 120px;
+        width: 120px;
+        font-size: 2.5rem;
+        color: $whiteText;
+        background: $darkestBg;
+        z-index: auto;
+        i {
+          display: inline-block;
+        }
+
+        &::before {
+          content: "";
+          width: 150%;
+          height: 1px;
+          background: $smallGreyBg;
+          transform: rotate(-60deg);
+          position: absolute;
+          z-index: -1;
+        }
+      }
+
+      h3 {
+        color: $whiteText;
+      }
+
+      p {
+        color: $smallGreyBg;
+        font-size: 1rem;
+        padding: 0 2rem;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .header_about {
     background-size: 200%;

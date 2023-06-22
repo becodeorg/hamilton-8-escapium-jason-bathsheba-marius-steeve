@@ -1,11 +1,11 @@
-.footer {
+#footer {
   width: 100%;
 
   display: flex;
   flex-direction: column;
   background-color: hsla(0, 0%, 0%, 0.657);
   background-size: cover;
-  background-image: url("/image/gallery/footer-bg.jpg");
+  background-image: url("../image/gallery/footer-bg.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
@@ -179,8 +179,8 @@
       flex-direction: column;
     }
 
-    &__legal {
-    }
+    // &__legal {
+    // }
   }
 }
 
