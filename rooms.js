@@ -1,6 +1,5 @@
 
-const reponse = await fetch("/rooms.json");
-const json = await reponse.json();
+
 
 
 fetch("/rooms.json")

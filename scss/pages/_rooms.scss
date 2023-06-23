@@ -51,46 +51,19 @@
             margin-right: auto;
             margin-left: auto;
 
-            ul {
-                display: block;
-                list-style-type: disc;
-                margin-block-start: 1em;
-                margin-block-end: 1em;
-                margin-inline-start: 0px;
-                margin-inline-end: 0px;
-                padding-inline-start: 40px;
-                padding-left: 0;
-                list-style: none;
-
-                .filterDifficult {
-                    display: list-item;
-                    margin: 0  0.5rem;
-                    
-                }
-            }
-
             .filter {
                 display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
                 margin-bottom: 3.75rem;
-                list-style: none;
                 
                 &__difficult{
                     margin: 0 0.5rem;
 
                     button {
-                        display: inline-block;
-                        white-space: nowrap;
-                        vertical-align: middle;
                         border: 2px solid $navFontColor;
                         padding: 0.8rem 2rem;
                         font-family: $fontTitleMonserrat;
                         font-weight: 700;
                         font-size: 1.05rem;
-                        line-height: 1.25;
                         border-radius: 2.5rem;
                         transition: all .5s ease;
                         background-color: transparent;
@@ -116,7 +89,7 @@
                     //align-self: center;
                     //justify-self: center;
                     height: 375px;
-                    min-width: 230px;
+                    width: 230px;
                     display: flex;
                     flex-direction: column;
                     justify-content: end;
@@ -222,7 +195,7 @@
 
 
 
-@media (min-width: 992px){
+@media screen and (min-width: 769px) and (max-width: 992px){
 
     .homeRoom {
 
@@ -231,13 +204,115 @@
             padding-top: 120px;
             padding-bottom: 120px;
     
-        
-            &__section{
+            &__container{
 
                 max-width: 960px;
 
             } 
         }
+    
+        .cardRoom{
+            grid-template-columns: repeat(4, 160px);
+            grid: 1rem;
+            
+            .card {
+                height: 250px;
+                width: 160px;
+                padding-left: 10px;
+            }
+
+            .card__levels {
+                bottom: 50px;
+
+                i {
+                    font-size: $sizeParagrapheMobile;
+                }
+
+            }
+
+            .card__name {
+                bottom: 30px;
+                font-size: 0.85rem;
+
+            }
+
+            .card__description {
+                width: 100px;
+                left: 0;
+                bottom: 15px;
+            }
+            
+        }
+        
     }
 } 
-    
+
+@media screen and (min-width: 621px) and (max-width: 768px ) {
+	.homeRoom {
+		&__section {
+			
+            &__container {
+                max-width: 540px;
+            }
+		}
+
+        .cardRoom {
+            grid-template-columns: repeat(2, 250px);
+
+            .card {
+                height: 330px;
+                width: 250px;
+            }
+        }
+	}
+}
+   
+@media screen and (max-width: 620px) {
+	.homeRoom {
+		&__section {
+			
+            &__container {
+                width: auto;
+            }
+		}
+
+        .cardRoom {
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            .card {
+                height: 600px;
+                width: auto;
+            }
+        }
+        
+	}
+}
+
+@media screen and (max-width: 412px) {
+	.homeRoom {
+		&__section {
+			
+            &__container {
+                width: auto;
+            
+                .filter {
+                   display: flex;
+                   flex-direction: column;
+                   align-items: center;
+                   justify-content: center;
+
+                    &__difficult {
+                        width: 100%;
+                    }
+                
+                }
+                .cardRoom {
+                    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                    .card {
+                        height: 400px;
+                        width: auto;
+                    }
+                }
+            }   
+        }    
+	}
+}

@@ -189,7 +189,7 @@
 	.footer {
 		&__body {
 			flex-direction: column;
-			padding: 5rem 3rem 4rem 4rem;
+			padding: 5rem 0rem 4rem 1rem;
 			&__column {
 
 				div {
@@ -202,7 +202,19 @@
 						display: flex;
 						flex-direction: row;
 						flex-wrap: nowrap;	
+
+						li {
+
+							a {
+								width: 2.5rem;
+
+								i {
+									font-size: 1.5rem;
+								}
+							}
+						}
 					}	
+
 				}
 			}
 		}
@@ -222,14 +234,15 @@
 				&.social {
 					
 					ul {
+						width: 150%;
 						display: flex;
 						flex-direction: row;
-						flex-wrap: nowrap;
+						flex-wrap: wrap;
 						
 						li {
-
+							width: 2rem;
 							a {
-								width: 1rem;
+								
 
 								i {
 									font-size: 1rem;

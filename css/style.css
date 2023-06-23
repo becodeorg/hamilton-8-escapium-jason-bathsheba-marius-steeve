@@ -346,7 +346,7 @@ body p {
 @media screen and (min-width: 412px) and (max-width: 619px) {
   .footer__body {
     flex-direction: column;
-    padding: 5rem 3rem 4rem 4rem;
+    padding: 5rem 0rem 4rem 1rem;
   }
   .footer__body__column div {
     gap: 0;
@@ -355,6 +355,12 @@ body p {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+  }
+  .footer__body__column.social ul li a {
+    width: 2.5rem;
+  }
+  .footer__body__column.social ul li a i {
+    font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 412px) {
@@ -366,12 +372,13 @@ body p {
     gap: 0;
   }
   .footer__body__column.social ul {
+    width: 150%;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
-  .footer__body__column.social ul li a {
-    width: 1rem;
+  .footer__body__column.social ul li {
+    width: 2rem;
   }
   .footer__body__column.social ul li a i {
     font-size: 1rem;
@@ -971,43 +978,19 @@ p {
   margin-right: auto;
   margin-left: auto;
 }
-.homeRoom__section__container ul {
-  display: block;
-  list-style-type: disc;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
-  padding-left: 0;
-  list-style: none;
-}
-.homeRoom__section__container ul .filterDifficult {
-  display: list-item;
-  margin: 0 0.5rem;
-}
 .homeRoom__section__container .filter {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 3.75rem;
-  list-style: none;
 }
 .homeRoom__section__container .filter__difficult {
   margin: 0 0.5rem;
 }
 .homeRoom__section__container .filter__difficult button {
-  display: inline-block;
-  white-space: nowrap;
-  vertical-align: middle;
   border: 2px solid #777;
   padding: 0.8rem 2rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1.05rem;
-  line-height: 1.25;
   border-radius: 2.5rem;
   transition: all 0.5s ease;
   background-color: transparent;
@@ -1027,7 +1010,7 @@ p {
 }
 .homeRoom__section__container .cardRoom .card {
   height: 375px;
-  min-width: 230px;
+  width: 230px;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -1106,13 +1089,82 @@ p {
   word-spacing: 1rem;
 }
 
-@media (min-width: 992px) {
+@media screen and (min-width: 769px) and (max-width: 992px) {
   .homeRoom__section {
     padding-top: 120px;
     padding-bottom: 120px;
   }
-  .homeRoom__section__section {
+  .homeRoom__section__container {
     max-width: 960px;
+  }
+  .homeRoom .cardRoom {
+    grid-template-columns: repeat(4, 160px);
+    grid: 1rem;
+  }
+  .homeRoom .cardRoom .card {
+    height: 250px;
+    width: 160px;
+    padding-left: 10px;
+  }
+  .homeRoom .cardRoom .card__levels {
+    bottom: 50px;
+  }
+  .homeRoom .cardRoom .card__levels i {
+    font-size: 14px;
+  }
+  .homeRoom .cardRoom .card__name {
+    bottom: 30px;
+    font-size: 0.85rem;
+  }
+  .homeRoom .cardRoom .card__description {
+    width: 100px;
+    left: 0;
+    bottom: 15px;
+  }
+}
+@media screen and (min-width: 621px) and (max-width: 768px) {
+  .homeRoom__section__container {
+    max-width: 540px;
+  }
+  .homeRoom .cardRoom {
+    grid-template-columns: repeat(2, 250px);
+  }
+  .homeRoom .cardRoom .card {
+    height: 330px;
+    width: 250px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .homeRoom__section__container {
+    width: auto;
+  }
+  .homeRoom .cardRoom {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+  .homeRoom .cardRoom .card {
+    height: 600px;
+    width: auto;
+  }
+}
+@media screen and (max-width: 412px) {
+  .homeRoom__section__container {
+    width: auto;
+  }
+  .homeRoom__section__container .filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .homeRoom__section__container .filter__difficult {
+    width: 100%;
+  }
+  .homeRoom__section__container .cardRoom {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  .homeRoom__section__container .cardRoom .card {
+    height: 400px;
+    width: auto;
   }
 }
 h1, h2, h3 {
