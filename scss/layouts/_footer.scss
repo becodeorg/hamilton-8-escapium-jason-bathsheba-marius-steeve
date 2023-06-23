@@ -9,7 +9,7 @@
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-blend-mode: multiply;
-	position: relative;
+	//position: relative;
     bottom: 0;
 	
 	span, h4, li, a {
@@ -25,16 +25,16 @@
     }
 
 	
-	section {
+	&__body {
 		width: 100%;
 		display: flex;
 		flex-direction: row;
 		align-items: flex-start;
 		justify-content: center;
-		padding: 8rem 0rem 8rem 5rem;
+		padding: 7rem 2rem 4rem 1rem;
 		
-		article {
-			width: 100%;
+		&__column {
+			width: 40%;
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
@@ -49,11 +49,13 @@
 				align-items: flex-start;
 				justify-content: flex-start;
 				gap: 5vw;
+				position: relative;
 				
 				ul {
 					display: flex;
 					flex-direction: column;
 					gap: 1em;
+					white-space: nowrap;
 				}
 			}
 			
@@ -104,6 +106,7 @@
 					flex-direction: column;
 					gap: 1em;
 					margin-top: 2em;
+					padding: 0;
 					
 					a {
 						color: $globalFontColor;
@@ -119,21 +122,23 @@
 				}
 			}
 			
-			&:last-child {
+			
+			&.social {
 				ul {
-					width: 70%;
+					width: 100%;
 					display: flex;
 					flex-direction: row;
 					flex-wrap: wrap;
-					gap: 1em;
+					gap: 0.5rem;
+					position: relative;
 					
 					li a {
-						width: 2em;
+						width: 3rem;
 						aspect-ratio: 1/1;
 						background: transparent;
 						border-radius: 50px;
 						transition: all .5s ease;
-						font-size: 2rem;
+						font-size: 1.5rem;
 						display: flex;
 						align-items: center;
 						justify-content: center;
@@ -147,49 +152,59 @@
 				}
 			}
 		}
-		
-		&:nth-child(2) {
-			align-items: center;
-			justify-content: center;
-			background: hsla(0, 0%, 0%, 0.657);
-			padding: 2em;
-			padding-top: 3em;
-			
-			cite {
-				color: $globalFontColor;
-				font-style: normal;
+	}
+
+	&__copyright {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background: hsla(0, 0%, 0%, 0.657);
+		border-top: 1px solid rgba(51,51,51,.5);
+		padding-top: 2em;
+		padding-bottom: 3em;
+		gap: 1rem;
+		position: relative;
+		z-index: 2;
+
+		cite {
+			color: $globalFontColor;
+			font-style: normal;
+		}
+	}
+}
+
+
+@media screen and (min-width: 620px) and (max-width: 769px ) {
+	.footer {
+		&__body {
+			flex-wrap: wrap;
+			flex-grow: 3;
+			gap: 1rem;
+		}
+	}
+}
+
+@media screen and (min-width: 412px) and (max-width: 619px) {
+	.footer {
+		&__body {
+			flex-direction: column;
+
+			&__column {
+
+				div {
+					gap: 0;
+
+				}
+				&.social {
+					
+					ul {
+						display: flex;
+						flex-direction: row;
+						flex-wrap: nowrap;	
+					}	
+				}
 			}
 		}
 	}
-
-
-	&__legal {
-		text-align: center;
-    	padding-top: 2.625rem;
-    	padding-bottom: 2.625rem;
-    	border-top: 1px solid rgba(51,51,51,.5);
-    	background-color: rgba(0,0,0,.1);
-    	position: relative;
-    	z-index: 2;
-	}
 }
-
-@media screen and (max-width: 769px) {
-	.footer {
-		section:first-child {
-		flex-direction: column;
-		}
-
-		
-	}
-	
-
-}
-
-/*@media screen and (max-width: 412px) {
-	section:first-child {
-		flex-direction: column;
-
-        
-	}
-}*/

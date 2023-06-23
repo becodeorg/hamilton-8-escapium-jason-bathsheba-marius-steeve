@@ -76,36 +76,128 @@
                 justify-content: center;
                 align-items: center;
                 margin-bottom: 3.75rem;
+                list-style: none;
                 
-
-                button {
-                    display: inline-block;
-                    white-space: nowrap;
-                    vertical-align: middle;
-                    border: 2px solid $navFontColor;
-                    padding: 0.8rem 2rem;
-                    font-family: $fontTitleMonserrat;
-                    font-weight: 700;
-                    font-size: 1.05rem;
-                    line-height: 1.25;
-                    border-radius: 2.5rem;
-                    transition: all .5s ease;
-                    background-color: transparent;
-                    color: $whiteText;
-                    cursor: pointer;
-                    
-
-                    &:hover {
+                &__difficult{
+                    margin: 0 0.5rem;
+                    button {
+                        display: inline-block;
+                        white-space: nowrap;
+                        vertical-align: middle;
+                        border: 2px solid $navFontColor;
+                        padding: 0.8rem 2rem;
+                        font-family: $fontTitleMonserrat;
+                        font-weight: 700;
+                        font-size: 1.05rem;
+                        line-height: 1.25;
+                        border-radius: 2.5rem;
+                        transition: all .5s ease;
+                        background-color: transparent;
                         color: $whiteText;
-                        background-color: $navFontColor;
+                        cursor: pointer;
                         
 
+                        &:hover {
+                            color: $whiteText;
+                            background-color: $navFontColor;
+                            
+
+                        }
+
+                        &:active {
+                            color: $whiteText;
+                            background-color: $redColor;
+                            border-color: #c7070a;
+                        }
+                    }
+                }
+            }
+
+            .cardRoom {
+                display: grid;
+                grid-template-columns: repeat(4, 250px);
+                justify-content: center;
+                grid-gap: 2rem;
+                justify-content: center;
+
+                .card{
+                    //align-self: center;
+                    //justify-self: center;
+                    height: 375px;
+                    min-width: 230px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: end;
+                    padding-left: 35px;
+                    box-shadow: 0 0 1em black;
+                    
+                }
+
+                .card__levels {
+                    position: relative;
+                    bottom: 130px;
+                    
+                    line-height: 1rem;
+                    font-size: $sizeParagraphBigScreen;
+
+                    i {
+                        color: #000000;
+                        margin-right: 0.3em;
+                       
+                    }
+                }
+                .card__name{
+                    font-family: $fontTitleMonserrat;
+                    font-size: 1.125rem;
+                    font-weight: 900;
+                    color: $whiteText;
+                    position: relative;
+                    bottom: 120px;
+                }
+
+                .card__description {
+                    display: flex;
+                    flex-direction: row;
+                    position: relative;
+                    bottom: 100px;
+                    div {
+                        color: #000000;
                     }
 
-                    &:active {
-                        color: $whiteText;
-                        background-color: $redColor;
-                        border-color: #c7070a;
+                    i {
+                        color: #000000;
+                        
+                    }
+
+                    p {
+                        color: #3C3F3E;
+                        font-weight: bold;
+            
+                    }
+                }
+
+            }
+            
+            &__navRoom {
+                padding-top: 2rem;
+                    
+
+                .pageList {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 160px;
+
+                    &__link {
+                        
+                        a {
+                            z-index: 2;
+                            color: #fff;
+                            background-color: #f60b0e;
+                            border-color: #f60b0e;
+                            text-transform: none;
+                        }
                     }
                 }
             }
@@ -113,10 +205,8 @@
     }
 }    
 
-.gridRoom {
-    height: 1200px;
-    position: relative;
-}
+
+
 
 
 @media (min-width: 992px){

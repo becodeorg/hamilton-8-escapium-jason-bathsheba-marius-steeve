@@ -9,32 +9,38 @@
 }
 
 @mixin flex-column-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 @mixin flex-row-center {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 @mixin flex-row-between {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @mixin petit-icon {
-    width: 20px;
+  width: 20px;
 }
 
 @mixin moyen-icon {
-    width: 50px;
+  width: 50px;
 }
 
 @mixin grand-icon {
-    width: 100px;
+  width: 100px;
+}
+
+@mixin separator($height, $width, $background) {
+  height: $height;
+  width: $width;
+  background: $background;
 }
