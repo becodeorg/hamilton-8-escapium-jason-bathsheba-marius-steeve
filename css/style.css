@@ -201,7 +201,7 @@ body p {
   flex-direction: column;
   background-color: hsla(0, 0%, 0%, 0.657);
   background-size: cover;
-  background-image: url("/image/gallery/footer-bg.jpg");
+  background-image: url("../image/gallery/footer-bg.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
@@ -354,6 +354,25 @@ body p {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+  }
+}
+@media screen and (max-width: 412px) {
+  .footer__body {
+    flex-direction: column;
+  }
+  .footer__body__column div {
+    gap: 0;
+  }
+  .footer__body__column.social ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .footer__body__column.social ul li a {
+    width: 1em;
+  }
+  .footer__body__column.social ul li a i {
+    font-size: 1em;
   }
 }
 .header_nav_container {

@@ -8,13 +8,13 @@ fetch("/rooms.json")
     });
 
 function generateRooms(json) {
-    for(let cards of json) {
+    for(const cards of json) {
     //
     const sectionCard = document.querySelector(".cardRoom");
     //const cardElement = document.createElement("article");
     //
-    const cardElement = document.createElement("article");
-    cardElement.style.backgroundImage ='url("' + cards["photos"][0] +'")';
+    const cardElement = document.createElement("div");
+    cardElement.style.backgroundImage ='linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)),url("' + cards["photos"][0] +'")';
     cardElement.style.backgroundPosition = '50%';
     cardElement.style.backgroundRepeat = 'no-repeat';
     cardElement.style.backgroundSize = 'cover';
