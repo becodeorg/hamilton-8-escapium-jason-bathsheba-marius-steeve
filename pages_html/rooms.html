@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"rel="stylesheet"/>
     <link rel="stylesheet" href="../css/style.css"/>
-    <script type="module" src="rooms.js"></script>
+    <script type="module" src="/rooms.js"></script>
     <script src="https://kit.fontawesome.com/9dacd2a25d.js" crossorigin="anonymous"></script>
     <title>Rooms</title>
   </head>
@@ -21,39 +21,39 @@
       <section class="homeRoom__section">
         <section class="homeRoom__section__container">
           <ul class="filter">
-            <li class="filterDifficult">
+            <li class="filter__difficult btnAll">
               <button>All</button>
             </li>
-            <li class="filterDifficult">
+            <li class="filter__difficult btnEasy">
               <button>Easy</button>
             </li>
-            <li class="filterDifficult">
+            <li class="filter__difficult btnNormal">
               <button>Normal</button>
             </li>
-            <li class="filterDifficult">
+            <li class="filter__difficult btnHardbtn">
               <button>Hard</button>
             </li>
           </ul>
-          <section class="gridRoom">
-            <article class="gridRoom__card">
 
-            </article>
+          <section class="homeRoom__section__container__gridRoom cardRoom ">
+            
           </section>
-          <nav class="roomNav">
-            <ul class="roomNav__pageList">
-              <li class="roomNav__pageList__link">
+
+          <nav class="homeRoom__section__container__navRoom">
+            <ul class="pageList">
+              <li class="pageList__link">
                 <a href="#">1</a>
               </li>
-              <li class="roomNav__pageList__link">
+              <li class="pageList__link">
                 <a href="#">2</a>
               </li>
-              <li class="roomNav__pageList__link">
+              <li class="pageList__link">
                 <a href="#">3</a>
               </li>
-              <li class="roomNav__pageList__link">
+              <li class="pageList__link">
                 <a href="#">...</a>
               </li>
-              <li class="roomNav__pageList__link">
+              <li class="pageList__link">
                 <a href="#">10</a>
               </li>
             </ul>
@@ -63,8 +63,8 @@
     </main>
 
     <footer class="footer">
-      <section>
-        <article>
+      <section class="footer__body">
+        <article class="footer__body__column address" >
           <span>01</span>
           <h4>Our Address</h4>
           <ul>
@@ -75,7 +75,7 @@
             <li>Tel: +1 800 900 1248</li>
           </ul>
         </article>
-        <article class="link">
+        <article class="footer__body__column link">
           <span>02</span>
           <h4>Useful Links</h4>
           <ul>
@@ -87,7 +87,7 @@
             <li><a href="#">contact</a></li>
           </ul>
         </article>
-        <article>
+        <article class="footer__body__column calendar">
           <span>03</span>
           <h4>Working Hours</h4>
           <div>
@@ -111,21 +111,21 @@
             </ul>
           </div>
         </article>
-        <article>
+        <article class="footer__body__column social">
           <span>04</span>
           <h4>Social Links</h4>
           <ul>
             <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
             <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
             <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-tripadvisor" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a></li>
             <li><a href="#"><i class="fa-brands fa-yelp"></i></a></li>
             <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
             <li><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
           </ul>
         </article>
       </section>
-      <section class="footer__legal">
+      <section class="footer__copyright">
         <figure>
           <img src="/image/logo/footer-logo.png" alt="logo">
         </figure>
