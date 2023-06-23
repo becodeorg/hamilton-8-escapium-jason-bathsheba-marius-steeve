@@ -1,26 +1,28 @@
 
+const reponse = await fetch("/rooms.json");
+const json = await reponse.json();
 
 
 fetch("/rooms.json")
     .then(response => response.json())
-    .then(json => {
-        generateRooms(json); // appel createRooms une fois les données récupérer
+    .then(cards => {
+        generateRooms(cards); 
     });
 
 function generateRooms(json) {
-    for(const cards of json) {
+    for(let cards of json) {
     //
     const sectionCard = document.querySelector(".cardRoom");
-    //const cardElement = document.createElement("article");
+
     //
-    const cardElement = document.createElement("div");
-    cardElement.style.backgroundImage ='linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)),url("' + cards["photos"][0] +'")';
+    const cardElement = document.createElement("article");
+    cardElement.style.backgroundImage ='linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),url("' + cards["photos"][0] +'")';
     cardElement.style.backgroundPosition = '50%';
     cardElement.style.backgroundRepeat = 'no-repeat';
     cardElement.style.backgroundSize = 'cover';
     cardElement.className = "card" + " all "; 
 
-    switch (cards['difficulty']){
+    /*switch (cards['difficulty']){
         case 1:
             cardElement.className += 'easy';
             break;
@@ -37,7 +39,7 @@ function generateRooms(json) {
             cardElement.className += 'hard';
             break;
 
-    }
+    }*/
 
 
     //
@@ -49,7 +51,7 @@ function generateRooms(json) {
         if (levels.children.length < cards['difficulty']){
             lock.style.color = '#F60B0E';
         }
-        levels.appendChild(lock);
+        levels.append(lock);
     }
     //
     const nomElement = document.createElement("p");
@@ -65,7 +67,8 @@ function generateRooms(json) {
     const userText = document.createElement("p");
     userText.innerText = cards['players'][0] + "-" + cards['players'][1];
     //
-    user.appendChild(userIcon, userText);
+    user.append(userIcon);
+    user.append(userText);
     //
     const time = document.createElement('div');
     const timeIcon = document.createElement('i');
@@ -73,7 +76,8 @@ function generateRooms(json) {
     const timeText = document.createElement('p');
     timeText.innerText = cards['minutes'];
     //
-    time.appendChild(timeIcon, timeText);
+    time.append(timeIcon);
+    time.append(timeText);
     //
     const location = document.createElement('div');
     const locationIcon = document.createElement('i');
@@ -81,37 +85,58 @@ function generateRooms(json) {
     const locationText = document.createElement('p');
     locationText.innerText = cards['location'];
     //
-    location.appendChild(locationIcon, locationText);
+    location.append(locationIcon);
+    location.append(locationText);
     //
     //
-    description.appendChild(user, time, location);
+    description.append(user);
+    description.append(time);
+    description.append(location);
     //
-    cardElement.appendChild(levels);
-    cardElement.appendChild(nomElement);
-    cardElement.appendChild(description);
+    cardElement.append(levels);
+    cardElement.append(nomElement);
+    cardElement.append(description);
     //
-    sectionCard.appendChild(cardElement);    
+    
+    //
+    sectionCard.append(cardElement);   
+    //
+     
     }
 }
 
-//generateRooms(json);
+generateRooms(json);
 
-const buttonAll = document.querySelector(".btnAll");
- 
- buttonAll.addEventListener("click", function () {
-     const allRoom = json.filter(function (json) {
-         return json.difficulty == 5;
-     });
-     document.querySelector(".fiches").innerHTML = "";
-     generateRooms(allRoom);
- });
+/*const filter = document.getElementsByTagName("input");
 
- const buttonEasy = document.querySelector(".btnEasy");
+for(let input of filter){
+    input.addEventListener('change', e=>{
+        for(let checkbox of input){
+            if(checkbox.checked){
+                checkbox.checked = false;
+            }
+        }
+        input.checked = true;
+    });
+}*/
+
+// Ajout du listener pour filtrer les pièces non abordables
+/*const btnEasy = document.querySelector(".easy");
+btnEasy.addEventListener("click", function () {
+   const easyFilter = pieces.filter(function (card) {
+       return card.difficulty == 2;
+   });
+   // Effacement de l'écran et regénération de la page avec les pièces filtrées uniquement
+  document.querySelector(".cardRoom").innerHTML = "";
+  generateRooms(easyFilter);
+});*/
+
+const btnEasy = document.querySelector(".easy");
  
- buttonEasy.addEventListener("click", function () {
-     const easyRoom = json.filter(function (json) {
-         return json.difficulty == 2;
+ btnEasy.addEventListener("click", function () {
+     const cardEasyRoom = cards.filter(function (card) {
+         return card.difficulty == 2;
      });
-     document.querySelector(".fiches").innerHTML = "";
-     generateRooms(easyRoom);
+     document.querySelector(".cardRoom").innerHTML = "";
+     generateRooms(cardEasyRoom);
  });

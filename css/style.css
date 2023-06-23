@@ -224,7 +224,7 @@ body p {
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  padding: 7rem 2rem 4rem 1rem;
+  padding: 7rem 7rem 4rem 8rem;
 }
 .footer__body__column {
   width: 40%;
@@ -295,7 +295,7 @@ body p {
   color: #fefefe;
 }
 .footer__body__column.social ul {
-  width: 100%;
+  width: 75%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -340,12 +340,13 @@ body p {
   .footer__body {
     flex-wrap: wrap;
     flex-grow: 3;
-    gap: 1rem;
+    gap: 5rem;
   }
 }
 @media screen and (min-width: 412px) and (max-width: 619px) {
   .footer__body {
     flex-direction: column;
+    padding: 5rem 3rem 4rem 4rem;
   }
   .footer__body__column div {
     gap: 0;
@@ -359,6 +360,7 @@ body p {
 @media screen and (max-width: 412px) {
   .footer__body {
     flex-direction: column;
+    padding: 7rem 2rem 4rem 1rem;
   }
   .footer__body__column div {
     gap: 0;
@@ -369,10 +371,10 @@ body p {
     flex-wrap: nowrap;
   }
   .footer__body__column.social ul li a {
-    width: 1em;
+    width: 1rem;
   }
   .footer__body__column.social ul li a i {
-    font-size: 1em;
+    font-size: 1rem;
   }
 }
 .header_nav_container {
@@ -740,11 +742,6 @@ body p {
   color: white;
   background-color: #777;
 }
-.homeRoom__section__container .filter__difficult button:active {
-  color: white;
-  background-color: #f60b0e;
-  border-color: #c7070a;
-}
 .homeRoom__section__container .cardRoom {
   display: grid;
   grid-template-columns: repeat(4, 250px);
@@ -763,12 +760,12 @@ body p {
 }
 .homeRoom__section__container .cardRoom .card__levels {
   position: relative;
-  bottom: 130px;
+  bottom: 100px;
   line-height: 1rem;
   font-size: 16px;
 }
 .homeRoom__section__container .cardRoom .card__levels i {
-  color: #000000;
+  color: #717171;
   margin-right: 0.3em;
 }
 .homeRoom__section__container .cardRoom .card__name {
@@ -777,22 +774,30 @@ body p {
   font-weight: 900;
   color: white;
   position: relative;
-  bottom: 120px;
+  bottom: 80px;
 }
 .homeRoom__section__container .cardRoom .card__description {
+  width: 150px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
   position: relative;
-  bottom: 100px;
+  bottom: 50px;
 }
 .homeRoom__section__container .cardRoom .card__description div {
-  color: #000000;
+  display: flex;
+  flex-direction: row;
+  gap: 0.7rem;
 }
 .homeRoom__section__container .cardRoom .card__description i {
-  color: #000000;
+  color: #fefefe;
 }
 .homeRoom__section__container .cardRoom .card__description p {
-  color: #3C3F3E;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  color: #717171;
   font-weight: bold;
 }
 .homeRoom__section__container__navRoom {
@@ -805,12 +810,24 @@ body p {
   align-items: center;
   margin-bottom: 160px;
 }
-.homeRoom__section__container__navRoom .pageList__link a {
-  z-index: 2;
-  color: #fff;
-  background-color: #f60b0e;
-  border-color: #f60b0e;
-  text-transform: none;
+.homeRoom__section__container__navRoom .pageList__link {
+  margin: 0 0.5rem;
+}
+.homeRoom__section__container__navRoom .pageList__link button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05rem;
+  border-radius: 3.5rem;
+  min-width: 50px;
+  min-height: 50px;
+  padding: 0.8rem;
+  color: white;
+  background-color: transparent;
+  border: 2px solid #777;
+}
+.homeRoom__section__container__navRoom .pageList__link p {
+  color: white;
+  font-size: 1.05rem;
+  word-spacing: 1rem;
 }
 
 @media (min-width: 992px) {
