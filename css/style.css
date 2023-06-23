@@ -86,7 +86,6 @@ body p {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
-  position: relative;
   bottom: 0;
 }
 .footer span, .footer h4, .footer li, .footer a {
@@ -100,16 +99,16 @@ body p {
 .footer li {
   font-family: "Hind", sans-serif;
 }
-.footer section {
+.footer__body {
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  padding: 8rem 0rem 8rem 5rem;
+  padding: 7rem 2rem 4rem 1rem;
 }
-.footer section article {
-  width: 100%;
+.footer__body__column {
+  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -117,29 +116,31 @@ body p {
   gap: 1em;
   background: none;
 }
-.footer section article div {
+.footer__body__column div {
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 5vw;
+  position: relative;
 }
-.footer section article div ul {
+.footer__body__column div ul {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  white-space: nowrap;
 }
-.footer section article ul, .footer section article h4 {
+.footer__body__column ul, .footer__body__column h4 {
   margin-left: 1.5rem;
 }
-.footer section article ul li, .footer section article h4 li {
+.footer__body__column ul li, .footer__body__column h4 li {
   color: #717171;
 }
-.footer section article ul li em, .footer section article h4 li em {
+.footer__body__column ul li em, .footer__body__column h4 li em {
   color: white;
 }
-.footer section article span {
+.footer__body__column span {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -147,88 +148,95 @@ body p {
   gap: 1em;
   color: #717171;
 }
-.footer section article span::after {
+.footer__body__column span::after {
   content: "";
   width: 2em;
   height: 2px;
   border-radius: 5px;
   background: #f60b0e;
 }
-.footer section article:first-child ul li:first-child, .footer section article:first-child ul li:nth-child(4) {
+.footer__body__column:first-child ul li:first-child, .footer__body__column:first-child ul li:nth-child(4) {
   margin-top: 1em;
 }
-.footer section article.link ul {
+.footer__body__column.link ul {
   display: flex;
   flex-direction: column;
   gap: 1em;
   margin-top: 2em;
+  padding: 0;
 }
-.footer section article.link ul a {
+.footer__body__column.link ul a {
   color: #717171;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 1px;
   font-size: 0.8em;
 }
-.footer section article.link ul a:hover {
+.footer__body__column.link ul a:hover {
   color: #fefefe;
 }
-.footer section article:last-child ul {
-  width: 70%;
+.footer__body__column.social ul {
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 1em;
+  gap: 0.5rem;
+  position: relative;
 }
-.footer section article:last-child ul li a {
-  width: 2em;
+.footer__body__column.social ul li a {
+  width: 3rem;
   aspect-ratio: 1/1;
   background: transparent;
   border-radius: 50px;
   transition: all 0.5s ease;
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #1b1b1b;
 }
-.footer section article:last-child ul li a:hover {
+.footer__body__column.social ul li a:hover {
   background: #f60b0e;
   color: white;
 }
-.footer section:nth-child(2) {
+.footer__copyright {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: hsla(0, 0%, 0%, 0.657);
-  padding: 2em;
-  padding-top: 3em;
-}
-.footer section:nth-child(2) cite {
-  color: #717171;
-  font-style: normal;
-}
-.footer__legal {
-  text-align: center;
-  padding-top: 2.625rem;
-  padding-bottom: 2.625rem;
   border-top: 1px solid rgba(51, 51, 51, 0.5);
-  background-color: rgba(0, 0, 0, 0.1);
+  padding-top: 2em;
+  padding-bottom: 3em;
+  gap: 1rem;
   position: relative;
   z-index: 2;
 }
+.footer__copyright cite {
+  color: #717171;
+  font-style: normal;
+}
 
-@media screen and (max-width: 769px) {
-  .footer section:first-child {
-    flex-direction: column;
+@media screen and (min-width: 620px) and (max-width: 769px) {
+  .footer__body {
+    flex-wrap: wrap;
+    flex-grow: 3;
+    gap: 1rem;
   }
 }
-/*@media screen and (max-width: 412px) {
-	section:first-child {
-		flex-direction: column;
-
-
-	}
-}*/
+@media screen and (min-width: 412px) and (max-width: 619px) {
+  .footer__body {
+    flex-direction: column;
+  }
+  .footer__body__column div {
+    gap: 0;
+  }
+  .footer__body__column.social ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
 .nav {
   background-color: rgba(34, 34, 34, 0.3);
   display: flex;
@@ -392,8 +400,12 @@ body p {
   justify-content: center;
   align-items: center;
   margin-bottom: 3.75rem;
+  list-style: none;
 }
-.homeRoom__section__container .filter button {
+.homeRoom__section__container .filter__difficult {
+  margin: 0 0.5rem;
+}
+.homeRoom__section__container .filter__difficult button {
   display: inline-block;
   white-space: nowrap;
   vertical-align: middle;
@@ -409,40 +421,76 @@ body p {
   color: white;
   cursor: pointer;
 }
-.homeRoom__section__container .filter button:hover {
+.homeRoom__section__container .filter__difficult button:hover {
   color: white;
   background-color: #777;
 }
-.homeRoom__section__container .filter button:active {
+.homeRoom__section__container .filter__difficult button:active {
   color: white;
   background-color: #f60b0e;
   border-color: #c7070a;
 }
-
-.gridRoom {
-  height: 1200px;
-  position: relative;
-  padding-top: 2rem;
+.homeRoom__section__container .cardRoom {
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  justify-content: center;
+  grid-gap: 2rem;
+  justify-content: center;
 }
-
-.roomNav {
-  padding-top: 2rem;
-}
-.roomNav__pageList {
-  display: block;
-  list-style-type: disc;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
-  padding-left: 0;
-  list-style: none;
+.homeRoom__section__container .cardRoom .card {
+  height: 375px;
+  min-width: 230px;
   display: flex;
-  padding-left: 0;
-  border-radius: 1.25rem;
+  flex-direction: column;
+  justify-content: end;
+  padding-left: 35px;
+  box-shadow: 0 0 1em black;
 }
-.roomNav__pageList__link a {
+.homeRoom__section__container .cardRoom .card__levels {
+  position: relative;
+  bottom: 130px;
+  line-height: 1rem;
+  font-size: 16px;
+}
+.homeRoom__section__container .cardRoom .card__levels i {
+  color: #000000;
+  margin-right: 0.3em;
+}
+.homeRoom__section__container .cardRoom .card__name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 900;
+  color: white;
+  position: relative;
+  bottom: 120px;
+}
+.homeRoom__section__container .cardRoom .card__description {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  bottom: 100px;
+}
+.homeRoom__section__container .cardRoom .card__description div {
+  color: #000000;
+}
+.homeRoom__section__container .cardRoom .card__description i {
+  color: #000000;
+}
+.homeRoom__section__container .cardRoom .card__description p {
+  color: #3C3F3E;
+  font-weight: bold;
+}
+.homeRoom__section__container__navRoom {
+  padding-top: 2rem;
+}
+.homeRoom__section__container__navRoom .pageList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 160px;
+}
+.homeRoom__section__container__navRoom .pageList__link a {
   z-index: 2;
   color: #fff;
   background-color: #f60b0e;
