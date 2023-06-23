@@ -1,34 +1,91 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+    src="https://kit.fontawesome.com/9dacd2a25d.js"
+    crossorigin="anonymous"
+  ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/style.css" />
-    <title>Escapium</title>
-  </head>
-  <body>
-    <div class="yop">
-      <h1>BONJOUR</h1>
-    </div>
-  </body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+    integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm"
+    crossorigin="anonymous"
+  />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
     <link rel="stylesheet" href="../css/style.css" />
     <title>Escapium</title>
   </head>
   <body>
+    <header>
+      <div class="header_about">
+        <nav class="header_nav_container">
+          <figure>
+            <img src="../image/logo/logo.png" alt="logo escapium" />
+          </figure>
+          <div class="header_container_navlist_navlogin">
+            <nav class="header_nav_container_list_all_page">
+              <ul class="header_list_all_page">
+                <li class="header_item_all_page"><a href="">home</a></li>
+                <li class="header_item_all_page">
+                  <a href="">about</a>
+                </li>
+                <li class="header_item_all_page"><a href="">features</a></li>
+                <li class="header_item_all_page"><a href="">rooms</a></li>
+                <li class="header_item_all_page"><a href="">booking</a></li>
+                <li class="header_item_all_page"><a href="">blog</a></li>
+                <li class="header_item_all_page active"><a href="">contacts</a></li>
+                <li class="header_item_all_page burger_login">
+                  <a href=""><i class="fa-regular fa-user"></i>sign in</a>
+                </li>
+              </ul>
+            </nav>
+
+            <nav class="header_nav_container_login">
+              <ul class="header_list_login">
+                <li class="header_item_login">
+                  <a class="header_book_now" href="">
+                    <span>Book Now!</span>
+                    <i class="fa-regular fa-calendar-days"></i>
+                  </a>
+                </li>
+                <li class="header_item_login">
+                  <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                </li>
+                <div class="separator_nav_login"></div>
+                <li class="header_item_login">
+                  <a href=""><i class="fa-regular fa-user"></i>SIGN IN</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </nav>
+        <div class="header_about_container">
+          <h1>contact<span>.</span></h1>
+          <ul class="header_about_list">
+            <li class="header_about_list_item">
+              <a class="header_about_link" href="">home</a>
+            </li>
+            <li class="header_about_list_item">
+              <div class="header_about_separator"></div>
+            </li>
+            <li class="header_about_list_item">contact</li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <section class="contact__main">
 
       <div class="contact__main__section-content">
@@ -65,12 +122,12 @@
                     <div class="contact__section__form__name">
                       <input class="contact__section__form__input" type="text" placeholder="Name">
                     </div>
-                  </div>
+                  
 
-                  <div class="contact__section__form__email">
-                    <input class="contact__section__form__input" type="text" placeholder="Email Address" autofocus>
+                    <div class="contact__section__form__email">
+                      <input class="contact__section__form__input" type="text" placeholder="Email Address" autofocus>
+                    </div>
                   </div>
-
                   <div class="contact__section__form__message">
                     <textarea class="contact__section__form__input form__message" rows="8" placeholder="Your Message" style="height:200px" autofocus></textarea>
                   </div>
@@ -84,9 +141,9 @@
       </div>
     </section>
 
-    <footer id="footer">
-      <section>
-        <article>
+    <footer class="footer">
+      <section class="footer__body">
+        <article class="footer__body__column address">
           <span>01</span>
           <h4>Our Address</h4>
           <ul>
@@ -97,7 +154,7 @@
             <li>Tel: +1 800 900 1248</li>
           </ul>
         </article>
-        <article class="link">
+        <article class="footer__body__column link">
           <span>02</span>
           <h4>Useful Links</h4>
           <ul>
@@ -109,7 +166,7 @@
             <li><a href="#">contact</a></li>
           </ul>
         </article>
-        <article>
+        <article class="footer__body__column calendar">
           <span>03</span>
           <h4>Working Hours</h4>
           <div>
@@ -133,23 +190,39 @@
             </ul>
           </div>
         </article>
-        <article>
+        <article class="footer__body__column social">
           <span>04</span>
           <h4>Social Links</h4>
           <ul>
-            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-yelp"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa fa-tripadvisor" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-yelp"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+            </li>
           </ul>
         </article>
       </section>
-      <section>
+      <section class="footer__copyright">
         <figure>
-          <img src="/image/logo/footer-logo.png" alt="logo">
+          <img src="../image/logo/footer-logo.png" alt="logo" />
         </figure>
         <cite>Copyright 2022 Escapium | All Rights Reserved</cite>
       </section>

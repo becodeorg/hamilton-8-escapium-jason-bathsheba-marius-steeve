@@ -1,11 +1,11 @@
-#footer {
+.footer {
 	width: 100%;
 	
 	display: flex;
 	flex-direction: column;
 	background-color: hsla(0, 0%, 0%, 0.657);
 	background-size: cover;
-	background-image: url("/image/gallery/footer-bg.jpg");
+	background-image: url("../image/gallery/footer-bg.jpg");
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-blend-mode: multiply;
@@ -202,6 +202,40 @@
 						display: flex;
 						flex-direction: row;
 						flex-wrap: nowrap;	
+					}	
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 412px) {
+	.footer {
+		&__body {
+			flex-direction: column;
+
+			&__column {
+
+				div {
+					gap: 0;
+
+				}
+				&.social {
+					
+					ul {
+						display: flex;
+						flex-direction: row;
+						flex-wrap: nowrap;
+						
+						li {
+
+							a {
+								width: 1em;
+
+								i {
+									font-size: 1em;
+								}
+							}
+						}
 					}	
 				}
 			}
