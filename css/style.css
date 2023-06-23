@@ -937,6 +937,92 @@ p {
     overflow: auto;
   }
 }
+@media screen and (min-width: 769px) {
+  .homepage__contact__section__map__map #map {
+    height: 100%;
+  }
+  .homepage__contact__section__form {
+    max-width: 550px;
+    padding-left: 55px;
+  }
+  .homepage__contact__section__map {
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .homepage__contact__section__map__map {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .homepage__contact__button {
+    color: #fff;
+    font-weight: 700;
+    background-color: transparent;
+    background-image: none;
+    border: 2px solid transparent;
+    border-color: #404040;
+    padding: 1rem 2.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+  }
+  .homepage__contact__button:hover {
+    color: #fff;
+    background-color: #404040;
+    border-color: #404040;
+  }
+  .homepage__contact__getintouch {
+    max-width: 50%;
+    flex: 0 0 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .homepage__contact__getintouch__title {
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .homepage__contact__form__message {
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (max-width: 412px) {
+  .homepage__contact__button {
+    color: #fff;
+    font-weight: 700;
+    background-color: transparent;
+    background-image: none;
+    border: 2px solid transparent;
+    border-color: #404040;
+    padding: 1rem 2.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+  }
+  .homepage__contact__button:hover {
+    color: #fff;
+    background-color: #404040;
+    border-color: #404040;
+  }
+  .homepage__contact__getintouch {
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .homepage__contact__getintouch__title {
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .homepage__contact__form__message {
+    margin-bottom: 3rem;
+  }
+}
 .rooms .banRoom {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("/image/gallery/slide-1.jpg");
   background-position: center;
