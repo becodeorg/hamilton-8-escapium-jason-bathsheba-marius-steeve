@@ -76,7 +76,7 @@ body p {
     margin-bottom: 0.5rem;
   }
 }
-.footer {
+#footer {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -89,18 +89,18 @@ body p {
   position: relative;
   bottom: 0;
 }
-.footer span, .footer h4, .footer li, .footer a {
+#footer span, #footer h4, #footer li, #footer a {
   color: white;
   list-style: none;
   text-decoration: none;
 }
-.footer h4 {
+#footer h4 {
   font-family: "Montserrat", sans-serif;
 }
-.footer li {
+#footer li {
   font-family: "Hind", sans-serif;
 }
-.footer section {
+#footer section {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -108,7 +108,7 @@ body p {
   justify-content: center;
   padding: 8rem 0rem 8rem 5rem;
 }
-.footer section article {
+#footer section article {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -117,7 +117,7 @@ body p {
   gap: 1em;
   background: none;
 }
-.footer section article div {
+#footer section article div {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -125,21 +125,21 @@ body p {
   justify-content: flex-start;
   gap: 5vw;
 }
-.footer section article div ul {
+#footer section article div ul {
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
-.footer section article ul, .footer section article h4 {
+#footer section article ul, #footer section article h4 {
   margin-left: 1.5rem;
 }
-.footer section article ul li, .footer section article h4 li {
+#footer section article ul li, #footer section article h4 li {
   color: #717171;
 }
-.footer section article ul li em, .footer section article h4 li em {
+#footer section article ul li em, #footer section article h4 li em {
   color: white;
 }
-.footer section article span {
+#footer section article span {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -147,40 +147,40 @@ body p {
   gap: 1em;
   color: #717171;
 }
-.footer section article span::after {
+#footer section article span::after {
   content: "";
   width: 2em;
   height: 2px;
   border-radius: 5px;
   background: #f60b0e;
 }
-.footer section article:first-child ul li:first-child, .footer section article:first-child ul li:nth-child(4) {
+#footer section article:first-child ul li:first-child, #footer section article:first-child ul li:nth-child(4) {
   margin-top: 1em;
 }
-.footer section article.link ul {
+#footer section article.link ul {
   display: flex;
   flex-direction: column;
   gap: 1em;
   margin-top: 2em;
 }
-.footer section article.link ul a {
+#footer section article.link ul a {
   color: #717171;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 1px;
   font-size: 0.8em;
 }
-.footer section article.link ul a:hover {
+#footer section article.link ul a:hover {
   color: #fefefe;
 }
-.footer section article:last-child ul {
+#footer section article:last-child ul {
   width: 70%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1em;
 }
-.footer section article:last-child ul li a {
+#footer section article:last-child ul li a {
   width: 2em;
   aspect-ratio: 1/1;
   background: transparent;
@@ -192,22 +192,22 @@ body p {
   justify-content: center;
   background-color: #1b1b1b;
 }
-.footer section article:last-child ul li a:hover {
+#footer section article:last-child ul li a:hover {
   background: #f60b0e;
   color: white;
 }
-.footer section:nth-child(2) {
+#footer section:nth-child(2) {
   align-items: center;
   justify-content: center;
   background: hsla(0, 0%, 0%, 0.657);
   padding: 2em;
   padding-top: 3em;
 }
-.footer section:nth-child(2) cite {
+#footer section:nth-child(2) cite {
   color: #717171;
   font-style: normal;
 }
-.footer__legal {
+#footer__legal {
   text-align: center;
   padding-top: 2.625rem;
   padding-bottom: 2.625rem;
@@ -327,6 +327,196 @@ body p {
     width: 20px;
     display: flex;
     justify-content: flex-end;
+  }
+}
+h1, h2, h3 {
+  color: white;
+}
+
+p {
+  color: #717171;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  .contact__main-contact {
+    display: flex;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1140px;
+  }
+  .contact__main {
+    padding-bottom: 40px;
+  }
+  .contact__main__section-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .contact__main__container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .contact__main__list {
+    padding-top: 2rem;
+  }
+  .contact__main__title {
+    margin-bottom: 1.5rem;
+    font-size: 28px;
+  }
+  .contact__main__address {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  .contact__main__address__icon {
+    width: 30px;
+    color: white;
+    margin-right: 20px;
+  }
+  #contact__section__title {
+    font-size: 28px;
+  }
+  .contact__section {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 40px;
+  }
+  .contact__section__form__name, .contact__section__form__email {
+    margin-bottom: 3rem;
+  }
+  .contact__section__form__input {
+    display: block;
+    width: 100%;
+    height: calc(3.1rem + 4px);
+    padding: 0.8rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #fff;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: none;
+    border-bottom: 2px solid #404040;
+    border-radius: 0;
+    transition: border-color 0.15s ease-in-out;
+    outline: none;
+    font-family: "Hind", sans-serif;
+  }
+  .contact__section__form__button {
+    display: block;
+    padding: 1rem 2.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: #fff;
+    background-color: #f60b0e;
+    border-color: #f60b0e;
+    border: 2px solid transparent;
+    width: 100%;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .form__message {
+    resize: vertical;
+    overflow: auto;
+  }
+}
+@media screen and (max-width: 412px) {
+  .contact__main {
+    padding-bottom: 40px;
+  }
+  .contact__main__section-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .contact__main__container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .contact__main__list {
+    padding-top: 2rem;
+  }
+  .contact__main__title {
+    margin-bottom: 1.5rem;
+    font-size: 28px;
+  }
+  .contact__main__address {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  .contact__main__address__icon {
+    width: 30px;
+    color: white;
+    margin-right: 20px;
+  }
+  #contact__section__title {
+    font-size: 28px;
+  }
+  .contact__section {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 40px;
+  }
+  .contact__section__form__name, .contact__section__form__email {
+    margin-bottom: 3rem;
+  }
+  .contact__section__form__input {
+    display: block;
+    width: 100%;
+    height: calc(3.1rem + 4px);
+    padding: 0.8rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #fff;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: none;
+    border-bottom: 2px solid #404040;
+    border-radius: 0;
+    transition: border-color 0.15s ease-in-out;
+    outline: none;
+    font-family: "Hind", sans-serif;
+  }
+  .contact__section__form__button {
+    display: block;
+    padding: 1rem 2.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: #fff;
+    background-color: #f60b0e;
+    border-color: #f60b0e;
+    border: 2px solid transparent;
+    width: 100%;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .form__message {
+    resize: vertical;
+    overflow: auto;
   }
 }
 .rooms .banRoom {
