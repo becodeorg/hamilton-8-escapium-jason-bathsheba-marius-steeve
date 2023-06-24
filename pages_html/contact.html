@@ -1,18 +1,233 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+    src="https://kit.fontawesome.com/9dacd2a25d.js"
+    crossorigin="anonymous"
+  ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+    integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm"
+    crossorigin="anonymous"
+  />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
     <link rel="stylesheet" href="../css/style.css" />
     <title>Escapium</title>
   </head>
   <body>
-    <div class="yop">
-      <h1>BONJOUR</h1>
-    </div>
+    <header>
+      <div class="header_about">
+        <nav class="header_nav_container">
+          <figure>
+            <img src="../image/logo/logo.png" alt="logo escapium" />
+          </figure>
+          <div class="header_container_navlist_navlogin">
+            <nav class="header_nav_container_list_all_page">
+              <ul class="header_list_all_page">
+                <li class="header_item_all_page"><a href="">home</a></li>
+                <li class="header_item_all_page">
+                  <a href="">about</a>
+                </li>
+                <li class="header_item_all_page"><a href="">features</a></li>
+                <li class="header_item_all_page"><a href="">rooms</a></li>
+                <li class="header_item_all_page"><a href="">booking</a></li>
+                <li class="header_item_all_page"><a href="">blog</a></li>
+                <li class="header_item_all_page active"><a href="">contacts</a></li>
+                <li class="header_item_all_page burger_login">
+                  <a href=""><i class="fa-regular fa-user"></i>sign in</a>
+                </li>
+              </ul>
+            </nav>
+
+            <nav class="header_nav_container_login">
+              <ul class="header_list_login">
+                <li class="header_item_login">
+                  <a class="header_book_now" href="">
+                    <span>Book Now!</span>
+                    <i class="fa-regular fa-calendar-days"></i>
+                  </a>
+                </li>
+                <li class="header_item_login">
+                  <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                </li>
+                <div class="separator_nav_login"></div>
+                <li class="header_item_login">
+                  <a href=""><i class="fa-regular fa-user"></i>SIGN IN</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </nav>
+        <div class="header_about_container">
+          <h1>contact<span>.</span></h1>
+          <ul class="header_about_list">
+            <li class="header_about_list_item">
+              <a class="header_about_link" href="">home</a>
+            </li>
+            <li class="header_about_list_item">
+              <div class="header_about_separator"></div>
+            </li>
+            <li class="header_about_list_item">contact</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="contact__main">
+
+      <div class="contact__main__section-content">
+          <div class="contact__main-contact">
+            <div class="contact__main__container">
+                <h1 class="contact__main__title">Get in Touch</h1>
+                <p class="contact__main__para">If you are interested in working with us, please get in touch</p>
+                
+              <ul class="contact__main__list">
+                <li class="contact__main__address">
+                  <svg class="contact__main__address__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path fill="white" d="M565.6 36.2C572.1 40.7 576 48.1 576 56V392c0 10-6.2 18.9-15.5 22.4l-168 64c-5.2 2-10.9 2.1-16.1 .3L192.5 417.5l-160 61c-7.4 2.8-15.7 1.8-22.2-2.7S0 463.9 0 456V120c0-10 6.1-18.9 15.5-22.4l168-64c5.2-2 10.9-2.1 16.1-.3L383.5 94.5l160-61c7.4-2.8 15.7-1.8 22.2 2.7zM48 136.5V421.2l120-45.7V90.8L48 136.5zM360 422.7V137.3l-144-48V374.7l144 48zm48-1.5l120-45.7V90.8L408 136.5V421.2z"/></svg>
+                  <p class="contact__main__para">2390 RoadHill St., Suite 100 <br>North Downtown, NY 82153</p>
+                </li>
+
+                <li class="contact__main__address">
+                  <svg class="contact__main__address__icon" fill="white"  viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M8.194 1.156c1.169 1.612 2.563 3.694 4.175 6.237 0.406 0.688 0.344 1.512-0.181 2.481-0.2 0.406-0.706 1.331-1.512 2.787 0.887 1.25 2.238 2.787 4.056 4.6s3.331 3.169 4.538 4.056c1.45-0.85 2.381-1.369 2.788-1.575 0.525-0.281 1.031-0.425 1.512-0.425 0.363 0 0.688 0.081 0.969 0.244 1.856 1.131 3.956 2.525 6.294 4.175 0.444 0.325 0.694 0.769 0.756 1.331 0.063 0.569-0.113 1.169-0.512 1.819-0.2 0.281-0.525 0.694-0.969 1.244-0.444 0.544-1.113 1.231-2 2.056s-1.613 1.244-2.181 1.244h-0.063c-4.269-0.169-9.531-3.369-15.762-9.6-6.237-6.238-9.438-11.494-9.6-15.769 0-0.563 0.412-1.3 1.244-2.212 0.825-0.906 1.506-1.563 2.025-1.969 0.525-0.4 0.969-0.725 1.331-0.969 0.444-0.325 0.95-0.481 1.513-0.481 0.694 0 1.212 0.244 1.581 0.725zM6.194 2.425c-0.85 0.606-1.644 1.287-2.394 2.031-0.744 0.75-1.181 1.3-1.3 1.662 0.163 3.756 3.156 8.537 8.988 14.35s10.625 8.819 14.375 9.019c0.325-0.119 0.856-0.563 1.606-1.331s1.425-1.575 2.025-2.419c0.119-0.163 0.163-0.3 0.119-0.425-2.419-1.694-4.438-3.044-6.056-4.056-0.163 0-0.363 0.063-0.606 0.181-0.363 0.2-1.269 0.706-2.725 1.512l-1.031 0.606-1.031-0.669c-1.331-0.925-2.944-2.363-4.844-4.3-1.894-1.894-3.306-3.512-4.238-4.844l-0.725-0.969 0.606-1.088c0.806-1.45 1.313-2.363 1.512-2.725 0.119-0.244 0.181-0.444 0.181-0.606-1.438-2.294-2.769-4.313-3.981-6.050h-0.063c-0.156 0-0.3 0.044-0.419 0.119z"></path></svg>
+                  <p class="contact__main__para">+1800 900 1248</p>
+                </li>
+
+                <li class="contact__main__address">
+                  <svg class="contact__main__address__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">                 <g id="SVGRepo_iconCarrier"> <path d="M3.29289 5.29289C3.47386 5.11193 3.72386 5 4 5H20C20.2761 5 20.5261 5.11193 20.7071 5.29289M3.29289 5.29289C3.11193 5.47386 3 5.72386 3 6V18C3 18.5523 3.44772 19 4 19H20C20.5523 19 21 18.5523 21 18V6C21 5.72386 20.8881 5.47386 20.7071 5.29289M3.29289 5.29289L10.5858 12.5857C11.3668 13.3668 12.6332 13.3668 13.4142 12.5857L20.7071 5.29289" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </g>          
+                    </svg>
+                  <p class="white-text contact__main__para">info@escapium.com</p>
+                </li>
+              </ul>
+            </div>
+              <section class="contact__section">
+                <h2 id="contact__section__title">
+                  Contact Form
+                </h2>
+
+                <form action="#" class="contact__section__form">
+                  <div class="responsive__block">
+                    <div class="contact__section__form__name">
+                      <input class="contact__section__form__input" type="text" placeholder="Name">
+                    </div>
+                  
+
+                    <div class="contact__section__form__email">
+                      <input class="contact__section__form__input" type="text" placeholder="Email Address" autofocus>
+                    </div>
+                  </div>
+                  <div class="contact__section__form__message">
+                    <textarea class="contact__section__form__input form__message" rows="8" placeholder="Your Message" style="height:200px" autofocus></textarea>
+                  </div>
+                  <input type="button" value="Send Message" class="contact__section__form__button">
+                </form>
+              </section>
+          </div>
+            <section class="contact__section__map">
+              <div id="map"></div>
+            </section>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <section class="footer__body">
+        <article class="footer__body__column address">
+          <span>01</span>
+          <h4>Our Address</h4>
+          <ul>
+            <li>Escape Room Ltd.</li>
+            <li>2390 RoadHill St. Suite 100</li>
+            <li>North Downtown, NY 82153</li>
+            <li>Email: <em>info@escapium.com</em></li>
+            <li>Tel: +1 800 900 1248</li>
+          </ul>
+        </article>
+        <article class="footer__body__column link">
+          <span>02</span>
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">about</a></li>
+            <li><a href="#">gallery</a></li>
+            <li><a href="#">plan an event</a></li>
+            <li><a href="#">pricing packages</a></li>
+            <li><a href="#">faq</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </article>
+        <article class="footer__body__column calendar">
+          <span>03</span>
+          <h4>Working Hours</h4>
+          <div>
+            <ul>
+              <li>Monday:</li>
+              <li>Tuesday:</li>
+              <li>Wednesday:</li>
+              <li>Thursday:</li>
+              <li>Friday:</li>
+              <li>Saturday:</li>
+              <li>Sunday:</li>
+            </ul>
+            <ul>
+              <li>6pm - 11pm</li>
+              <li>5pm - 11pm</li>
+              <li>Closed</li>
+              <li>6pm - 11pm</li>
+              <li>2pm - 11pm</li>
+              <li>11am - 11pm</li>
+              <li>11am - 9pm</li>
+            </ul>
+          </div>
+        </article>
+        <article class="footer__body__column social">
+          <span>04</span>
+          <h4>Social Links</h4>
+          <ul>
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa fa-tripadvisor" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-yelp"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="footer__copyright">
+        <figure>
+          <img src="../image/logo/footer-logo.png" alt="logo" />
+        </figure>
+        <cite>Copyright 2022 Escapium | All Rights Reserved</cite>
+      </section>
+    </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbze0M9eZ8-Y5x6LLUMA5POhZO7i6_Jqw&callback=initMap&v=weekly" defer async></script>
+    <script src="../script-map.js"></script>
   </body>
 </html>

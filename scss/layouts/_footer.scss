@@ -5,7 +5,7 @@
 	flex-direction: column;
 	background-color: hsla(0, 0%, 0%, 0.657);
 	background-size: cover;
-	background-image: url("/image/gallery/footer-bg.jpg");
+	background-image: url("../image/gallery/footer-bg.jpg");
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-blend-mode: multiply;
@@ -31,7 +31,7 @@
 		flex-direction: row;
 		align-items: flex-start;
 		justify-content: center;
-		padding: 7rem 2rem 4rem 1rem;
+		padding: 7rem 7rem 4rem 8rem;
 		
 		&__column {
 			width: 40%;
@@ -125,7 +125,7 @@
 			
 			&.social {
 				ul {
-					width: 100%;
+					width: 75%;
 					display: flex;
 					flex-direction: row;
 					flex-wrap: wrap;
@@ -180,7 +180,7 @@
 		&__body {
 			flex-wrap: wrap;
 			flex-grow: 3;
-			gap: 1rem;
+			gap: 5rem;
 		}
 	}
 }
@@ -189,7 +189,7 @@
 	.footer {
 		&__body {
 			flex-direction: column;
-
+			padding: 5rem 0rem 4rem 1rem;
 			&__column {
 
 				div {
@@ -202,10 +202,58 @@
 						display: flex;
 						flex-direction: row;
 						flex-wrap: nowrap;	
+
+						li {
+
+							a {
+								width: 2.5rem;
+
+								i {
+									font-size: 1.5rem;
+								}
+							}
+						}
+					}	
+
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 412px) {
+	.footer {
+		&__body {
+			flex-direction: column;
+			padding: 7rem 2rem 4rem 1rem;
+			&__column {
+
+				div {
+					gap: 0;
+
+				}
+				&.social {
+					
+					ul {
+						width: 150%;
+						display: flex;
+						flex-direction: row;
+						flex-wrap: wrap;
+						
+						li {
+							width: 2rem;
+							a {
+								
+
+								i {
+									font-size: 1rem;
+								}
+							}
+						}
 					}	
 				}
 			}
 		}
 	}
+
 }
 
