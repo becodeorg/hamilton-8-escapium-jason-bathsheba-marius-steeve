@@ -1066,12 +1066,15 @@ p {
 }
 .homeRoom__section__container .filter {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 3.75rem;
 }
 .homeRoom__section__container .filter__difficult {
   margin: 0 0.5rem;
 }
 .homeRoom__section__container .filter__difficult button {
+  width: 100%;
   border: 2px solid #777;
   padding: 0.8rem 2rem;
   font-family: "Montserrat", sans-serif;
@@ -1208,7 +1211,7 @@ p {
     bottom: 15px;
   }
 }
-@media screen and (min-width: 621px) and (max-width: 768px) {
+@media screen and (min-width: 580px) and (max-width: 768px) {
   .homeRoom__section__container {
     max-width: 540px;
   }
@@ -1220,16 +1223,31 @@ p {
     width: 250px;
   }
 }
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 580px) {
   .homeRoom__section__container {
-    width: auto;
+    width: 100%;
+  }
+  .homeRoom__section__container .filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .homeRoom__section__container .filter__difficult {
+    flex-basis: 50%;
+    min-width: 50%;
+    margin: 0 0 0.5rem;
+    padding: 0 0.5rem;
+  }
+  .homeRoom__section__container .filter__difficult button {
+    width: 100%;
   }
   .homeRoom .cardRoom {
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    max-width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   }
   .homeRoom .cardRoom .card {
-    height: 600px;
-    width: auto;
+    height: 700px;
+    width: 100%;
   }
 }
 @media screen and (max-width: 412px) {
@@ -1238,11 +1256,14 @@ p {
   }
   .homeRoom__section__container .filter {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
   }
   .homeRoom__section__container .filter__difficult {
+    flex-basis: 50%;
+    min-width: 50%;
+  }
+  .homeRoom__section__container .filter__difficult button {
     width: 100%;
   }
   .homeRoom__section__container .cardRoom {
