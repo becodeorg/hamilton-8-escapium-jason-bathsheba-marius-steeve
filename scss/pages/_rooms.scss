@@ -258,6 +258,22 @@
             &__container {
                 max-width: 540px;
 
+                .filter {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+ 
+                     &__difficult {
+                         flex-basis: 50%;
+                         min-width: 50%;
+                         margin: 0 0 0.5rem;
+                         padding: 0 0.5rem;
+
+                         button {
+                             width: 100%;
+                         }
+                     }
+                 }
             }
 		}
 

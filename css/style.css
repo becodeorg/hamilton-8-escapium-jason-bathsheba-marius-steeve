@@ -1555,6 +1555,20 @@ p {
   .homeRoom__section__container {
     max-width: 540px;
   }
+  .homeRoom__section__container .filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .homeRoom__section__container .filter__difficult {
+    flex-basis: 50%;
+    min-width: 50%;
+    margin: 0 0 0.5rem;
+    padding: 0 0.5rem;
+  }
+  .homeRoom__section__container .filter__difficult button {
+    width: 100%;
+  }
   .homeRoom .cardRoom {
     grid-template-columns: repeat(2, 250px);
   }
