@@ -75,8 +75,14 @@
                         cursor: pointer;
 
                         &:hover {
-                            color: $whiteText;
                             background-color: $navFontColor;
+                        }
+                        &:active{
+                            border: 2px solid blue ;
+                        }
+                        &:focus{
+                            border: 2px solid rgb(179, 0, 0);
+                            background-color: $redColor;
                         }
                     }
                 }
@@ -92,8 +98,8 @@
                 .card{
                     //align-self: center;
                     //justify-self: center;
-                    height: 375px;
-                    width: 230px;
+                    height: 400px;
+                    width: 100%;
                     display: flex;
                     flex-direction: column;
                     justify-content: end;
@@ -107,7 +113,7 @@
                     bottom: 100px;
                     
                     line-height: 1rem;
-                    font-size: $sizeParagraphBigScreen;
+                    font-size: 1.4rem;
 
                     i {
                         color: $globalFontColor;
@@ -117,7 +123,7 @@
                 }
                 .card__name{
                     font-family: $fontTitleMonserrat;
-                    font-size: 1.125rem;
+                    font-size: 1.425rem;
                     font-weight: 900;
                     color: $whiteText;
                     position: relative;
@@ -148,7 +154,7 @@
 
                     p {
                         font-family: $fontTitleMonserrat;
-                        font-size: 0.9rem;
+                        font-size: 1.3rem;
                         color: $globalFontColor;
                         font-weight: bold;
             
@@ -181,7 +187,17 @@
                             color: $whiteText;
                             background-color: transparent;
                             border: 2px solid $navFontColor;
+
+                            &:hover{
+                                background-color: $navFontColor;
+                            }
+
+                            &:focus{
+                                border: 2px solid rgb(179, 0, 0);
+                                background-color: $redColor; 
+                            }
                         }
+
 
                         p {
                             color: $whiteText;
@@ -195,8 +211,23 @@
     }
 }    
 
-
-
+@media screen and (min-width: 993px) and (max-width: 1220px ) {
+	.homeRoom {
+		&__section {
+			
+            &__container {
+                .cardRoom {
+                    grid-template-columns: repeat(4, 200px);
+        
+                    .card {
+                        height: 330px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 @media screen and (min-width: 769px) and (max-width: 992px){
@@ -221,7 +252,7 @@
             
             .card {
                 height: 250px;
-                width: 160px;
+                width: 100%;
                 padding-left: 10px;
             }
 
@@ -282,7 +313,7 @@
 
             .card {
                 height: 330px;
-                width: 250px;
+                width: 100%;
             }
         }
 	}
@@ -317,10 +348,10 @@
 
         .cardRoom {
             max-width: 100%;
-            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
 
             .card {
-                height:700px;
+                height:600px;
                 width: 100%;
             }
         }
@@ -351,9 +382,9 @@
                 }
 
                 .cardRoom {
-                    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
                     .card {
-                        height: 400px;
+                        height: 450px;
                         width: auto;
                     }
                 }

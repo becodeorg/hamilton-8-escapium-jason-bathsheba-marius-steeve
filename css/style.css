@@ -1427,8 +1427,14 @@ p {
   cursor: pointer;
 }
 .homeRoom__section__container .filter__difficult button:hover {
-  color: white;
   background-color: #777;
+}
+.homeRoom__section__container .filter__difficult button:active {
+  border: 2px solid blue;
+}
+.homeRoom__section__container .filter__difficult button:focus {
+  border: 2px solid rgb(179, 0, 0);
+  background-color: #f60b0e;
 }
 .homeRoom__section__container .cardRoom {
   display: grid;
@@ -1438,8 +1444,8 @@ p {
   justify-content: center;
 }
 .homeRoom__section__container .cardRoom .card {
-  height: 375px;
-  width: 230px;
+  height: 400px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -1450,7 +1456,7 @@ p {
   position: relative;
   bottom: 100px;
   line-height: 1rem;
-  font-size: 16px;
+  font-size: 1.4rem;
 }
 .homeRoom__section__container .cardRoom .card__levels i {
   color: #717171;
@@ -1458,7 +1464,7 @@ p {
 }
 .homeRoom__section__container .cardRoom .card__name {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.425rem;
   font-weight: 900;
   color: white;
   position: relative;
@@ -1484,7 +1490,7 @@ p {
 }
 .homeRoom__section__container .cardRoom .card__description p {
   font-family: "Montserrat", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   color: #717171;
   font-weight: bold;
 }
@@ -1512,12 +1518,28 @@ p {
   background-color: transparent;
   border: 2px solid #777;
 }
+.homeRoom__section__container__navRoom .pageList__link button:hover {
+  background-color: #777;
+}
+.homeRoom__section__container__navRoom .pageList__link button:focus {
+  border: 2px solid rgb(179, 0, 0);
+  background-color: #f60b0e;
+}
 .homeRoom__section__container__navRoom .pageList__link p {
   color: white;
   font-size: 1.05rem;
   word-spacing: 1rem;
 }
 
+@media screen and (min-width: 993px) and (max-width: 1220px) {
+  .homeRoom__section__container .cardRoom {
+    grid-template-columns: repeat(4, 200px);
+  }
+  .homeRoom__section__container .cardRoom .card {
+    height: 330px;
+    width: 100%;
+  }
+}
 @media screen and (min-width: 769px) and (max-width: 992px) {
   .homeRoom__section {
     padding-top: 120px;
@@ -1532,7 +1554,7 @@ p {
   }
   .homeRoom .cardRoom .card {
     height: 250px;
-    width: 160px;
+    width: 100%;
     padding-left: 10px;
   }
   .homeRoom .cardRoom .card__levels {
@@ -1574,7 +1596,7 @@ p {
   }
   .homeRoom .cardRoom .card {
     height: 330px;
-    width: 250px;
+    width: 100%;
   }
 }
 @media screen and (max-width: 580px) {
@@ -1597,10 +1619,10 @@ p {
   }
   .homeRoom .cardRoom {
     max-width: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
   }
   .homeRoom .cardRoom .card {
-    height: 700px;
+    height: 600px;
     width: 100%;
   }
 }
@@ -1621,10 +1643,10 @@ p {
     width: 100%;
   }
   .homeRoom__section__container .cardRoom {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   }
   .homeRoom__section__container .cardRoom .card {
-    height: 400px;
+    height: 450px;
     width: auto;
   }
 }

@@ -116,3 +116,8 @@ const btnAll = document.querySelector(".all");
         document.querySelector(".cardRoom").innerHTML = "";
      generateRoom(cardsHard);
     });
+
+    
+
+    
+    
