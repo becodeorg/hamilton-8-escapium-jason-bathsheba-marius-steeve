@@ -1735,6 +1735,177 @@ p {
     width: auto;
   }
 }
+.header .headerSlider .slide {
+  width: 100%;
+  height: 950px;
+}
+.header .headerSlider .slide__mist:after {
+  width: 100%;
+  height: 50%;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.header .headerSlider .slide__title {
+  position: relative;
+  top: 400px;
+  padding: 2rem;
+}
+.header__button {
+  position: absolute;
+  z-index: 10;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.header__button .btnHeader {
+  padding: 0;
+  margin: 0;
+  height: 20px;
+  width: 80px;
+  cursor: pointer;
+  position: relative;
+}
+.header__button .btnHeader:before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -1px;
+  background-color: hsla(0, 0%, 100%, 0.33);
+  height: 2px;
+  width: 50%;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.header__button .btnHeader:hover:before {
+  background-color: #fff;
+  width: 100%;
+}
+
+main {
+  font-size: 16px;
+  color: #717171;
+  font-size: "Montserrat", sans-serif;
+}
+main .singleRoom {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+main .singleRoom__section {
+  max-width: 1140px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+}
+main .singleRoom__section__container__bloc {
+  display: flex;
+  flex-direction: row;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+main .singleRoom__section__container__bloc__info {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+main .singleRoom__section__container__bloc__info .data {
+  margin-bottom: 3.375rem;
+}
+main .singleRoom__section__container__bloc__info .data__description {
+  display: flex;
+  flex-direction: row;
+  font-family: "Montserrat", sans-serif;
+  color: #717171;
+  text-align: center;
+}
+main .singleRoom__section__container__bloc__info .data__description .data__levels {
+  flex-grow: 1;
+  position: relative;
+  padding: 0.2rem 0;
+}
+main .singleRoom__section__container__bloc__info .data__description .data__user {
+  flex-grow: 1;
+  position: relative;
+  text-align: center;
+  padding: 0.2rem 0;
+  border-left: 1px solid #717171;
+}
+main .singleRoom__section__container__bloc__info .data__description .data__time {
+  flex-grow: 1;
+  position: relative;
+  padding: 0.2rem 0;
+  border-left: 1px solid #717171;
+}
+main .singleRoom__section__container__bloc__info .data__description .data__time i {
+  font-size: 20px;
+}
+main .singleRoom__section__container__bloc__info p {
+  font-size: "Montserrat", sans-serif;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+main .singleRoom__section aside {
+  flex-basis: 30%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+main .singleRoom__section aside ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+main .singleRoom__section aside ul li {
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+  padding: 0.75rem 0 0.75rem 36px;
+  position: relative;
+}
+main .singleRoom__section aside ul li i {
+  padding-right: 1rem;
+  color: white;
+}
+main .singleRoom__section aside ul li:nth-child(2) {
+  color: white;
+}
+main .singleRoom__section aside ul li:nth-child(3) {
+  color: white;
+}
+main .singleRoom__section aside button {
+  padding: 1rem 2.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 2rem;
+  color: white;
+  background-color: #f60b0e;
+  border: 2px solid #f60b0e;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+main .singleRoom__section aside button:hover {
+  color: white;
+  background-color: #d3080a;
+  border-color: #c7070a;
+}
+
 .header .headerSlider {
   width: 100%;
   height: 100%;
