@@ -1650,6 +1650,18 @@ p {
     width: auto;
   }
 }
+.header .headerSlider {
+  width: 100%;
+  height: 100%;
+}
+.header .headerSlider h1 {
+  color: silver;
+}
+.header .headerSlider .slide {
+  width: 100%;
+  height: 800px;
+}
+
 h1, h2, h3 {
   color: white;
 }
