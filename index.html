@@ -30,7 +30,7 @@
   <body>
     <header>
       <div class="header_container">
-        <!-- <nav class="header_nav_container">
+        <nav class="header_nav_container">
           <figure>
             <img src="./image/logo/logo.png" alt="logo escapium" />
           </figure>
@@ -39,10 +39,18 @@
               <ul class="header_list_all_page">
                 <li class="header_item_all_page active"><a href="">home</a></li>
                 <li class="header_item_all_page"><a href="">about</a></li>
-                <li class="header_item_all_page"><a href="">features</a></li>
-                <li class="header_item_all_page"><a href="">rooms</a></li>
-                <li class="header_item_all_page"><a href="">booking</a></li>
-                <li class="header_item_all_page"><a href="">blog</a></li>
+                <li class="header_item_all_page nav_more_content">
+                  <a href="">features</a>
+                </li>
+                <li class="header_item_all_page nav_more_content">
+                  <a href="">rooms</a>
+                </li>
+                <li class="header_item_all_page nav_more_content">
+                  <a href="">booking</a>
+                </li>
+                <li class="header_item_all_page nav_more_content">
+                  <a href="">blog</a>
+                </li>
                 <li class="header_item_all_page"><a href="">contacts</a></li>
                 <li class="header_item_all_page burger_login">
                   <a href=""><i class="fa-regular fa-user"></i>sign in</a>
@@ -58,7 +66,7 @@
                     <i class="fa-regular fa-calendar-days"></i>
                   </a>
                 </li>
-                <li class="header_item_login">
+                <li id="burgerIcon" class="header_item_login login_glass">
                   <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
                 </li>
                 <div class="separator_nav_login"></div>
@@ -67,8 +75,8 @@
                 </li>
               </ul>
             </nav>
-          </div> -->
-        <!-- </nav> -->
+          </div>
+        </nav>
         <div class="header-container-title-paragraphe">
           <div class="header_title_separator">
             <h1>
@@ -89,7 +97,7 @@
         </div>
       </div>
     </header>
-    <main>
+    <!-- <main>
       <section class="homepage__rooms"></section>
       <section class="homepage__about">
         <section class="about_section_how_to_play">
@@ -193,7 +201,7 @@
       </section>
 
       <section class="homepage__book"></section>
-    </main>
+    </main> -->
     <footer class="footer">
       <section class="footer__body">
         <article class="footer__body__column address">
@@ -280,14 +288,14 @@
         <cite>Copyright 2022 Escapium | All Rights Reserved</cite>
       </section>
     </footer>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbze0M9eZ8-Y5x6LLUMA5POhZO7i6_Jqw&callback=initMap&v=weekly"
       defer
       async
     ></script>
     <script src="script-map.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/carroussel.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/carroussel.js"></script>
   </body>
 </html>
