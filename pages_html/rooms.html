@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"rel="stylesheet"/>
     <link rel="stylesheet" href="../css/style.css"/>
-    <script type="module" src="/rooms.js"></script>
     <script src="https://kit.fontawesome.com/9dacd2a25d.js" crossorigin="anonymous"></script>
+    <script type="module" src="/js/rooms.js"></script>
     <title>Rooms</title>
   </head>
   <body class="rooms">
@@ -21,17 +21,17 @@
       <section class="homeRoom__section">
         <section class="homeRoom__section__container">
           <ul class="filter">
-            <li class="filter__difficult btnAll">
-              <button>All</button>
+            <li class="filter__difficult">
+              <button class="btn all">All</button>
             </li>
-            <li class="filter__difficult btnEasy">
-              <button>Easy</button>
+            <li class="filter__difficult">
+              <button class="btn easy">Easy</button>
             </li>
-            <li class="filter__difficult btnNormal">
-              <button>Normal</button>
+            <li class="filter__difficult">
+              <button class="btn normal">Normal</button>
             </li>
-            <li class="filter__difficult btnHardbtn">
-              <button>Hard</button>
+            <li class="filter__difficult">
+              <button class="btn hard">Hard</button>
             </li>
           </ul>
 
@@ -42,19 +42,19 @@
           <nav class="homeRoom__section__container__navRoom">
             <ul class="pageList">
               <li class="pageList__link">
-                <a href="#">1</a>
+                <button href="#">1</button>
               </li>
               <li class="pageList__link">
-                <a href="#">2</a>
+                <button href="#">2</butt>
               </li>
               <li class="pageList__link">
-                <a href="#">3</a>
+                <button href="#">3</button>
               </li>
               <li class="pageList__link">
-                <a href="#">...</a>
+                <p href="#">...</p>
               </li>
               <li class="pageList__link">
-                <a href="#">10</a>
+                <button href="#">10</button>
               </li>
             </ul>
           </nav>
@@ -133,4 +133,5 @@
       </section>
     </footer>
   </body>
+  
 </html>

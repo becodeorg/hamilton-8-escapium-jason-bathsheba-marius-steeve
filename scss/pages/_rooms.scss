@@ -1,8 +1,4 @@
 .rooms {
-   
-    
-
-
 .banRoom {
 
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.2)),url("/image/gallery/slide-1.jpg");
@@ -51,63 +47,38 @@
             margin-right: auto;
             margin-left: auto;
 
-            ul {
-                display: block;
-                list-style-type: disc;
-                margin-block-start: 1em;
-                margin-block-end: 1em;
-                margin-inline-start: 0px;
-                margin-inline-end: 0px;
-                padding-inline-start: 40px;
-                padding-left: 0;
-                list-style: none;
-
-                .filterDifficult {
-                    display: list-item;
-                    margin: 0  0.5rem;
-                    
-                }
-            }
-
             .filter {
                 display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
                 justify-content: center;
-                align-items: center;
+                flex-wrap: wrap;
                 margin-bottom: 3.75rem;
-                list-style: none;
+               
                 
                 &__difficult{
                     margin: 0 0.5rem;
+
                     button {
-                        display: inline-block;
-                        white-space: nowrap;
-                        vertical-align: middle;
+                        width: 100%;
                         border: 2px solid $navFontColor;
                         padding: 0.8rem 2rem;
                         font-family: $fontTitleMonserrat;
                         font-weight: 700;
                         font-size: 1.05rem;
-                        line-height: 1.25;
                         border-radius: 2.5rem;
                         transition: all .5s ease;
                         background-color: transparent;
                         color: $whiteText;
                         cursor: pointer;
-                        
 
                         &:hover {
-                            color: $whiteText;
                             background-color: $navFontColor;
-                            
-
                         }
-
-                        &:active {
-                            color: $whiteText;
+                        &:active{
+                            border: 2px solid blue ;
+                        }
+                        &:focus{
+                            border: 2px solid rgb(179, 0, 0);
                             background-color: $redColor;
-                            border-color: #c7070a;
                         }
                     }
                 }
@@ -123,8 +94,8 @@
                 .card{
                     //align-self: center;
                     //justify-self: center;
-                    height: 375px;
-                    min-width: 230px;
+                    height: 400px;
+                    width: 100%;
                     display: flex;
                     flex-direction: column;
                     justify-content: end;
@@ -135,42 +106,52 @@
 
                 .card__levels {
                     position: relative;
-                    bottom: 130px;
+                    bottom: 100px;
                     
                     line-height: 1rem;
-                    font-size: $sizeParagraphBigScreen;
+                    font-size: 1.4rem;
 
                     i {
-                        color: #000000;
+                        color: $globalFontColor;
                         margin-right: 0.3em;
                        
                     }
                 }
                 .card__name{
                     font-family: $fontTitleMonserrat;
-                    font-size: 1.125rem;
+                    font-size: 1.425rem;
                     font-weight: 900;
                     color: $whiteText;
                     position: relative;
-                    bottom: 120px;
+                    bottom: 80px;
                 }
 
                 .card__description {
+                    width: 150px;
                     display: flex;
                     flex-direction: row;
+                    flex-wrap: wrap;
+                    column-gap: 1rem;
+                    row-gap: 0.5rem;
                     position: relative;
-                    bottom: 100px;
+                    bottom: 50px;
+                    
+                    
                     div {
-                        color: #000000;
+                        display: flex;
+                        flex-direction: row;
+                        gap: 0.7rem;
                     }
 
                     i {
-                        color: #000000;
+                        color: $whiteBg;
                         
                     }
 
                     p {
-                        color: #3C3F3E;
+                        font-family: $fontTitleMonserrat;
+                        font-size: 1.3rem;
+                        color: $globalFontColor;
                         font-weight: bold;
             
                     }
@@ -190,13 +171,34 @@
                     margin-bottom: 160px;
 
                     &__link {
-                        
-                        a {
-                            z-index: 2;
-                            color: #fff;
-                            background-color: #f60b0e;
-                            border-color: #f60b0e;
-                            text-transform: none;
+                        margin: 0 0.5rem;
+
+                        button {
+                            font-family: $fontTitleMonserrat;
+                            font-size: 1.05rem;
+                            border-radius: 3.5rem;
+                            min-width: 50px;
+                            min-height: 50px;
+                            padding: 0.8rem ;
+                            color: $whiteText;
+                            background-color: transparent;
+                            border: 2px solid $navFontColor;
+
+                            &:hover{
+                                background-color: $navFontColor;
+                            }
+
+                            &:focus{
+                                border: 2px solid rgb(179, 0, 0);
+                                background-color: $redColor; 
+                            }
+                        }
+
+
+                        p {
+                            color: $whiteText;
+                            font-size: 1.05rem;
+                            word-spacing: 1rem;
                         }
                     }
                 }
@@ -205,11 +207,26 @@
     }
 }    
 
+@media screen and (min-width: 993px) and (max-width: 1220px ) {
+	.homeRoom {
+		&__section {
+			
+            &__container {
+                .cardRoom {
+                    grid-template-columns: repeat(4, 200px);
+        
+                    .card {
+                        height: 330px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
 
 
-
-
-@media (min-width: 992px){
+@media screen and (min-width: 769px) and (max-width: 992px){
 
     .homeRoom {
 
@@ -218,13 +235,156 @@
             padding-top: 120px;
             padding-bottom: 120px;
     
-        
-            &__section{
+            &__container{
 
                 max-width: 960px;
 
             } 
         }
+    
+        .cardRoom{
+            grid-template-columns: repeat(4, 160px);
+            grid: 1rem;
+            
+            .card {
+                height: 250px;
+                width: 100%;
+                padding-left: 10px;
+            }
+
+            .card__levels {
+                bottom: 50px;
+
+                i {
+                    font-size: $sizeParagrapheMobile;
+                }
+
+            }
+
+            .card__name {
+                bottom: 30px;
+                font-size: 0.85rem;
+
+            }
+
+            .card__description {
+                width: 100px;
+                left: 0;
+                bottom: 15px;
+            }
+            
+        }
+        
     }
 } 
-    
+
+@media screen and (min-width: 580px) and (max-width: 768px ) {
+	.homeRoom {
+		&__section {
+			
+            &__container {
+                max-width: 540px;
+
+                .filter {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+ 
+                     &__difficult {
+                         flex-basis: 50%;
+                         min-width: 50%;
+                         margin: 0 0 0.5rem;
+                         padding: 0 0.5rem;
+
+                         button {
+                             width: 100%;
+                         }
+                     }
+                 }
+            }
+		}
+
+        .cardRoom {
+            grid-template-columns: repeat(2, 250px);
+
+            .card {
+                height: 330px;
+                width: 100%;
+            }
+        }
+	}
+}
+   
+@media screen and (max-width: 580px) {
+	.homeRoom {
+		&__section {
+			
+            &__container {
+                width: 100%;
+
+                .filter {
+                    display: flex;
+                    flex-wrap: wrap;
+                   
+                    justify-content: center;
+ 
+                     &__difficult {
+                         flex-basis: 50%;
+                         min-width: 50%;
+                         margin: 0 0 0.5rem;
+                         padding: 0 0.5rem;
+ 
+                         button {
+                             width: 100%;
+                         }
+                     }
+                 }
+            }
+		}
+
+        .cardRoom {
+            max-width: 100%;
+            grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+
+            .card {
+                height:600px;
+                width: 100%;
+            }
+        }
+        
+	}
+}
+
+@media screen and (max-width: 412px) {
+	.homeRoom {
+		&__section {
+			
+            &__container {
+                width: auto;
+            
+                .filter {
+                   display: flex;
+                   flex-wrap: wrap;
+                   justify-content: center;
+
+                    &__difficult {
+                        flex-basis: 50%;
+                        min-width: 50%;
+
+                        button {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .cardRoom {
+                    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+                    .card {
+                        height: 450px;
+                        width: auto;
+                    }
+                }
+            }   
+        }    
+	}
+}

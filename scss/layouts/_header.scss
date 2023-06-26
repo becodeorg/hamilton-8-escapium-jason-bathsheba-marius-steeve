@@ -86,7 +86,7 @@
 
 @media only screen and (max-width: 768px) {
   .header_container {
-    height: 470px;
+    height: 350px;
     text-align: center;
     background: linear-gradient(
         180deg,
@@ -105,9 +105,10 @@
       align-items: center;
       gap: 0.8rem;
 
-      h1 {
-        font-size: $h1TitleMobile;
-        font-size: 44px;
+      .header_title_separator {
+        h1 {
+          font-size: $h1TitleMobile;
+        }
       }
 
       a {

@@ -78,6 +78,7 @@ const cardElement = document.createElement("article");
 }
 
 generateRoom(cards);
+generateRoom(cards);
 
 const btnAll = document.querySelector(".all");
     btnAll.addEventListener("click", function(){
@@ -85,6 +86,7 @@ const btnAll = document.querySelector(".all");
             return card.difficulty <= 5;
         });
         document.querySelector(".cardRoom").innerHTML = "";
+     generateRoom(cardsAll);
      generateRoom(cardsAll);
     });
 
@@ -97,6 +99,7 @@ const btnAll = document.querySelector(".all");
         });
         document.querySelector(".cardRoom").innerHTML = "";
      generateRoom(cardsEasy);
+     generateRoom(cardsEasy);
     });
 
     const btnNormal = document.querySelector(".normal");
@@ -106,6 +109,7 @@ const btnAll = document.querySelector(".all");
         });
         document.querySelector(".cardRoom").innerHTML = "";
      generateRoom(cardsNormal);
+     generateRoom(cardsNormal);
     });
 
     const btnHard = document.querySelector(".hard");
@@ -114,6 +118,7 @@ const btnAll = document.querySelector(".all");
             return card.difficulty == 4;
         });
         document.querySelector(".cardRoom").innerHTML = "";
+     generateRoom(cardsHard);
      generateRoom(cardsHard);
     });
 
