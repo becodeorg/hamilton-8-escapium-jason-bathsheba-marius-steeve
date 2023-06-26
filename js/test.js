@@ -1,32 +1,7 @@
 const reponse = await fetch("/rooms.json");
 const cards = await reponse.json();
 
-
-let posInitCarrousel = 0;
-let jsonSize = 0;
-let jsonFile;
-function setDynamic() {
-    fetch("/rooms.json")
-        .then(response => response.json())
-        .then(json => {
-            for (let room of json) { // pour chaque room du .json
-                if (room['name'] === postName) {
-                    roomDatas = room;
-                    jsonSize = json.length;
-                    jsonFile = json;
-                    generateRoom();
-                    if(window.innerWidth <= 650){
-                        generateRoom(posInitCarrousel,1);
-
-                    }else {
-                        generateRoom(posInitCarrousel, 3);
-                    }
-                }
-            }
-
-        });
-}
-function generateRoom(jsonFile){
+function generateRoom(cards){
     for (let i = 0; i < cards.length; i++) {
     const roomLevels = cards[i];
     const sectionCard = document.querySelector(".otherRoom");
