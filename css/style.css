@@ -343,7 +343,7 @@ body p {
     gap: 1rem;
   }
 }
-@media screen and (min-width: 412px) and (max-width: 619px) {
+@media screen and (max-width: 619px) {
   .footer__body {
     flex-direction: column;
   }
@@ -633,6 +633,43 @@ body p {
     padding: 3rem 0;
   }
 }
+.blog_main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.blog_main .blog_container_section {
+  color: white;
+}
+.blog_main .blog_container_section .blog_img_section {
+  width: 700px;
+  height: 440px;
+}
+.blog_main .blog_container_section .blog_container_article {
+  background-color: #242424;
+  width: 700px;
+  height: 440px;
+  text-align: left;
+}
+.blog_main .blog_container_section .blog_container_article .blog_container_sousTitre {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+}
+.blog_main .blog_container_section .blog_container_article .blog_container_sousTitre .blog_icons {
+  width: 20px;
+  margin: 10px 20px 0 20px;
+}
+.blog_main .blog_container_aside {
+  color: white;
+}
+.blog_main .blog_container_aside .blog_img_aside {
+  width: 150px;
+  height: 150px;
+}
+
 .rooms .banRoom {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("/image/gallery/slide-1.jpg");
   background-position: center;
