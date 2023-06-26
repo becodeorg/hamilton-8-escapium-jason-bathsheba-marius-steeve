@@ -1,106 +1,94 @@
-
-
-@media screen and (min-width:769px) {
-    .homepage__contact__section__map__map #map {
-        height:100%;
-    }
-.homepage__contact {
-
-
+@media screen and (min-width: 769px) {
+  .homepage__contact__section__map__map #map {
+    height: 100%;
+  }
+  .homepage__contact {
     &__section__form {
-        max-width: 550px;
-        padding-left: 55px;
+      max-width: 550px;
+      padding-left: 55px;
     }
     &__section__map {
-        display: flex;
-        margin-right: -15px;
-        margin-left: -15px;
-       
-        &__map {
-            flex: 0 0 50%;
-            max-width: 50%;
-        }
-        
-       
+      display: flex;
+      margin-right: -15px;
+      margin-left: -15px;
+
+      &__map {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
     }
-    
+
     &__button {
-        color: #fff;
-        font-weight: 700;
-        background-color: transparent;
-        background-image: none;
-        border: 2px solid transparent;
-        border-color: #404040;
-        padding: 1rem 2.5rem;
-        font-size: .875rem;
-        line-height: 1.5;
-        border-radius: 2rem;
-        cursor: pointer;
-        transition: all .15s ease-in-out;
+      color: #fff;
+      font-weight: 700;
+      background-color: transparent;
+      background-image: none;
+      border: 2px solid transparent;
+      border-color: #404040;
+      padding: 1rem 2.5rem;
+      font-size: 0.875rem;
+      line-height: 1.5;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: all 0.15s ease-in-out;
     }
     &__button:hover {
-        color: #fff;
-        background-color: #404040;
-        border-color: #404040;
+      color: #fff;
+      background-color: #404040;
+      border-color: #404040;
     }
     &__getintouch {
-        max-width:50%;
-        flex: 0 0 50%;
-        padding-right: 15px;
-        padding-left: 15px;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        &__title {
-            padding-top: 3rem;
-            margin-bottom:3rem;
-        }
+      max-width: 50%;
+      flex: 0 0 50%;
+      padding-right: 15px;
+      padding-left: 15px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      &__title {
+        padding-top: 3rem;
+        margin-bottom: 3rem;
+      }
     }
     &__form__message {
-        margin-bottom: 3rem;
+      margin-bottom: 3rem;
     }
+  }
 }
-}
-
 
 // MOBILE RESPONSIVE
-@media screen and (max-width:412px) {
-.homepage__contact {
-
-
-
-    
-    
+@media screen and (max-width: 412px) {
+  .homepage__contact {
     &__button {
-        color: #fff;
-        font-weight: 700;
-        background-color: transparent;
-        background-image: none;
-        border: 2px solid transparent;
-        border-color: #404040;
-        padding: 1rem 2.5rem;
-        font-size: .875rem;
-        line-height: 1.5;
-        border-radius: 2rem;
-        cursor: pointer;
-        transition: all .15s ease-in-out;
+      color: #fff;
+      font-weight: 700;
+      background-color: transparent;
+      background-image: none;
+      border: 2px solid transparent;
+      border-color: #404040;
+      padding: 1rem 2.5rem;
+      font-size: 0.875rem;
+      line-height: 1.5;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: all 0.15s ease-in-out;
     }
     &__button:hover {
-        color: #fff;
-        background-color: #404040;
-        border-color: #404040;
+      color: #fff;
+      background-color: #404040;
+      border-color: #404040;
     }
     &__getintouch {
-        padding-right: 15px;
-        padding-left: 15px;
-        padding-top: 30px;
-    padding-bottom: 30px;
-        &__title {
-            padding-top: 3rem;
-            margin-bottom:3rem;
-        }
+      padding-right: 15px;
+      padding-left: 15px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      &__title {
+        padding-top: 3rem;
+        margin-bottom: 3rem;
+      }
     }
     &__form__message {
-        margin-bottom: 3rem;
+      margin-bottom: 3rem;
     }
-}
+  }
 }

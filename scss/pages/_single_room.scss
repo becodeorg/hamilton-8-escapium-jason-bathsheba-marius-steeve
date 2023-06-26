@@ -1,4 +1,5 @@
 .header {
+<<<<<<< HEAD
     //@include separator(2px, 80px, $smallGreyBg);
 
     .navRoomSingle{
@@ -27,53 +28,77 @@
             top: 400px;
             padding: 2rem;
         }
+=======
+  //@include separator(2px, 80px, $smallGreyBg);
+  .headerSlider {
+    .slide {
+      width: 100%;
+      height: 950px;
+>>>>>>> 0d576585e470f8e3f23b754a5b927296f2050dc7
     }
+    .slide__mist:after {
+      //background-image:linear-gradient(180deg,transparent,#1b1b1b);
+      width: 100%;
+      height: 50%;
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    .slide__title {
+      position: relative;
+      top: 400px;
+      padding: 2rem;
+    }
+  }
 
-    &__button {
+  &__button {
+    position: absolute;
+    z-index: 10;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .btnHeader {
+      padding: 0;
+      margin: 0;
+      height: 20px;
+      width: 80px;
+      cursor: pointer;
+      position: relative;
+
+      &:before {
+        content: "";
+        display: block;
         position: absolute;
-        z-index: 10;
-        right: 30px;
+        right: 0;
         top: 50%;
-        transform: translateY(-50%);
-        list-style: none;
-        padding: 0;
-        margin: 0;
+        margin-top: -1px;
+        background-color: hsla(0, 0%, 100%, 0.33);
+        height: 2px;
+        width: 50%;
+        pointer-events: none;
+        transition: all 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+      }
 
-        .btnHeader {
-            padding: 0;
-            margin: 0;
-            height: 20px;
-            width: 80px;
-            cursor: pointer;        
-            position: relative;
-
-            &:before {
-                content: "";
-                display: block;
-                position: absolute;
-                right: 0;
-                top: 50%;
-                margin-top: -1px;
-                background-color: hsla(0,0%,100%,.33);
-                height: 2px;
-                width: 50%;
-                pointer-events: none;
-                transition: all .3s cubic-bezier(.86,0,.07,1);
-            }
-
-            &:hover:before{
-                background-color: #fff;
-                width: 100%;
-            }
-        }
+      &:hover:before {
+        background-color: #fff;
+        width: 100%;
+      }
     }
+  }
 }
 
 main {
-    font-size: $sizeParagraphBigScreen;
-    color: $globalFontColor;
-    font-size: $fontTitleMonserrat;
+  font-size: $sizeParagraphBigScreen;
+  color: $globalFontColor;
+  font-size: $fontTitleMonserrat;
 
+<<<<<<< HEAD
     .singleRoom{
         padding-top: 120px;
         padding-bottom: 120px;
@@ -222,10 +247,13 @@ main {
 
 .booked{
     font-family: $fontTitleMonserrat;
+=======
+  .singleRoom {
+>>>>>>> 0d576585e470f8e3f23b754a5b927296f2050dc7
     padding-top: 120px;
     padding-bottom: 120px;
-    background-color: $darkBg;
 
+<<<<<<< HEAD
     &__section{
         max-width: 1140px;
          margin-right: auto;
@@ -613,8 +641,110 @@ main {
                         }
                     }
                 }
+=======
+    &__section {
+      max-width: 1140px;
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+      display: flex;
+      flex-direction: row;
+
+      &__container {
+        &__bloc {
+          display: flex;
+          flex-direction: row;
+          margin-right: -15px;
+          margin-left: -15px;
+
+          &__info {
+            position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+
+            .data {
+              margin-bottom: 3.375rem;
+
+              &__description {
+                display: flex;
+                flex-direction: row;
+                font-family: $fontTitleMonserrat;
+                color: #717171;
+                text-align: center;
+
+                .data__levels {
+                  flex-grow: 1;
+                  position: relative;
+                  padding: 0.2rem 0;
+                }
+
+                .data__user {
+                  flex-grow: 1;
+                  position: relative;
+                  text-align: center;
+                  padding: 0.2rem 0;
+                  border-left: 1px solid $globalFontColor;
+                }
+
+                .data__time {
+                  flex-grow: 1;
+                  position: relative;
+                  padding: 0.2rem 0;
+                  border-left: 1px solid $globalFontColor;
+
+                  i {
+                    font-size: 20px;
+                  }
+                }
+              }
             }
+
+            p {
+              font-size: $fontTitleMonserrat;
+              margin-right: 1rem;
+              margin-bottom: 1rem;
+            }
+          }
         }
+      }
+
+      aside {
+        flex-basis: 30%;
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0 0 2.5rem;
+          font-family: $fontTitleMonserrat;
+          font-size: 12px;
+          text-transform: uppercase;
+
+          li {
+            border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+            padding: 0.75rem 0 0.75rem 36px;
+            position: relative;
+
+            i {
+              padding-right: 1rem;
+              color: $whiteText;
+>>>>>>> 0d576585e470f8e3f23b754a5b927296f2050dc7
+            }
+            &:nth-child(2) {
+              color: $whiteText;
+            }
+            &:nth-child(3) {
+              color: $whiteText;
+            }
+          }
+        }
+<<<<<<< HEAD
     }    
 } 
 
@@ -659,3 +789,315 @@ main {
         }
     } 
 }
+=======
+
+        button {
+          padding: 1rem 2.5rem;
+          font-weight: 700;
+          font-size: 0.875rem;
+          line-height: 1.5;
+          border-radius: 2rem;
+          color: $whiteText;
+          background-color: $redColor;
+          border: 2px solid $redColor;
+          font-family: $fontTitleMonserrat;
+          text-align: center;
+          white-space: nowrap;
+          vertical-align: middle;
+
+          &:hover {
+            color: $whiteText;
+            background-color: #d3080a;
+            border-color: #c7070a;
+          }
+        }
+      }
+    }
+  }
+}
+
+.booked {
+  font-family: $fontTitleMonserrat;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: $darkBg;
+
+  &__form {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    &__calendar {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+
+      &__content {
+        margin-left: auto;
+        margin-right: auto;
+
+        table {
+          display: table;
+          margin: 0;
+          padding: 0;
+          background: #242424;
+          text-indent: initial;
+          border-spacing: 2px;
+          width: 100%;
+          border: none;
+          border-bottom: 1px solid #373737;
+          transition: all 0.1s ease-out;
+          border-collapse: collapse;
+          // transition: background .15s ease-out, color .15s ease-out;
+
+          thead {
+            background: #202020;
+            color: $whiteText;
+            display: table-header-group;
+            vertical-align: middle;
+            border-color: inherit;
+
+            tr {
+              display: table-row;
+              vertical-align: inherit;
+              border-color: inherit;
+
+              th {
+                display: table-cell;
+                vertical-align: inherit;
+                text-align: center;
+                color: #999;
+                border: 1px solid #373737;
+                text-align: center;
+                position: relative;
+                font-size: 20px;
+                width: 14.285%;
+                border-width: 1px;
+                border-style: solid;
+                padding: 37px 0;
+                line-height: 1;
+
+                .arrowLeft {
+                  color: $whiteText;
+                  position: absolute;
+                  left: 30px;
+                  top: 30px;
+                  width: 50px;
+                  height: 30px;
+                }
+
+                h4 {
+                  font-size: 1.5rem;
+                  font-weight: 300;
+                  font-family: $fontTitleMonserrat;
+                  display: inline-block;
+                  text-transform: none;
+                  color: $whiteText;
+                }
+
+                .arrowRight {
+                  color: $whiteText;
+                  position: absolute;
+                  right: 30px;
+                  top: 30px;
+                  width: 50px;
+                  height: 30px;
+                }
+              }
+            }
+
+            .days {
+              background: #404040;
+              color: #999;
+              border-color: #404040;
+              text-transform: uppercase;
+
+              th {
+                padding: 22px 12px;
+                border-width: 1px;
+                border-style: solid;
+                font-size: 0.875rem;
+                font-weight: 700;
+                font-family: Montserrat, sans-serif;
+                color: #999;
+              }
+            }
+          }
+          tbody {
+            display: table-row-group;
+
+            tr {
+              display: table-row;
+
+              td:first-child {
+                border-left: 1px solid #373737;
+              }
+
+              td,
+              .prev-date {
+                //display: table-cell;
+                //vertical-align: inherit;
+                text-align: center;
+                overflow: hidden;
+                position: relative;
+                font-size: 20px;
+                color: #414141;
+                padding: 0;
+                border-right: 1px solid #373737;
+                border-bottom: 1px solid #373737;
+                border: 1px solid #373737;
+                //font-family: Montserrat,sans-serif;
+                height: 106px;
+
+                .date {
+                  cursor: not-allowed;
+                  background: #202020;
+                  color: $whiteText;
+                  //background: #242424;
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                  line-height: 106px;
+
+                  .number {
+                    display: inline-block;
+                    border-radius: 50%;
+                    width: 50px;
+                    height: 50px;
+                    line-height: 50px;
+                  }
+                }
+              }
+            }
+
+            .blockReservation {
+              background: $separatorBg;
+              color: $globalFontColor;
+
+              td {
+                padding: 30px;
+                text-align: left;
+                background-color: #373737;
+
+                &:first-child {
+                  border-right: 1px solid #373737;
+                }
+                &:last-child {
+                  border-right: 1px solid #373737;
+                }
+              }
+              &__availableAppointment {
+                font-size: 0.75rem;
+                line-height: 1.5em;
+                transform: scale(1);
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+                color: #000;
+                background: #fff;
+                padding: 35px;
+                height: 100%;
+
+                .h2Booked {
+                  text-align: center;
+                  color: #242424;
+                  font-size: 20px;
+                  margin: 0 0 1.2em;
+                  line-height: 1.4;
+
+                  h2 {
+                    text-align: center;
+                    color: #242424;
+                    font-size: 20px;
+                    margin: 0 0 1.2em;
+                    line-height: 1.4;
+                  }
+                }
+
+                .bookRoom {
+                  line-height: 1.8;
+                  color: #888;
+
+                  &__time {
+                    width: 60%;
+                    min-height: 80px;
+                    height: 71px;
+                    padding: 20px 0 0px 20px;
+                    box-sizing: border-box;
+                    float: left;
+                    line-height: 1;
+                    font-weight: 600;
+                    color: #555;
+                    //border-top: 1px solid #e0e0e0;
+
+                    &__title {
+                      margin: 0 0 10px;
+                      display: block;
+                      font-size: 1.125rem;
+                      color: $redColor;
+                    }
+
+                    &__icone {
+                      color: #555;
+                    }
+
+                    &__available {
+                      font-weight: 400;
+                      font-size: 0.75rem;
+                      display: block;
+                      line-height: 1.2em;
+                      letter-spacing: 0.2em;
+                      color: #9f9f9f;
+                      padding: 0.75em 0 0;
+                    }
+                  }
+
+                  &__button {
+                    padding: 10px 20px 20px 0;
+                    box-sizing: border-box;
+                    float: right;
+                    width: 40%;
+
+                    .button {
+                      border-color: $redColor;
+                      background: $redColor;
+                      float: right;
+                      margin: 0 0 0 10px;
+                      color: #fff;
+                      border-width: 1px;
+                      border-style: solid;
+                      font-weight: 700;
+                      font-family: $fontTitleMonserrat;
+                      text-align: center;
+                      user-select: none;
+                      border: 2px solid transparent;
+                      padding: 0.8rem 2rem;
+                      font-size: 0.75rem;
+                      line-height: 1.25;
+                      border-radius: 1.5rem;
+
+                      &:focus {
+                        border-color: #000000;
+                        background: #000000;
+                      }
+                    }
+
+                    .disabled {
+                      cursor: default;
+                      background: #eee;
+                      border-color: #ddd;
+                      color: #aaa;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+>>>>>>> 0d576585e470f8e3f23b754a5b927296f2050dc7
