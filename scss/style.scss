@@ -1,9 +1,9 @@
-@import "../scss/utils/variables.scss";
+@import "../scss/utils/variables";
 @import "../scss/utils/mixins";
 @import "../scss/utils/functions";
-@import "../scss/utils/variables.scss";
 @import "../scss/base/font";
 @import "../scss/base/reset";
+@import "../scss/base/autoSizeTitleParagraphes.scss";
 @import "../scss/components/buttons";
 @import "../scss/layouts/header";
 @import "../scss/layouts/footer";
@@ -17,3 +17,4 @@
 @import "../scss/pages/single_room";
 @import "../scss/themes/themes.scss";
 @import "../scss/vendors/vendors.scss";
+@import "../scss/pages/contact";
