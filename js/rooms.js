@@ -11,10 +11,11 @@ const sectionCard = document.querySelector(".cardRoom");
 const cardElement = document.createElement("article");
     cardElement.className = "card";
     cardElement.style.backgroundImage ='linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),url("' + roomLevels["photos"][0] +'")';
+    cardElement.href = '../pages_html/single_room.html?name=' + roomLevels['name'];
     cardElement.style.backgroundPosition = '50%';
     cardElement.style.backgroundRepeat = 'no-repeat';
     cardElement.style.backgroundSize = 'cover';
-    //cardElement.href = "url('../page_html/single_room.html')";
+    
 
 
         const levels = document.createElement("div");
