@@ -14,6 +14,7 @@ const cardElement = document.createElement("article");
     cardElement.style.backgroundPosition = '50%';
     cardElement.style.backgroundRepeat = 'no-repeat';
     cardElement.style.backgroundSize = 'cover';
+    //cardElement.href = "url('../page_html/single_room.html')";
 
 
         const levels = document.createElement("div");
