@@ -494,7 +494,7 @@
   }
 
   .about_testimonials {
-    padding: 3rem 1rem;
+    padding: 3rem 1.5rem;
     gap: 2rem;
 
     h2 {
@@ -557,6 +557,28 @@
   }
 }
 
+@media only screen and (max-width: 550px) {
+  .about_section_certificate {
+    .about_container_certificate {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+
+  .about_container_text_article {
+    h3 {
+      font-size: 1rem;
+    }
+  }
+
+  .about_testimonials {
+    .about_slide_container {
+      width: 350px;
+      height: 350px;
+    }
+  }
+}
+
 @media only screen and (max-width: 412px) {
   .header_about {
     background-size: 350%;
@@ -564,6 +586,14 @@
 
     .header_about_container {
       padding: 3rem 0;
+    }
+  }
+
+  .about_section_our_team {
+    .about_section_container_our_team {
+      padding: 1rem;
+      display: flex;
+      flex-flow: row wrap;
     }
   }
 }
