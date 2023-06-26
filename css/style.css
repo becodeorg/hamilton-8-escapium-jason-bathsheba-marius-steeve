@@ -1550,6 +1550,12 @@ body p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
+  top: 0;
+}
+.rooms .banRoom .navRooms {
+  position: absolute;
+  top: 0;
 }
 .rooms .banRoom h1 {
   font-family: "Montserrat", sans-serif;
@@ -1827,6 +1833,16 @@ body p {
     width: auto;
   }
 }
+.header {
+  color: white;
+}
+.header .navRoomSingle {
+  position: absolute;
+  z-index: 999;
+}
+.header .headerSlider {
+  position: relative;
+}
 .header .headerSlider .slide {
   width: 100%;
   height: 950px;
@@ -1845,7 +1861,65 @@ body p {
   top: 400px;
   padding: 2rem;
 }
-.header__button {
+.header .slide__mist:after {
+  width: 100%;
+  height: 50%;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.header .slide__title {
+  position: relative;
+  top: 400px;
+  padding: 2rem;
+}
+
+.header {
+  color: white;
+}
+.header .navRoomSingle {
+  position: absolute;
+  z-index: 999;
+}
+.header .headerSlider {
+  position: relative;
+}
+.header .headerSlider .slide {
+  width: 100%;
+  height: 950px;
+}
+.header .headerSlider .slide__mist:after {
+  width: 100%;
+  height: 50%;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.header .headerSlider .slide__title {
+  position: relative;
+  top: 400px;
+  padding: 2rem;
+}
+.header .slide__mist:after {
+  width: 100%;
+  height: 50%;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.header .slide__title {
+  position: relative;
+  top: 400px;
+  padding: 2rem;
+}
+
+.button {
   position: absolute;
   z-index: 10;
   right: 30px;
@@ -1855,7 +1929,7 @@ body p {
   padding: 0;
   margin: 0;
 }
-.header__button .btnHeader {
+.button .btnHeader {
   padding: 0;
   margin: 0;
   height: 20px;
@@ -1863,7 +1937,7 @@ body p {
   cursor: pointer;
   position: relative;
 }
-.header__button .btnHeader:before {
+.button .btnHeader:before {
   content: "";
   display: block;
   position: absolute;
@@ -1876,7 +1950,7 @@ body p {
   pointer-events: none;
   transition: all 0.3s cubic-bezier(0.86, 0, 0.07, 1);
 }
-.header__button .btnHeader:hover:before {
+.button .btnHeader:hover:before {
   background-color: #fff;
   width: 100%;
 }
@@ -1897,16 +1971,16 @@ main .singleRoom__section {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  display: flex;
-  flex-direction: row;
 }
 main .singleRoom__section__container__bloc {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
 }
 main .singleRoom__section__container__bloc__info {
+  flex: 0 0 66.66667%;
+  max-width: 66.66667%;
   position: relative;
   width: 100%;
   padding-right: 15px;
@@ -1948,14 +2022,16 @@ main .singleRoom__section__container__bloc__info p {
   margin-right: 1rem;
   margin-bottom: 1rem;
 }
-main .singleRoom__section aside {
-  flex-basis: 30%;
+main .singleRoom__section__container__bloc aside {
+  margin: 0;
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
   position: relative;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
 }
-main .singleRoom__section aside ul {
+main .singleRoom__section__container__bloc aside ul {
   list-style: none;
   padding: 0;
   margin: 0 0 2.5rem;
@@ -1963,22 +2039,23 @@ main .singleRoom__section aside ul {
   font-size: 12px;
   text-transform: uppercase;
 }
-main .singleRoom__section aside ul li {
+main .singleRoom__section__container__bloc aside ul li {
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
   padding: 0.75rem 0 0.75rem 36px;
   position: relative;
 }
-main .singleRoom__section aside ul li i {
+main .singleRoom__section__container__bloc aside ul li i {
   padding-right: 1rem;
   color: white;
 }
-main .singleRoom__section aside ul li:nth-child(2) {
+main .singleRoom__section__container__bloc aside ul li:nth-child(2) {
   color: white;
 }
-main .singleRoom__section aside ul li:nth-child(3) {
+main .singleRoom__section__container__bloc aside ul li:nth-child(3) {
   color: white;
 }
-main .singleRoom__section aside button {
+main .singleRoom__section__container__bloc aside button {
+  display: inline-block;
   padding: 1rem 2.5rem;
   font-weight: 700;
   font-size: 0.875rem;
@@ -1992,7 +2069,7 @@ main .singleRoom__section aside button {
   white-space: nowrap;
   vertical-align: middle;
 }
-main .singleRoom__section aside button:hover {
+main .singleRoom__section__container__bloc aside button:hover {
   color: white;
   background-color: #d3080a;
   border-color: #c7070a;
@@ -2002,26 +2079,51 @@ main .singleRoom__section aside button:hover {
   font-family: "Montserrat", sans-serif;
   padding-top: 120px;
   padding-bottom: 120px;
-  background-color: #222222;
 }
-.booked__form {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+.booked__section {
+  max-width: 1140px;
   margin-right: auto;
   margin-left: auto;
 }
-.booked__form__calendar {
+.booked__section__form {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.booked__section__form__calendar {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
 }
-.booked__form__calendar__content {
+.booked__section__form__calendar__content {
   margin-left: auto;
   margin-right: auto;
 }
-.booked__form__calendar__content table {
+.booked__section__form__calendar__content .defaultCalendar {
+  background: #404040;
+  display: inline-block;
+  margin: 0;
+  padding: 20px 24px;
+  color: #fff;
+  border-radius: 5px 5px 0 0;
+}
+.booked__section__form__calendar__content .defaultCalendar i {
+  font-size: 0.875rem;
+  margin: 0 10px 0 0;
+  position: relative;
+  color: #fff;
+}
+.booked__section__form__calendar__content .defaultCalendar select {
+  position: relative;
+  cursor: pointer;
+  background: transparent;
+  min-width: 200px;
+  border: none;
+  color: #a8a8a8;
+  font-family: "Montserrat", sans-serif;
+}
+.booked__section__form__calendar__content table {
   display: table;
   margin: 0;
   padding: 0;
@@ -2034,19 +2136,19 @@ main .singleRoom__section aside button:hover {
   transition: all 0.1s ease-out;
   border-collapse: collapse;
 }
-.booked__form__calendar__content table thead {
+.booked__section__form__calendar__content table thead {
   background: #202020;
   color: white;
   display: table-header-group;
   vertical-align: middle;
   border-color: inherit;
 }
-.booked__form__calendar__content table thead tr {
+.booked__section__form__calendar__content table thead tr {
   display: table-row;
   vertical-align: inherit;
   border-color: inherit;
 }
-.booked__form__calendar__content table thead tr th {
+.booked__section__form__calendar__content table thead tr th {
   display: table-cell;
   vertical-align: inherit;
   text-align: center;
@@ -2061,7 +2163,7 @@ main .singleRoom__section aside button:hover {
   padding: 37px 0;
   line-height: 1;
 }
-.booked__form__calendar__content table thead tr th .arrowLeft {
+.booked__section__form__calendar__content table thead tr th .arrowLeft {
   color: white;
   position: absolute;
   left: 30px;
@@ -2069,7 +2171,7 @@ main .singleRoom__section aside button:hover {
   width: 50px;
   height: 30px;
 }
-.booked__form__calendar__content table thead tr th h4 {
+.booked__section__form__calendar__content table thead tr th h4 {
   font-size: 1.5rem;
   font-weight: 300;
   font-family: "Montserrat", sans-serif;
@@ -2077,7 +2179,7 @@ main .singleRoom__section aside button:hover {
   text-transform: none;
   color: white;
 }
-.booked__form__calendar__content table thead tr th .arrowRight {
+.booked__section__form__calendar__content table thead tr th .arrowRight {
   color: white;
   position: absolute;
   right: 30px;
@@ -2085,13 +2187,13 @@ main .singleRoom__section aside button:hover {
   width: 50px;
   height: 30px;
 }
-.booked__form__calendar__content table thead .days {
+.booked__section__form__calendar__content table thead .days {
   background: #404040;
   color: #999;
   border-color: #404040;
   text-transform: uppercase;
 }
-.booked__form__calendar__content table thead .days th {
+.booked__section__form__calendar__content table thead .days th {
   padding: 22px 12px;
   border-width: 1px;
   border-style: solid;
@@ -2100,62 +2202,100 @@ main .singleRoom__section aside button:hover {
   font-family: Montserrat, sans-serif;
   color: #999;
 }
-.booked__form__calendar__content table tbody {
-  display: table-row-group;
+.booked__section__form__calendar__content table tbody td {
+  padding: 0 1.5rem;
+  border-right: 1px solid #373737;
+  border-bottom: 1px solid #373737;
+  border: 1px solid #373737;
 }
-.booked__form__calendar__content table tbody tr {
-  display: table-row;
-}
-.booked__form__calendar__content table tbody tr td:first-child {
-  border-left: 1px solid #373737;
-}
-.booked__form__calendar__content table tbody tr td,
-.booked__form__calendar__content table tbody tr .prev-date {
+.booked__section__form__calendar__content table tbody .weekOne {
   text-align: center;
   overflow: hidden;
   position: relative;
   font-size: 20px;
-  color: #414141;
   padding: 0;
   border-right: 1px solid #373737;
   border-bottom: 1px solid #373737;
   border: 1px solid #373737;
+  font-family: "Montserrat", sans-serif;
   height: 106px;
-}
-.booked__form__calendar__content table tbody tr td .date,
-.booked__form__calendar__content table tbody tr .prev-date .date {
-  cursor: not-allowed;
   background: #202020;
-  color: white;
-  display: block;
-  width: 100%;
-  height: 100%;
-  line-height: 106px;
+  color: #414141;
+  pointer-events: none;
 }
-.booked__form__calendar__content table tbody tr td .date .number,
-.booked__form__calendar__content table tbody tr .prev-date .date .number {
+.booked__section__form__calendar__content table tbody .weekTwo {
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  font-size: 20px;
+  padding: 0;
+  border-right: 1px solid #373737;
+  border-bottom: 1px solid #373737;
+  border: 1px solid #373737;
+  font-family: "Montserrat", sans-serif;
+  height: 106px;
+  color: #fff;
+}
+.booked__section__form__calendar__content table tbody .weekTwo .today .number {
+  border: 2px solid #f60b0e;
+  display: inline-block;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  color: #414141;
+  pointer-events: none;
+}
+.booked__section__form__calendar__content table tbody .weekTwo .active {
+  background-color: #373737;
+  pointer-events: none;
+}
+.booked__section__form__calendar__content table tbody .weekTwo .active .number {
+  display: inline-block;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  background: white;
+  color: #242424;
+}
+.booked__section__form__calendar__content table tbody .weekTwo .number {
   display: inline-block;
   border-radius: 50%;
   width: 50px;
   height: 50px;
   line-height: 50px;
 }
-.booked__form__calendar__content table tbody .blockReservation {
+.booked__section__form__calendar__content table tbody .weekTwo .number:hover, .booked__section__form__calendar__content table tbody .weekTwo .number :focus {
+  background: #f60b0e;
+}
+.booked__section__form__calendar__content table tbody .blockReservation {
   background: #333333;
   color: #717171;
 }
-.booked__form__calendar__content table tbody .blockReservation td {
+.booked__section__form__calendar__content table tbody .blockReservation td {
   padding: 30px;
   text-align: left;
   background-color: #373737;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  font-size: 20px;
+  border-right: 1px solid #373737;
+  border-bottom: 1px solid #373737;
+  border: 1px solid #373737;
+  font-family: "Montserrat", sans-serif;
+  height: 106px;
+  color: #fff;
 }
-.booked__form__calendar__content table tbody .blockReservation td:first-child {
+.booked__section__form__calendar__content table tbody .blockReservation td:first-child {
   border-right: 1px solid #373737;
 }
-.booked__form__calendar__content table tbody .blockReservation td:last-child {
+.booked__section__form__calendar__content table tbody .blockReservation td:last-child {
   border-right: 1px solid #373737;
 }
-.booked__form__calendar__content table tbody .blockReservation__availableAppointment {
+.booked__section__form__calendar__content table tbody .blockReservation__availableAppointment {
+  display: block;
   font-size: 0.75rem;
   line-height: 1.5em;
   transform: scale(1);
@@ -2166,45 +2306,52 @@ main .singleRoom__section aside button:hover {
   padding: 35px;
   height: 100%;
 }
-.booked__form__calendar__content table tbody .blockReservation__availableAppointment .h2Booked {
+.booked__section__form__calendar__content table tbody .blockReservation__availableAppointment .h2Booked {
   text-align: center;
   color: #242424;
   font-size: 20px;
   margin: 0 0 1.2em;
   line-height: 1.4;
 }
-.booked__form__calendar__content table tbody .blockReservation__availableAppointment .h2Booked h2 {
+.booked__section__form__calendar__content table tbody .blockReservation__availableAppointment .h2Booked h2 {
   text-align: center;
   color: #242424;
   font-size: 20px;
   margin: 0 0 1.2em;
   line-height: 1.4;
 }
-.booked__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom {
+.booked__section__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom {
   line-height: 1.8;
   color: #888;
 }
-.booked__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__time {
+.booked__section__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom hr {
+  position: relative;
+  left: 0;
+  width: 600px;
+}
+.booked__section__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__time {
+  margin: 10px 0px 10px 0px;
+  text-align: left;
   width: 60%;
   min-height: 80px;
   height: 71px;
-  padding: 20px 0 0px 20px;
+  padding: 10px 195px 0px 0px;
   box-sizing: border-box;
   float: left;
   line-height: 1;
   font-weight: 600;
   color: #555;
 }
-.booked__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__time__title {
+.booked__section__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__time__title {
   margin: 0 0 10px;
   display: block;
   font-size: 1.125rem;
   color: #f60b0e;
 }
-.booked__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__time__icone {
+.booked__section__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__time__icone {
   color: #555;
 }
-.booked__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__time__available {
+.booked__section__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__time__available {
   font-weight: 400;
   font-size: 0.75rem;
   display: block;
@@ -2213,13 +2360,18 @@ main .singleRoom__section aside button:hover {
   color: #9f9f9f;
   padding: 0.75em 0 0;
 }
-.booked__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__button {
-  padding: 10px 20px 20px 0;
+.booked__section__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__time .empty {
+  color: #f60b0e;
+  white-space: nowrap;
+}
+.booked__section__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__button {
+  padding: 20px 0px 20px 0;
   box-sizing: border-box;
   float: right;
   width: 40%;
 }
-.booked__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__button .button {
+.booked__section__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__button .buttonBook {
+  cursor: pointer;
   border-color: #f60b0e;
   background: #f60b0e;
   float: right;
@@ -2237,15 +2389,171 @@ main .singleRoom__section aside button:hover {
   line-height: 1.25;
   border-radius: 1.5rem;
 }
-.booked__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__button .button:focus {
+.booked__section__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__button .buttonBook:focus {
   border-color: #000000;
   background: #000000;
 }
-.booked__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__button .disabled {
+.booked__section__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__button .disabled {
   cursor: default;
   background: #eee;
   border-color: #ddd;
   color: #aaa;
+}
+.booked__section__form__calendar__content table tbody .weekThree {
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  font-size: 20px;
+  padding: 0;
+  border-right: 1px solid #373737;
+  border-bottom: 1px solid #373737;
+  border: 1px solid #373737;
+  font-family: "Montserrat", sans-serif;
+  height: 106px;
+  color: #fff;
+}
+.booked__section__form__calendar__content table tbody .weekThree .number {
+  display: inline-block;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+}
+.booked__section__form__calendar__content table tbody .weekThree .number:hover, .booked__section__form__calendar__content table tbody .weekThree .number :focus {
+  background: #f60b0e;
+}
+.booked__section__form__calendar__content table tbody .weekFour {
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  font-size: 20px;
+  padding: 0;
+  border-right: 1px solid #373737;
+  border-bottom: 1px solid #373737;
+  border: 1px solid #373737;
+  font-family: "Montserrat", sans-serif;
+  height: 106px;
+  color: #fff;
+}
+.booked__section__form__calendar__content table tbody .weekFour .unavailable {
+  background: #202020;
+  color: #f60b0e;
+  pointer-events: none;
+}
+.booked__section__form__calendar__content table tbody .weekFour .number {
+  display: inline-block;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+}
+.booked__section__form__calendar__content table tbody .weekFour .number:hover, .booked__section__form__calendar__content table tbody .weekFour .number :focus {
+  background: #f60b0e;
+}
+.booked__section__form__calendar__content table tbody .weekFive {
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  font-size: 20px;
+  padding: 0;
+  border-right: 1px solid #373737;
+  border-bottom: 1px solid #373737;
+  border: 1px solid #373737;
+  font-family: "Montserrat", sans-serif;
+  height: 106px;
+  color: #fff;
+}
+.booked__section__form__calendar__content table tbody .weekFive .nextMonth {
+  background: #202020;
+  color: #414141;
+  pointer-events: none;
+}
+.booked__section__form__calendar__content table tbody .weekFive .number {
+  display: inline-block;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+}
+.booked__section__form__calendar__content table tbody .weekFive .number:hover, .booked__section__form__calendar__content table tbody .weekFive .number :focus {
+  background: #f60b0e;
+}
+.booked__section__form:nth-child(2) {
+  color: white;
+}
+.booked__section__form:nth-child(3) {
+  color: white;
+}
+
+.other {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.other__bloc {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.other__bloc .otherRoom {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  grid-column: 2rem;
+  justify-content: center;
+  margin: 0 10% 100px 10%;
+}
+.other__bloc .otherRoom .card {
+  height: 450px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-left: 35px;
+  box-shadow: 0 0 1em black;
+}
+.other__bloc .otherRoom .card__levels {
+  position: relative;
+  bottom: 100px;
+  line-height: 1rem;
+  font-size: 1.4rem;
+}
+.other__bloc .otherRoom .card__levels i {
+  color: #717171;
+  margin-right: 0.3em;
+}
+.other__bloc .otherRoom .card__name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.425rem;
+  font-weight: 900;
+  color: white;
+  position: relative;
+  bottom: 80px;
+}
+.other__bloc .otherRoom .card__description {
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+  position: relative;
+  bottom: 50px;
+}
+.other__bloc .otherRoom .card__description div {
+  display: flex;
+  flex-direction: row;
+  gap: 0.7rem;
+}
+.other__bloc .otherRoom .card__description i {
+  color: #fefefe;
+}
+.other__bloc .otherRoom .card__description p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  color: #717171;
+  font-weight: bold;
 }
 
 #map {

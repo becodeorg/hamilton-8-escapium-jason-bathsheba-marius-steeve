@@ -8,15 +8,56 @@
     <link rel="stylesheet" href="../css/style.css"/>
     <script src="https://kit.fontawesome.com/9dacd2a25d.js" crossorigin="anonymous"></script>
     <script type="module" src="/js/singleRoom.js"></script>
+    <script type="module" src="/js/test.js"></script>
     <title>Single Room</title>
   </head>
     <body>
       
     <header class="header">
-      <section class="header__banniere headerSlider">
-        
+      <nav class="header_nav_container navRoomSingle">
+        <figure>
+          <img src="../image/logo/logo.png" alt="logo escapium" />
+        </figure>
+        <div class="header_container_navlist_navlogin">
+          <nav class="header_nav_container_list_all_page">
+            <ul class="header_list_all_page">
+              <li class="header_item_all_page"><a href="../index.html">home</a></li>
+              <li class="header_item_all_page">
+                <a href="">about</a>
+              </li>
+              <li class="header_item_all_page"><a href="#">features</a></li>
+              <li class="header_item_all_page active"><a href="../pages_html/rooms.html">rooms</a></li>
+              <li class="header_item_all_page"><a href="../pages_html/single_room.html">booking</a></li>
+              <li class="header_item_all_page"><a href="../pages_html/single_blog.html">blog</a></li>
+              <li class="header_item_all_page "><a href="../pages_html/contact.html">contacts</a></li>
+              <li class="header_item_all_page burger_login">
+                <a href=""><i class="fa-regular fa-user"></i>sign in</a>
+              </li>
+            </ul>
+          </nav>
+
+          <nav class="header_nav_container_login">
+            <ul class="header_list_login">
+              <li class="header_item_login">
+                <a class="header_book_now" href="">
+                  <span>Book Now!</span>
+                  <i class="fa-regular fa-calendar-days"></i>
+                </a>
+              </li>
+              <li class="header_item_login">
+                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+              </li>
+              <div class="separator_nav_login"></div>
+              <li class="header_item_login">
+                <a href=""><i class="fa-regular fa-user"></i>SIGN IN</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </nav>
+      <section class="header__banniere headerSlider">        
       </section>
-      <ul class="header__button">
+      <ul class="button">
         <li class="btnHeader slideOne"></li>
         <li class="btnHeader slideTwo"></li>
         <li class="btnHeader slideThree"></li>
@@ -27,310 +68,414 @@
 
       <section class="singleRoom">
         <section class="singleRoom__section">
-          <section class="singleRoom__section__container__bloc">
-            <section class="singleRoom__section__container__bloc__info">
-              <article class="data"></article>
-              <p>
-                Vivamus ultrices dapibus justo, vel pharetra nisi mattis sit amet. Integer faucibus varius mauris sit amet <br>
-                molestie. Integer finibus velit in eleifend sodales. Aenean pulvinar sapien vitae justo imperdiet dignissim.<br>
-                Integer facilisis magna felis, vel interdum ligula consectetur et. Quisque ac porttitor nisl.
-              </p>
-              <p>
-                Etiam pulvinar enim nec mi tincidunt, convallis hendrerit ligula interdum. Cras condimentum justo sed nunc<br>
-                cursus, ac euismod sem feugiat. In in maximus mauris. Vivamus eget erat non neque dignissim fermentum.<br>
-                Phasellus at dapibus tortor. Sed dapibus sagittis molestie. Donec ullamcorper, sapien eu commodo<br> 
-                pulvinar, magna ante pharetra nunc, ut elementum orci erat sed risus. Nunc vel tincidunt ex.
-              </p>
-              <p>
-                Aliquam in lectus sed velit viverra sodales ut sit amet enim. Nam sed justo dapibus, volutpat augue non,<br> 
-                pulvinar neque. Pellentesque volutpat augue ullamcorper ullamcorper tincidunt. Morbi id aliquam odio.<br>
-                Mauris posuere interdum tellus quis aliquet. In hac habitasse platea dictumst. Pellentesque eget<br>
-                sollicitudin sem, eget tincidunt purus. Nam efficitur felis quis neque malesuada sodales. Aenean sit<br> 
-                amet magna pellentesque, congue massa eu, pharetra leo.
-              </p>
+          <section class="singleRoom__section__container">
+            <section class="singleRoom__section__container__bloc">
+              <section class="singleRoom__section__container__bloc__info">
+                <article class="data">
+
+                </article>
+                <p>
+                  Vivamus ultrices dapibus justo, vel pharetra nisi mattis sit amet. Integer faucibus varius mauris sit amet <br>
+                  molestie. Integer finibus velit in eleifend sodales. Aenean pulvinar sapien vitae justo imperdiet dignissim.<br>
+                  Integer facilisis magna felis, vel interdum ligula consectetur et. Quisque ac porttitor nisl.
+                </p>
+                <p>
+                  Etiam pulvinar enim nec mi tincidunt, convallis hendrerit ligula interdum. Cras condimentum justo sed nunc<br>
+                  cursus, ac euismod sem feugiat. In in maximus mauris. Vivamus eget erat non neque dignissim fermentum.<br>
+                  Phasellus at dapibus tortor. Sed dapibus sagittis molestie. Donec ullamcorper, sapien eu commodo<br> 
+                  pulvinar, magna ante pharetra nunc, ut elementum orci erat sed risus. Nunc vel tincidunt ex.
+                </p>
+                <p>
+                  Aliquam in lectus sed velit viverra sodales ut sit amet enim. Nam sed justo dapibus, volutpat augue non,<br> 
+                  pulvinar neque. Pellentesque volutpat augue ullamcorper ullamcorper tincidunt. Morbi id aliquam odio.<br>
+                  Mauris posuere interdum tellus quis aliquet. In hac habitasse platea dictumst. Pellentesque eget<br>
+                  sollicitudin sem, eget tincidunt purus. Nam efficitur felis quis neque malesuada sodales. Aenean sit<br> 
+                  amet magna pellentesque, congue massa eu, pharetra leo.
+                </p>
+              </section>
+            
+              <aside >
+                <ul>
+                  <li>
+                    <i class="fa fa-phone" aria-hidden="true"></i> <span>+1800 900 1248</span>
+                  </li>
+                  <li>
+                    <i class="fa fa-envelope" aria-hidden="true"></i> <span>SUPPORT@ESCAPIUM.COM</span>
+                  </li>
+                  <li>
+                    <i class="fa fa-skype" aria-hidden="true"></i> <span>ESCAPIUM</span>
+                  </li>
+                  <li>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> <span>3031 NEW YORK ST, MIAMI, FL 33132</span>
+                  </li>
+                </ul>
+                <button>Book Now!</button>
+              </aside>
             </section>
           </section>
-          <aside>
-            <ul>
-              <li>
-                <i class="fa fa-phone" aria-hidden="true"></i> <span>+1800 900 1248</span>
-              </li>
-              <li>
-                <i class="fa fa-envelope" aria-hidden="true"></i> <span>SUPPORT@ESCAPIUM.COM</span>
-              </li>
-              <li>
-                <i class="fa fa-skype" aria-hidden="true"></i> <span>ESCAPIUM</span>
-              </li>
-              <li>
-                <i class="fa fa-map-marker" aria-hidden="true"></i> <span>3031 NEW YORK ST, MIAMI, FL 33132</span>
-              </li>
-            </ul>
-            <button>Book Now!</button>
-          </aside>
         </section>
       </section>
 
       <section class="booked">
-        <section class="booked__form">
-          <section class="booked__form__calendar">
-            <section class="booked__form__calendar__content">
-              <table>
-                <thead>
-                  <tr class="">
-                    <th colspan="7">
-                      <a href="#"class="arrowLeft"><i class="fa-solid fa-arrow-left-long"></i></a>      
-                      <h4>August 2017</h4>
-                      <a href="#"class="arrowRight"><i class="fa-solid fa-arrow-right-long"></i></a>
-                    </th>
-                  </tr>
-                  <tr class="days">
-                    <th>Mon</th>
-                    <th>Tue</th>
-                    <th>Wed</th>
-                    <th>Thu</th>
-                    <th>Fri</th>
-                    <th>Sat</th>
-                    <th>Sun</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="week">
-                    <td class="prev-month prev-date">
-                      <span class="date">
-                        <span class="number">31</span>
-                      </span>
-                    </td>
-                    <td class="prev-date">
-                      <span class="date">
-                        <span class="number">1</span>
-                      </span>
-                    </td>
-                    <td class="prev-date">
-                      <span class="date">
-                        <span class="number">2</span>
-                      </span>
-                    </td>
-                    <td class="prev-date">
-                      <span class="date">
-                        <span class="number">3</span>
-                      </span>
-                    </td>
-                    <td class="prev-date">
-                      <span class="date">
-                        <span class="number">4</span>
-                      </span>
-                    </td>
-                    <td class="prev-date">
-                      <span class="date">
-                        <span class="number">5</span>
-                      </span>
-                    </td>
-                    <td class="prev-date">
-                      <span class="date">
-                        <span class="number">6</span>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr class="week">
-                    <td class="today prev-date">
-                      <span class="date">
-                        <span class="number">7</span>
-                      </span>
-                    </td>
-                    <td class="active">
-                      <span class="date">
-                        <span class="number">8</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="date">
-                        <span class="number">9</span>
-                      </span>
-                    </td>
-                    <td >
-                      <span class="date">
-                        <span class="number">10</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="date">
-                        <span class="number">11</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="date">
-                        <span class="number">12</span>
-                      </span>
-                    </td>
-                    <td >
-                      <span class="date">
-                        <span class="number">13</span>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr class="blockReservation">
-                    <td colspan="7">
-                      <article class="blockReservation__availableAppointment">
-                        <div class ="h2Booked">
-                          <h2><span>Available Appointment on </span><strong>August 8, 2017</strong><span></span></h2>
-                        </div>
-                        <div class="bookRoom">
-                          <span class="bookRoom__time">
-                            <span class="bookRoom__time__title">Escape Room</span>
-                            <span class="bookRoom__time__icone"><i class="fa-sharp fa-solid fa-clock-nine"></i> 1:00 am – 2:00 am</span>
-                            <span class="bookRoom__time__available">1 space available</span>
-                          </span>
-                          <span class="bookRoom__button">
-                            <button class="button">Book Room</button>
-                          </span>
-                        </div>
-                        <div class="bookRoom">
-                          <span class="bookRoom__time">
-                            <span class="bookRoom__time__icone"><i class="fa-sharp fa-solid fa-clock-nine"></i> 1:00 am – 2:00 am</span>
-                            <span class="bookRoom__time__available">1 space available</span>
-                          </span>
-                          <span class="bookRoom__button">
-                            <button class="button">Book Room</button>
-                          </span>
-                        </div>
-                        <div class="bookRoom">
-                          <span class="bookRoom__time">
-                            <span class="bookRoom__time__icone"><i class="fa-sharp fa-solid fa-clock-nine"></i> 4:00 pm – 6:00 pm</span>
-                            <span class="bookRoom__time__available empty">0 spaces available</span>
-                          </span>
-                          <span class="bookRoom__button">
-                            <button class="button disabled" disabled>Unavailable</button>
-                          </span>
-                        </div>
-                        <div class="bookRoom">
-                          <span class="bookRoom__time">
-                            <span class="bookRoom__time__icone"><i class="fa-sharp fa-solid fa-clock-nine"></i> 1:00 am – 2:00 am</span>
-                            <span class="bookRoom__time__available">1 space available</span>
-                          </span>
-                          <span class="bookRoom__button">
-                            <button class="button">Book Room</button>
-                          </span>
-                        </div>
-                      </article>
-                    </td>
-                  </tr>
-                  <tr class="week">
-                    <td>
-                      <span class="date">
-                        <span class="number">14</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="date">
-                        <span class="number">15</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="date">
-                        <span class="number">16</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="date">
-                        <span class="number">17</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="date">
-                        <span class="number">18</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="date">
-                        <span class="number">19</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="date">
-                        <span class="number">20</span>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr class="week">
-                    <td>
-                      <span class="date">
-                        <span class="number">21</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="date">
-                        <span class="number">22</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="date">
-                        <span class="number">23</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="date">
-                        <span class="number">24</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="date">
-                        <span class="number">25</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="date">
-                        <span class="number">26</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="date">
-                        <span class="number">27</span>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr class="week">
-                    <td>
-                      <span class="date">
-                        <span class="number">28</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="date">
-                        <span class="number">29</span>
-                      </span>
-                    </td>
-                    <th>
-                      <span class="date">
-                        <span class="number">30</span>
-                      </span>
-                    </th>
-                    <td>
-                      <span class="date">
-                        <span class="number">31</span>
-                      </span>
-                    </td>
-                    <td class="next-month prev-date">
-                      <span class="date">
-                        <span class="number">1</span>
-                      </span>
-                    </td>
-                    <td class="next-month prev-date">
-                      <span class="date">
-                        <span class="number">2</span>
-                      </span>
-                    </td>
-                    <td class="next-month prev-date">
-                      <span class="date">
-                        <span class="number">3</span>
-                      </span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+        <section class="booked__section">
+          <section class="booked__section__form">
+            <section class="booked__section__form__calendar">
+              <section class="booked__section__form__calendar__content">
+                <div class="defaultCalendar">
+                  <p>
+                    <i class="fa-sharp fa-solid fa-calendar"></i>
+                    <select>
+                      <option>Default Calendar</option>
+                      <option>Room #1</option>
+                      <option>Room #2</option>
+                    </select>
+                  </p>
+                </div>
+                <table>
+                  <thead>
+                    <tr class="">
+                      <th colspan="7">
+                        <a href="#"class="arrowLeft"><i class="fa-solid fa-arrow-left-long"></i></a>      
+                        <h4>August 2017</h4>
+                        <a href="#"class="arrowRight"><i class="fa-solid fa-arrow-right-long"></i></a>
+                      </th>
+                    </tr>
+                    <tr class="days">
+                      <th>Mon</th>
+                      <th>Tue</th>
+                      <th>Wed</th>
+                      <th>Thu</th>
+                      <th>Fri</th>
+                      <th>Sat</th>
+                      <th>Sun</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="weekOne">
+                      <td class="prev-month prev-date">
+                        <span class="date">
+                          <span class="number">31</span>
+                        </span>
+                      </td>
+                      <td class="prev-date">
+                        <span class="date">
+                          <span class="number">1</span>
+                        </span>
+                      </td>
+                      <td class="prev-date">
+                        <span class="date">
+                          <span class="number">2</span>
+                        </span>
+                      </td>
+                      <td class="prev-date">
+                        <span class="date">
+                          <span class="number">3</span>
+                        </span>
+                      </td>
+                      <td class="prev-date">
+                        <span class="date">
+                          <span class="number">4</span>
+                        </span>
+                      </td>
+                      <td class="prev-date">
+                        <span class="date">
+                          <span class="number">5</span>
+                        </span>
+                      </td>
+                      <td class="prev-date">
+                        <span class="date">
+                          <span class="number">6</span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr class="weekTwo">
+                      <td class="today prev-date">
+                        <span class="date">
+                          <span class="number">7</span>
+                        </span>
+                      </td>
+                      <td class="active">
+                        <span class="date">
+                          <span class="number">8</span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="date">
+                          <span class="number">9</span>
+                        </span>
+                      </td>
+                      <td >
+                        <span class="date">
+                          <span class="number">10</span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="date">
+                          <span class="number">11</span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="date">
+                          <span class="number">12</span>
+                        </span>
+                      </td>
+                      <td >
+                        <span class="date">
+                          <span class="number">13</span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr class="blockReservation">
+                      <td colspan="7">
+                        <article class="blockReservation__availableAppointment">
+                          <div class ="h2Booked">
+                            <h2><span>Available Appointment on </span><strong>August 8, 2017</strong><span></span></h2>
+                          </div>
+                          <div class="bookRoom">
+                            <hr>
+                            <span class="bookRoom__time">
+                              <span class="bookRoom__time__title">Escape Room</span>
+                              <span class="bookRoom__time__icone"><i class="fa-regular fa-clock"></i>  1:00 am – 2:00 am</span>
+                              <span class="bookRoom__time__available escapeRoom">1 space available</span>
+                            </span>
+                            <span class="bookRoom__button">
+                              <button class="buttonBook">Book Room</button>
+                            </span>
+                          </div>
+                          <div class="bookRoom">
+                            <hr>
+                            <span class="bookRoom__time">
+                              <span class="bookRoom__time__icone"><i class="fa-regular fa-clock"></i> 1:00 am – 2:00 am</span>
+                              <span class="bookRoom__time__available">1 space available</span>
+                            </span>
+                            <span class="bookRoom__button">
+                              <button class="buttonBook">Book Room</button>
+                            </span>
+                          </div>
+                          <div class="bookRoom">
+                            <hr>
+                            <span class="bookRoom__time">
+                              <span class="bookRoom__time__icone"><i class="fa-regular fa-clock"></i>  4:00 pm – 6:00 pm</span>
+                              <span class="bookRoom__time__available empty">0 spaces available</span>
+                            </span>
+                            <span class="bookRoom__button">
+                              <button class="buttonBook disabled" disabled>Unavailable</button>
+                            </span>
+                          </div>
+                          <div class="bookRoom">
+                            <hr>
+                            <span class="bookRoom__time">
+                              <span class="bookRoom__time__icone"><i class="fa-regular fa-clock"></i> 1:00 am – 2:00 am</span>
+                              <span class="bookRoom__time__available">1 space available</span>
+                            </span>
+                            <span class="bookRoom__button">
+                              <button class="buttonBook">Book Room</button>
+                            </span>
+                          </div>
+                        </article>
+                      </td>
+                    </tr>
+                    <tr class="weekThree">
+                      <td>
+                        <span class="date">
+                          <span class="number">14</span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="date">
+                          <span class="number">15</span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="date">
+                          <span class="number">16</span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="date">
+                          <span class="number">17</span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="date">
+                          <span class="number">18</span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="date">
+                          <span class="number">19</span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="date">
+                          <span class="number">20</span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr class="weekFour">
+                      <td>
+                        <span class="date">
+                          <span class="number">21</span>
+                        </span>
+                      </td>
+                      <td class="unavailable">
+                        <span class="date">
+                          <span class="number">22</span>
+                        </span>
+                      </td>
+                      <td >
+                        <span class="date">
+                          <span class="number">23</span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="date">
+                          <span class="number">24</span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="date">
+                          <span class="number">25</span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="date">
+                          <span class="number">26</span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="date">
+                          <span class="number">27</span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr class="weekFive">
+                      <td>
+                        <span class="date">
+                          <span class="number">28</span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="date">
+                          <span class="number">29</span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="date">
+                          <span class="number">30</span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="date">
+                          <span class="number">31</span>
+                        </span>
+                      </td>
+                      <td class="nextMonth">
+                        <span class="date">
+                          <span class="number">1</span>
+                        </span>
+                      </td>
+                      <td class="nextMonth">
+                        <span class="date">
+                          <span class="number">2</span>
+                        </span>
+                      </td>
+                      <td class="nextMonth">
+                        <span class="date">
+                          <span class="number">3</span>
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
             </section>
           </section>
         </section>
       </section>
+      <section class="other">
+        <section class="other__bloc">
+          <h2>Other Rooms</h2>
+          <div id="other_carousel">
+            <a><i class="fa fa-angle-left fa-2x" aria-hidden="true" id="other_previous"></i></a>
+            <a><i class="fa fa-angle-right fa-2x" aria-hidden="true" id="other_next"></i></a>
+        </div>
+          <section class="otherRoom">
+            
+          </section>
+          
+      </section>
+      </section>
     </main>
+    <footer class="footer">
+      <section class="footer__body">
+        <article class="footer__body__column address" >
+          <span>01</span>
+          <h4>Our Address</h4>
+          <ul>
+            <li>Escape Room Ltd.</li>
+            <li>2390 RoadHill St. Suite 100</li>
+            <li>North Downtown, NY 82153</li>
+            <li>Email: <em>info@escapium.com</em></li>
+            <li>Tel: +1 800 900 1248</li>
+          </ul>
+        </article>
+        <article class="footer__body__column link">
+          <span>02</span>
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">about</a></li>
+            <li><a href="#">gallery</a></li>
+            <li><a href="#">plan an event</a></li>
+            <li><a href="#">pricing packages</a></li>
+            <li><a href="#">faq</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </article>
+        <article class="footer__body__column calendar">
+          <span>03</span>
+          <h4>Working Hours</h4>
+          <div>
+            <ul>
+              <li>Monday:</li>
+              <li>Tuesday:</li>
+              <li>Wednesday:</li>
+              <li>Thursday:</li>
+              <li>Friday:</li>
+              <li>Saturday:</li>
+              <li>Sunday:</li>
+            </ul>
+            <ul>
+              <li>6pm - 11pm</li>
+              <li>5pm - 11pm</li>
+              <li>Closed</li>
+              <li>6pm - 11pm</li>
+              <li>2pm - 11pm</li>
+              <li>11am - 11pm</li>
+              <li>11am - 9pm</li>
+            </ul>
+          </div>
+        </article>
+        <article class="footer__body__column social">
+          <span>04</span>
+          <h4>Social Links</h4>
+          <ul>
+            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-yelp"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
+          </ul>
+        </article>
+      </section>
+      <section class="footer__copyright">
+        <figure>
+          <img src="/image/logo/footer-logo.png" alt="logo">
+        </figure>
+        <cite>Copyright 2022 Escapium | All Rights Reserved</cite>
+      </section>
+    </footer>
     </body>
 </html>
