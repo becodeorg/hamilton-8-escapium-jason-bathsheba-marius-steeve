@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/style.css"/>
     <script src="https://kit.fontawesome.com/9dacd2a25d.js" crossorigin="anonymous"></script>
     <script type="module" src="/js/singleRoom.js"></script>
+    <script type="module" src="/js/test.js"></script>
     <title>Single Room</title>
   </head>
     <body>
@@ -25,10 +26,10 @@
                 <a href="">about</a>
               </li>
               <li class="header_item_all_page"><a href="">features</a></li>
-              <li class="header_item_all_page"><a href="">rooms</a></li>
+              <li class="header_item_all_page active"><a href="">rooms</a></li>
               <li class="header_item_all_page"><a href="">booking</a></li>
               <li class="header_item_all_page"><a href="">blog</a></li>
-              <li class="header_item_all_page active"><a href="">contacts</a></li>
+              <li class="header_item_all_page "><a href="">contacts</a></li>
               <li class="header_item_all_page burger_login">
                 <a href=""><i class="fa-regular fa-user"></i>sign in</a>
               </li>
@@ -56,7 +57,7 @@
       </nav>
       <section class="header__banniere headerSlider">        
       </section>
-      <ul class="header__button">
+      <ul class="button">
         <li class="btnHeader slideOne"></li>
         <li class="btnHeader slideTwo"></li>
         <li class="btnHeader slideThree"></li>
@@ -238,7 +239,7 @@
                               <span class="bookRoom__time__available escapeRoom">1 space available</span>
                             </span>
                             <span class="bookRoom__button">
-                              <button class="button">Book Room</button>
+                              <button class="buttonBook">Book Room</button>
                             </span>
                           </div>
                           <div class="bookRoom">
@@ -248,7 +249,7 @@
                               <span class="bookRoom__time__available">1 space available</span>
                             </span>
                             <span class="bookRoom__button">
-                              <button class="button">Book Room</button>
+                              <button class="buttonBook">Book Room</button>
                             </span>
                           </div>
                           <div class="bookRoom">
@@ -258,7 +259,7 @@
                               <span class="bookRoom__time__available empty">0 spaces available</span>
                             </span>
                             <span class="bookRoom__button">
-                              <button class="button disabled" disabled>Unavailable</button>
+                              <button class="buttonBook disabled" disabled>Unavailable</button>
                             </span>
                           </div>
                           <div class="bookRoom">
@@ -268,7 +269,7 @@
                               <span class="bookRoom__time__available">1 space available</span>
                             </span>
                             <span class="bookRoom__button">
-                              <button class="button">Book Room</button>
+                              <button class="buttonBook">Book Room</button>
                             </span>
                           </div>
                         </article>
@@ -392,11 +393,89 @@
           </section>
         </section>
       </section>
-      <section>
-        <section class="otherRoom">
-
-        </section>
+      <section class="other">
+        <section class="other__bloc">
+          <h2>Other Rooms</h2>
+          <div id="other_carousel">
+            <a><i class="fa fa-angle-left fa-2x" aria-hidden="true" id="other_previous"></i></a>
+            <a><i class="fa fa-angle-right fa-2x" aria-hidden="true" id="other_next"></i></a>
+        </div>
+          <section class="otherRoom">
+            
+          </section>
+          
+      </section>
       </section>
     </main>
+    <footer class="footer">
+      <section class="footer__body">
+        <article class="footer__body__column address" >
+          <span>01</span>
+          <h4>Our Address</h4>
+          <ul>
+            <li>Escape Room Ltd.</li>
+            <li>2390 RoadHill St. Suite 100</li>
+            <li>North Downtown, NY 82153</li>
+            <li>Email: <em>info@escapium.com</em></li>
+            <li>Tel: +1 800 900 1248</li>
+          </ul>
+        </article>
+        <article class="footer__body__column link">
+          <span>02</span>
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">about</a></li>
+            <li><a href="#">gallery</a></li>
+            <li><a href="#">plan an event</a></li>
+            <li><a href="#">pricing packages</a></li>
+            <li><a href="#">faq</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </article>
+        <article class="footer__body__column calendar">
+          <span>03</span>
+          <h4>Working Hours</h4>
+          <div>
+            <ul>
+              <li>Monday:</li>
+              <li>Tuesday:</li>
+              <li>Wednesday:</li>
+              <li>Thursday:</li>
+              <li>Friday:</li>
+              <li>Saturday:</li>
+              <li>Sunday:</li>
+            </ul>
+            <ul>
+              <li>6pm - 11pm</li>
+              <li>5pm - 11pm</li>
+              <li>Closed</li>
+              <li>6pm - 11pm</li>
+              <li>2pm - 11pm</li>
+              <li>11am - 11pm</li>
+              <li>11am - 9pm</li>
+            </ul>
+          </div>
+        </article>
+        <article class="footer__body__column social">
+          <span>04</span>
+          <h4>Social Links</h4>
+          <ul>
+            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-yelp"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
+          </ul>
+        </article>
+      </section>
+      <section class="footer__copyright">
+        <figure>
+          <img src="/image/logo/footer-logo.png" alt="logo">
+        </figure>
+        <cite>Copyright 2022 Escapium | All Rights Reserved</cite>
+      </section>
+    </footer>
     </body>
 </html>
