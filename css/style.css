@@ -1821,16 +1821,251 @@ main .singleRoom__section aside button:hover {
   border-color: #c7070a;
 }
 
-.header .headerSlider {
+.booked {
+  font-family: "Montserrat", sans-serif;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: #222222;
+}
+.booked__form {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.booked__form__calendar {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.booked__form__calendar__content {
+  margin-left: auto;
+  margin-right: auto;
+}
+.booked__form__calendar__content table {
+  display: table;
+  margin: 0;
+  padding: 0;
+  background: #242424;
+  text-indent: initial;
+  border-spacing: 2px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #373737;
+  transition: all 0.1s ease-out;
+  border-collapse: collapse;
+}
+.booked__form__calendar__content table thead {
+  background: #202020;
+  color: white;
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+.booked__form__calendar__content table thead tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+.booked__form__calendar__content table thead tr th {
+  display: table-cell;
+  vertical-align: inherit;
+  text-align: center;
+  color: #999;
+  border: 1px solid #373737;
+  text-align: center;
+  position: relative;
+  font-size: 20px;
+  width: 14.285%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 37px 0;
+  line-height: 1;
+}
+.booked__form__calendar__content table thead tr th .arrowLeft {
+  color: white;
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  width: 50px;
+  height: 30px;
+}
+.booked__form__calendar__content table thead tr th h4 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  text-transform: none;
+  color: white;
+}
+.booked__form__calendar__content table thead tr th .arrowRight {
+  color: white;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 50px;
+  height: 30px;
+}
+.booked__form__calendar__content table thead .days {
+  background: #404040;
+  color: #999;
+  border-color: #404040;
+  text-transform: uppercase;
+}
+.booked__form__calendar__content table thead .days th {
+  padding: 22px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-family: Montserrat, sans-serif;
+  color: #999;
+}
+.booked__form__calendar__content table tbody {
+  display: table-row-group;
+}
+.booked__form__calendar__content table tbody tr {
+  display: table-row;
+}
+.booked__form__calendar__content table tbody tr td:first-child {
+  border-left: 1px solid #373737;
+}
+.booked__form__calendar__content table tbody tr td, .booked__form__calendar__content table tbody tr .prev-date {
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  font-size: 20px;
+  color: #414141;
+  padding: 0;
+  border-right: 1px solid #373737;
+  border-bottom: 1px solid #373737;
+  border: 1px solid #373737;
+  height: 106px;
+}
+.booked__form__calendar__content table tbody tr td .date, .booked__form__calendar__content table tbody tr .prev-date .date {
+  cursor: not-allowed;
+  background: #202020;
+  color: white;
+  display: block;
   width: 100%;
   height: 100%;
+  line-height: 106px;
 }
-.header .headerSlider h1 {
-  color: silver;
+.booked__form__calendar__content table tbody tr td .date .number, .booked__form__calendar__content table tbody tr .prev-date .date .number {
+  display: inline-block;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
 }
-.header .headerSlider .slide {
-  width: 100%;
-  height: 800px;
+.booked__form__calendar__content table tbody .blockReservation {
+  background: #333333;
+  color: #717171;
+}
+.booked__form__calendar__content table tbody .blockReservation td {
+  padding: 30px;
+  text-align: left;
+  background-color: #373737;
+}
+.booked__form__calendar__content table tbody .blockReservation td:first-child {
+  border-right: 1px solid #373737;
+}
+.booked__form__calendar__content table tbody .blockReservation td:last-child {
+  border-right: 1px solid #373737;
+}
+.booked__form__calendar__content table tbody .blockReservation__availableAppointment {
+  font-size: 0.75rem;
+  line-height: 1.5em;
+  transform: scale(1);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  color: #000;
+  background: #fff;
+  padding: 35px;
+  height: 100%;
+}
+.booked__form__calendar__content table tbody .blockReservation__availableAppointment .h2Booked {
+  text-align: center;
+  color: #242424;
+  font-size: 20px;
+  margin: 0 0 1.2em;
+  line-height: 1.4;
+}
+.booked__form__calendar__content table tbody .blockReservation__availableAppointment .h2Booked h2 {
+  text-align: center;
+  color: #242424;
+  font-size: 20px;
+  margin: 0 0 1.2em;
+  line-height: 1.4;
+}
+.booked__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom {
+  line-height: 1.8;
+  color: #888;
+}
+.booked__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__time {
+  width: 60%;
+  min-height: 80px;
+  height: 71px;
+  padding: 20px 0 0px 20px;
+  box-sizing: border-box;
+  float: left;
+  line-height: 1;
+  font-weight: 600;
+  color: #555;
+}
+.booked__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__time__title {
+  margin: 0 0 10px;
+  display: block;
+  font-size: 1.125rem;
+  color: #f60b0e;
+}
+.booked__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__time__icone {
+  color: #555;
+}
+.booked__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__time__available {
+  font-weight: 400;
+  font-size: 0.75rem;
+  display: block;
+  line-height: 1.2em;
+  letter-spacing: 0.2em;
+  color: #9f9f9f;
+  padding: 0.75em 0 0;
+}
+.booked__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__button {
+  padding: 10px 20px 20px 0;
+  box-sizing: border-box;
+  float: right;
+  width: 40%;
+}
+.booked__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__button .button {
+  border-color: #f60b0e;
+  background: #f60b0e;
+  float: right;
+  margin: 0 0 0 10px;
+  color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  user-select: none;
+  border: 2px solid transparent;
+  padding: 0.8rem 2rem;
+  font-size: 0.75rem;
+  line-height: 1.25;
+  border-radius: 1.5rem;
+}
+.booked__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__button .button:focus {
+  border-color: #000000;
+  background: #000000;
+}
+.booked__form__calendar__content table tbody .blockReservation__availableAppointment .bookRoom__button .disabled {
+  cursor: default;
+  background: #eee;
+  border-color: #ddd;
+  color: #aaa;
 }
 
 h1, h2, h3 {
