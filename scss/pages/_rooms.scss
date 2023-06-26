@@ -1,7 +1,7 @@
 .rooms {
-.banRoom {
-
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.2)),url("/image/gallery/slide-1.jpg");
+  .banRoom {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+      url("/image/gallery/slide-1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -11,380 +11,353 @@
     align-items: center;
     flex-direction: column;
 
-    h1{
-      
+    h1 {
       font-family: $fontTitleMonserrat;
       color: $whiteText;
-      span{
+      span {
         color: $redColor;
       }
     }
-  
-    p{
+
+    p {
       color: $whiteText;
-      font-family:$fontParagraphHind  ;
+      font-family: $fontParagraphHind;
       font-size: $sizeParagraphBigScreen;
       display: flex;
       align-items: center;
       justify-content: center;
-      .grey{
-        color: #3C3F3E;
+      .grey {
+        color: #3c3f3e;
       }
-      
     }
   }
-}    
+}
 .homeRoom {
+  &__section {
+    padding-top: 120px;
+    padding-bottom: 120px;
 
-    &__section {
-        padding-top: 120px;
-        padding-bottom: 120px;
+    &__container {
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
 
-        &__container {
+      .filter {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 3.75rem;
+
+        &__difficult {
+          margin: 0 0.5rem;
+
+          button {
             width: 100%;
-            padding-right: 15px;
-            padding-left: 15px;
-            margin-right: auto;
-            margin-left: auto;
+            border: 2px solid $navFontColor;
+            padding: 0.8rem 2rem;
+            font-family: $fontTitleMonserrat;
+            font-weight: 700;
+            font-size: 1.05rem;
+            border-radius: 2.5rem;
+            transition: all 0.5s ease;
+            background-color: transparent;
+            color: $whiteText;
+            cursor: pointer;
 
-            .filter {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                margin-bottom: 3.75rem;
-               
-                
-                &__difficult{
-                    margin: 0 0.5rem;
-
-                    button {
-                        width: 100%;
-                        border: 2px solid $navFontColor;
-                        padding: 0.8rem 2rem;
-                        font-family: $fontTitleMonserrat;
-                        font-weight: 700;
-                        font-size: 1.05rem;
-                        border-radius: 2.5rem;
-                        transition: all .5s ease;
-                        background-color: transparent;
-                        color: $whiteText;
-                        cursor: pointer;
-
-                        &:hover {
-                            background-color: $navFontColor;
-                        }
-                        &:active{
-                            border: 2px solid blue ;
-                        }
-                        &:focus{
-                            border: 2px solid rgb(179, 0, 0);
-                            background-color: $redColor;
-                        }
-                    }
-                }
+            &:hover {
+              background-color: $navFontColor;
             }
-
-            .cardRoom {
-                display: grid;
-                grid-template-columns: repeat(4, 250px);
-                justify-content: center;
-                grid-gap: 2rem;
-                justify-content: center;
-
-                .card{
-                    //align-self: center;
-                    //justify-self: center;
-                    height: 400px;
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: end;
-                    padding-left: 35px;
-                    box-shadow: 0 0 1em black;
-                    
-                }
-
-                .card__levels {
-                    position: relative;
-                    bottom: 100px;
-                    
-                    line-height: 1rem;
-                    font-size: 1.4rem;
-
-                    i {
-                        color: $globalFontColor;
-                        margin-right: 0.3em;
-                       
-                    }
-                }
-                .card__name{
-                    font-family: $fontTitleMonserrat;
-                    font-size: 1.425rem;
-                    font-weight: 900;
-                    color: $whiteText;
-                    position: relative;
-                    bottom: 80px;
-                }
-
-                .card__description {
-                    width: 150px;
-                    display: flex;
-                    flex-direction: row;
-                    flex-wrap: wrap;
-                    column-gap: 1rem;
-                    row-gap: 0.5rem;
-                    position: relative;
-                    bottom: 50px;
-                    
-                    
-                    div {
-                        display: flex;
-                        flex-direction: row;
-                        gap: 0.7rem;
-                    }
-
-                    i {
-                        color: $whiteBg;
-                        
-                    }
-
-                    p {
-                        font-family: $fontTitleMonserrat;
-                        font-size: 1.3rem;
-                        color: $globalFontColor;
-                        font-weight: bold;
-            
-                    }
-                }
-
+            &:active {
+              border: 2px solid blue;
             }
-            
-            &__navRoom {
-                padding-top: 2rem;
-                    
-
-                .pageList {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    margin-bottom: 160px;
-
-                    &__link {
-                        margin: 0 0.5rem;
-
-                        button {
-                            font-family: $fontTitleMonserrat;
-                            font-size: 1.05rem;
-                            border-radius: 3.5rem;
-                            min-width: 50px;
-                            min-height: 50px;
-                            padding: 0.8rem ;
-                            color: $whiteText;
-                            background-color: transparent;
-                            border: 2px solid $navFontColor;
-
-                            &:hover{
-                                background-color: $navFontColor;
-                            }
-
-                            &:focus{
-                                border: 2px solid rgb(179, 0, 0);
-                                background-color: $redColor; 
-                            }
-                        }
-
-
-                        p {
-                            color: $whiteText;
-                            font-size: 1.05rem;
-                            word-spacing: 1rem;
-                        }
-                    }
-                }
+            &:focus {
+              border: 2px solid rgb(179, 0, 0);
+              background-color: $redColor;
             }
+          }
         }
-    }
-}    
+      }
 
-@media screen and (min-width: 993px) and (max-width: 1220px ) {
-	.homeRoom {
-		&__section {
-			
-            &__container {
-                .cardRoom {
-                    grid-template-columns: repeat(4, 200px);
-        
-                    .card {
-                        height: 330px;
-                        width: 100%;
-                    }
-                }
-            }
+      .cardRoom {
+        display: grid;
+        grid-template-columns: repeat(4, 250px);
+        justify-content: center;
+        grid-gap: 2rem;
+        justify-content: center;
+
+        .card {
+          //align-self: center;
+          //justify-self: center;
+          height: 400px;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: end;
+          padding-left: 35px;
+          box-shadow: 0 0 1em black;
         }
+
+        .card__levels {
+          position: relative;
+          bottom: 100px;
+
+          line-height: 1rem;
+          font-size: 1.4rem;
+
+          i {
+            color: $globalFontColor;
+            margin-right: 0.3em;
+          }
+        }
+        .card__name {
+          font-family: $fontTitleMonserrat;
+          font-size: 1.425rem;
+          font-weight: 900;
+          color: $whiteText;
+          position: relative;
+          bottom: 80px;
+        }
+
+        .card__description {
+          width: 150px;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          column-gap: 1rem;
+          row-gap: 0.5rem;
+          position: relative;
+          bottom: 50px;
+
+          div {
+            display: flex;
+            flex-direction: row;
+            gap: 0.7rem;
+          }
+
+          i {
+            color: $whiteBg;
+          }
+
+          p {
+            font-family: $fontTitleMonserrat;
+            font-size: 1.3rem;
+            color: $globalFontColor;
+            font-weight: bold;
+          }
+        }
+      }
+
+      &__navRoom {
+        padding-top: 2rem;
+
+        .pageList {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 160px;
+
+          &__link {
+            margin: 0 0.5rem;
+
+            button {
+              font-family: $fontTitleMonserrat;
+              font-size: 1.05rem;
+              border-radius: 3.5rem;
+              min-width: 50px;
+              min-height: 50px;
+              padding: 0.8rem;
+              color: $whiteText;
+              background-color: transparent;
+              border: 2px solid $navFontColor;
+
+              &:hover {
+                background-color: $navFontColor;
+              }
+
+              &:focus {
+                border: 2px solid rgb(179, 0, 0);
+                background-color: $redColor;
+              }
+            }
+
+            p {
+              color: $whiteText;
+              font-size: 1.05rem;
+              word-spacing: 1rem;
+            }
+          }
+        }
+      }
     }
+  }
 }
 
-
-@media screen and (min-width: 769px) and (max-width: 992px){
-
-    .homeRoom {
-
-        &__section {
-
-            padding-top: 120px;
-            padding-bottom: 120px;
-    
-            &__container{
-
-                max-width: 960px;
-
-            } 
-        }
-    
-        .cardRoom{
-            grid-template-columns: repeat(4, 160px);
-            grid: 1rem;
-            
-            .card {
-                height: 250px;
-                width: 100%;
-                padding-left: 10px;
-            }
-
-            .card__levels {
-                bottom: 50px;
-
-                i {
-                    font-size: $sizeParagrapheMobile;
-                }
-
-            }
-
-            .card__name {
-                bottom: 30px;
-                font-size: 0.85rem;
-
-            }
-
-            .card__description {
-                width: 100px;
-                left: 0;
-                bottom: 15px;
-            }
-            
-        }
-        
-    }
-} 
-
-@media screen and (min-width: 580px) and (max-width: 768px ) {
-	.homeRoom {
-		&__section {
-			
-            &__container {
-                max-width: 540px;
-
-                .filter {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
- 
-                     &__difficult {
-                         flex-basis: 50%;
-                         min-width: 50%;
-                         margin: 0 0 0.5rem;
-                         padding: 0 0.5rem;
-
-                         button {
-                             width: 100%;
-                         }
-                     }
-                 }
-            }
-		}
-
+@media screen and (min-width: 993px) and (max-width: 1220px) {
+  .homeRoom {
+    &__section {
+      &__container {
         .cardRoom {
-            grid-template-columns: repeat(2, 250px);
+          grid-template-columns: repeat(4, 200px);
 
-            .card {
-                height: 330px;
-                width: 100%;
-            }
+          .card {
+            height: 330px;
+            width: 100%;
+          }
         }
-	}
+      }
+    }
+  }
 }
-   
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .homeRoom {
+    &__section {
+      padding-top: 120px;
+      padding-bottom: 120px;
+
+      &__container {
+        max-width: 960px;
+      }
+    }
+
+    .cardRoom {
+      grid-template-columns: repeat(4, 160px);
+      grid: 1rem;
+
+      .card {
+        height: 250px;
+        width: 100%;
+        padding-left: 10px;
+      }
+
+      .card__levels {
+        bottom: 50px;
+
+        i {
+          font-size: $sizeParagrapheMobile;
+        }
+      }
+
+      .card__name {
+        bottom: 30px;
+        font-size: 0.85rem;
+      }
+
+      .card__description {
+        width: 100px;
+        left: 0;
+        bottom: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 580px) and (max-width: 768px) {
+  .homeRoom {
+    &__section {
+      &__container {
+        max-width: 540px;
+
+        .filter {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          &__difficult {
+            flex-basis: 50%;
+            min-width: 50%;
+            margin: 0 0 0.5rem;
+            padding: 0 0.5rem;
+
+            button {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .cardRoom {
+      grid-template-columns: repeat(2, 250px);
+
+      .card {
+        height: 330px;
+        width: 100%;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 580px) {
-	.homeRoom {
-		&__section {
-			
-            &__container {
-                width: 100%;
+  .homeRoom {
+    &__section {
+      &__container {
+        width: 100%;
 
-                .filter {
-                    display: flex;
-                    flex-wrap: wrap;
-                   
-                    justify-content: center;
- 
-                     &__difficult {
-                         flex-basis: 50%;
-                         min-width: 50%;
-                         margin: 0 0 0.5rem;
-                         padding: 0 0.5rem;
- 
-                         button {
-                             width: 100%;
-                         }
-                     }
-                 }
+        .filter {
+          display: flex;
+          flex-wrap: wrap;
+
+          justify-content: center;
+
+          &__difficult {
+            flex-basis: 50%;
+            min-width: 50%;
+            margin: 0 0 0.5rem;
+            padding: 0 0.5rem;
+
+            button {
+              width: 100%;
             }
-		}
-
-        .cardRoom {
-            max-width: 100%;
-            grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
-
-            .card {
-                height:600px;
-                width: 100%;
-            }
+          }
         }
-        
-	}
+      }
+    }
+
+    .cardRoom {
+      max-width: 100%;
+      grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+
+      .card {
+        height: 600px;
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 412px) {
-	.homeRoom {
-		&__section {
-			
-            &__container {
-                width: auto;
-            
-                .filter {
-                   display: flex;
-                   flex-wrap: wrap;
-                   justify-content: center;
+  .homeRoom {
+    &__section {
+      &__container {
+        width: auto;
 
-                    &__difficult {
-                        flex-basis: 50%;
-                        min-width: 50%;
+        .filter {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
 
-                        button {
-                            width: 100%;
-                        }
-                    }
-                }
+          &__difficult {
+            flex-basis: 50%;
+            min-width: 50%;
 
-                .cardRoom {
-                    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-                    .card {
-                        height: 450px;
-                        width: auto;
-                    }
-                }
-            }   
-        }    
-	}
+            button {
+              width: 100%;
+            }
+          }
+        }
+
+        .cardRoom {
+          grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+          .card {
+            height: 450px;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
 }
