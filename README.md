@@ -1,6 +1,6 @@
 # Project ESCAPIUM
 
-The aim of this project was to reproduce a model given to us. The project was carried out by teams of 2 people (duo) we had 4 days to do it and we had 3 weeks of training in web dev.
+The goal of the project was to create the 7 pages of the Escapium project, we were 4 and had a deadline of 5 days.
 
 ## Table of contents
 
