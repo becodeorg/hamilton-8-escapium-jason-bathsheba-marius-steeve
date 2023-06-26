@@ -14,23 +14,6 @@ window.addEventListener("resize", function () {
   updateText();
 });
 
-// const slideContainer = document.querySelector(".about_slide_container");
-// const slide = document.querySelector(".about_article_testimonials");
-// const leftArrow = document.querySelector(".arrow_left");
-// const rightArrow = document.querySelector(".arrow_right");
-
-// rightArrow.addEventListener("click", function () {
-//   const slideWidth = slide.clientWidth;
-//   slideContainer.scrollLeft += slideWidth;
-//   slide.style.transition = "all 4s ease";
-// });
-
-// leftArrow.addEventListener("click", function () {
-//   const slideWidth = slide.clientWidth;
-//   slideContainer.scrollLeft = slideWidth;
-//   slide.style.transition = "all 4s ease";
-// });
-
 const slideContainer = document.querySelector(".about_slide_container");
 const slides = document.querySelectorAll(".about_article_testimonials");
 const leftArrow = document.querySelector(".arrow_left");
@@ -69,3 +52,16 @@ for (let i = 0; i < accordion.length; i++) {
     this.classList.toggle("active");
   });
 }
+
+const btnPlay = document.querySelector(".about_btn_play");
+const containerMedia = document.querySelector(".container_media_youtube");
+
+btnPlay.addEventListener("click", function (event) {
+  console.log("BONJOUR");
+  event.preventDefault();
+  containerMedia.classList.toggle("active_media");
+});
+
+containerMedia.addEventListener("click", function () {
+  containerMedia.classList.toggle("active_media");
+});

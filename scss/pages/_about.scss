@@ -1,3 +1,24 @@
+.container_media_youtube {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 20;
+  position: fixed;
+  display: none;
+
+  .media_youtube {
+    height: 600px;
+    width: 900px;
+  }
+
+  &.active_media {
+    display: inline-flex;
+  }
+}
+
 .header_about {
   background: linear-gradient(
       180deg,
@@ -234,6 +255,7 @@
     .about_article_our_team {
       figure {
         position: relative;
+        overflow: hidden;
         img {
           width: 100%;
           display: block;
@@ -252,6 +274,12 @@
           left: 0;
           height: 100%;
           width: 100%;
+          transition: all 0.3s ease;
+
+          &:hover {
+            border: 0.8rem solid $redColor;
+            background: none;
+          }
         }
       }
 
@@ -418,6 +446,13 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .container_media_youtube {
+    .media_youtube {
+      height: 400px;
+      width: 600px;
+    }
+  }
+
   .header_about {
     background-size: 200%;
     background-position: 50% 10%;
@@ -525,7 +560,7 @@
 
       .container_question_faq {
         .about_title_faq {
-          font-size: $h2TitleMobile;
+          font-size: 1.1rem;
           margin-bottom: 0.8rem;
 
           &::before {
@@ -558,6 +593,14 @@
 }
 
 @media only screen and (max-width: 550px) {
+  .container_media_youtube {
+    padding: 0.5rem;
+    .media_youtube {
+      height: 400px;
+      width: 100%;
+    }
+  }
+
   .about_section_certificate {
     .about_container_certificate {
       grid-template-columns: 1fr 1fr;
@@ -575,6 +618,19 @@
     .about_slide_container {
       width: 350px;
       height: 350px;
+    }
+  }
+
+  .section_about_faq {
+    padding: 1rem;
+
+    .about_container_faq {
+      .container_question_faq {
+        padding-left: 3rem;
+        .about_title_faq {
+          font-size: 1rem;
+        }
+      }
     }
   }
 }

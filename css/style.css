@@ -615,6 +615,25 @@ body p {
     display: none;
   }
 }
+.container_media_youtube {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 20;
+  position: fixed;
+  display: none;
+}
+.container_media_youtube .media_youtube {
+  height: 600px;
+  width: 900px;
+}
+.container_media_youtube.active_media {
+  display: inline-flex;
+}
+
 .header_about {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5410539216) 0%, rgba(27, 27, 27, 0.5018382353) 100%), url(../image/gallery/slide-1.jpg);
   background-position: 30% 30%;
@@ -823,6 +842,7 @@ body p {
 }
 .about_section_our_team .about_section_container_our_team .about_article_our_team figure {
   position: relative;
+  overflow: hidden;
 }
 .about_section_our_team .about_section_container_our_team .about_article_our_team figure img {
   width: 100%;
@@ -836,6 +856,11 @@ body p {
   left: 0;
   height: 100%;
   width: 100%;
+  transition: all 0.3s ease;
+}
+.about_section_our_team .about_section_container_our_team .about_article_our_team figure .about_article_gradiant:hover {
+  border: 0.8rem solid #f60b0e;
+  background: none;
 }
 .about_section_our_team .about_section_container_our_team .about_article_our_team .about_container_text_article {
   padding: 1.2rem;
@@ -983,6 +1008,10 @@ body p {
 }
 
 @media only screen and (max-width: 768px) {
+  .container_media_youtube .media_youtube {
+    height: 400px;
+    width: 600px;
+  }
   .header_about {
     background-size: 200%;
     background-position: 50% 10%;
@@ -1062,7 +1091,7 @@ body p {
     padding: 1.3rem;
   }
   .section_about_faq .about_container_faq .container_question_faq .about_title_faq {
-    font-size: 19px;
+    font-size: 1.1rem;
     margin-bottom: 0.8rem;
   }
   .section_about_faq .about_container_faq .container_question_faq .about_title_faq::before {
@@ -1078,6 +1107,13 @@ body p {
   }
 }
 @media only screen and (max-width: 550px) {
+  .container_media_youtube {
+    padding: 0.5rem;
+  }
+  .container_media_youtube .media_youtube {
+    height: 400px;
+    width: 100%;
+  }
   .about_section_certificate .about_container_certificate {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -1088,6 +1124,15 @@ body p {
   .about_testimonials .about_slide_container {
     width: 350px;
     height: 350px;
+  }
+  .section_about_faq {
+    padding: 1rem;
+  }
+  .section_about_faq .about_container_faq .container_question_faq {
+    padding-left: 3rem;
+  }
+  .section_about_faq .about_container_faq .container_question_faq .about_title_faq {
+    font-size: 1rem;
   }
 }
 @media only screen and (max-width: 412px) {
