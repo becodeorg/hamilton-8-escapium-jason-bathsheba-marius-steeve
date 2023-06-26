@@ -10,6 +10,7 @@ The goal of the project was to create the 7 pages of the Escapium project, we we
     - [The challenge](#the-challenge)
     - [Screenshot](#screenshot)
     - [Links](#links)
+    - [Repartition Work](#repartition-work)
   - [Our process](#our-process)
     - [Built with](#built-with)
   - [Author](#author)
@@ -38,6 +39,30 @@ The model we had to reproduce:
 ### Links
 
 [Project](https://becodeorg.github.io/hamilton-8-escapium-jason-bathsheba-marius-steeve/)
+
+### Repartition Work
+
+Jason (J0K3RY-03)
+
+- Navbar
+- Header
+- About
+
+Steeve
+
+- Rooms
+- Single Room
+- Footer
+
+Marius
+
+- HomePage
+- Contact
+
+Bathsheba
+
+- Single Blog
+- Blog
 
 ## Our process
 
