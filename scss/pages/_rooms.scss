@@ -1,6 +1,10 @@
 .rooms {
 .banRoom {
 
+    .navRooms{
+        position: absolute;
+        top: 0;
+    }
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.2)),url("/image/gallery/slide-1.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -10,6 +14,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    top: 0;
 
     h1{
       

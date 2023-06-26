@@ -127,9 +127,9 @@ const btnSliderTwo = document.querySelector(".slideTwo");
         generateHeader(sliderPhotos);
     })
 
-/********************************  Header Random ********************************/
+/********************************  Carousel Others Rooms ********************************/
 
-    
-    
+
+
     
    
